@@ -16,12 +16,18 @@
  */
 package org.jboss.as.quickstarts.servlet.async;
 
-import javax.inject.Inject;
+import javax.annotation.Resource;
+import javax.enterprise.concurrent.ManagedExecutorService;
 import javax.servlet.AsyncContext;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * <p>
@@ -30,7 +36,7 @@ import javax.servlet.http.HttpServletResponse;
  * 
  * <p>
  * The servlet is registered and mapped to /AsynchronousServlet using the {@link WebServlet} annotation. The
- * {@link LongRunningService} is injected by CDI.
+ * {@link ManagedExecutorService} provided through resource injection.
  * </p>
  * 
  * <p>
@@ -47,21 +53,39 @@ import javax.servlet.http.HttpServletResponse;
  * </p>
  * 
  * @author Christian Sadilek <csadilek@redhat.com>
+ * @author Eduardo Martins (Java EE 7 upgrade)
  */
 @SuppressWarnings("serial")
 @WebServlet(value = "/AsynchronousServlet", asyncSupported = true)
 public class AsynchronousServlet extends HttpServlet {
 
-    @Inject
-    private LongRunningService longRunningService;
+    private final Logger logger = Logger.getLogger(AsynchronousServlet.class.getName());
+
+    @Resource
+    private ManagedExecutorService executorService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         // Here the request is put in asynchronous mode
-        AsyncContext asyncContext = req.startAsync();
-
+        final AsyncContext asyncContext = req.startAsync();
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // This is just to simulate a long running operation for demonstration purposes.
+                    Thread.sleep(5000);
+                    PrintWriter writer = asyncContext.getResponse().getWriter();
+                    writer.println(new SimpleDateFormat("HH:mm:ss").format(new Date()));
+                    writer.close();
+                } catch (Exception e) {
+                    logger.log(Level.SEVERE, e.getMessage(), e);
+                } finally {
+                    asyncContext.complete();
+                }
+            }
+        };
         // This method will return immediately when invoked,
         // the actual execution will run in a separate thread.
-        longRunningService.readData(asyncContext);
+        executorService.execute(runnable);
     }
 }
