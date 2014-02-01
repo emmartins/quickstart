@@ -13,9 +13,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.jboss.as.quickstarts</groupId>
+	<groupId>org.wildfly.quickstarts</groupId>
 	<artifactId>jboss-as-picketlink-authorization-idm-jpa</artifactId>
-	<version>7.1.2-SNAPSHOT</version>
+	<version>8.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>JBoss AS Quickstarts: PicketLink IDM Authorization using JPA</name>
 	<description>JBoss AS Quickstarts: PicketLink IDM Authorization using JPA</description>
@@ -65,8 +65,8 @@
 				actually use this stack with any version of JBoss AS that implements Java 
 				EE 6, not just JBoss AS 7! -->
 			<dependency>
-				<groupId>org.jboss.bom</groupId>
-				<artifactId>jboss-javaee-6.0-with-security</artifactId>
+				<groupId>org.wildfly.bom</groupId>
+				<artifactId>jboss-javaee-7.0-with-security</artifactId>
 				<version>${version.jboss.bom}</version>
 				<type>pom</type>
 				<scope>import</scope>
@@ -80,7 +80,7 @@
 			JBoss AS 7 -->
 		<dependency>
 			<groupId>org.jboss.spec.javax.ejb</groupId>
-			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+			<artifactId>jboss-ejb-api_3.2_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
@@ -96,7 +96,7 @@
 			as the API is included in JBoss AS 7 -->
 		<dependency>
 			<groupId>org.jboss.spec.javax.annotation</groupId>
-			<artifactId>jboss-annotations-api_1.1_spec</artifactId>
+			<artifactId>jboss-annotations-api_1.2_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
@@ -104,7 +104,7 @@
 			JBoss AS 7 -->
 		<dependency>
 			<groupId>org.jboss.spec.javax.faces</groupId>
-			<artifactId>jboss-jsf-api_2.1_spec</artifactId>
+			<artifactId>jboss-jsf-api_2.2_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
@@ -112,7 +112,7 @@
 			JBoss AS 7 -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 

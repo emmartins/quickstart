@@ -15,9 +15,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.jboss.as.quickstarts</groupId>
+        <groupId>org.wildfly.quickstarts</groupId>
         <artifactId>jboss-as-ejb-throws-exception</artifactId>
-        <version>7.1.2-SNAPSHOT</version>
+        <version>8.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>jboss-as-ejb-throws-exception-web</artifactId>
@@ -39,7 +39,7 @@
         <!-- Dependency on the EJB module so we can use it's services if 
             needed -->
         <dependency>
-            <groupId>org.jboss.as.quickstarts</groupId>
+            <groupId>org.wildfly.quickstarts</groupId>
             <artifactId>jboss-as-ejb-throws-exception-ejb</artifactId>
             <type>ejb</type>
             <scope>provided</scope>
@@ -48,8 +48,8 @@
         <!-- Import the JAX-RS API, we use provided scope as the API is included 
             in JBoss AS 7 -->
         <dependency>
-            <groupId>org.jboss.spec.javax.ws.rs</groupId>
-            <artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -65,13 +65,13 @@
             in JBoss AS 7 -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
-            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

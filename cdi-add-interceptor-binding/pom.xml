@@ -20,9 +20,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jboss.as.quickstarts</groupId>
+    <groupId>org.wildfly.quickstarts</groupId>
     <artifactId>jboss-as-cdi-add-interceptor-binding</artifactId>
-    <version>7.1.2-SNAPSHOT</version>
+    <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>JBoss AS Quickstarts: CDI Portable Extension, add an interceptor binding</name>
     <description>CDI Portable Extension, add an interceptor binding: An example of a Portable Extension and some of the APIs / SPIs of CDI</description>
@@ -47,8 +47,8 @@
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         
         <!-- Define the version of the JBoss BOMs we want to import. The JBoss BOMs specify tested stacks. -->
-        <version.jboss.bom>1.0.4.Final</version.jboss.bom>
-        <version.arquillian.container>8.0.0.Alpha3</version.arquillian.container>
+        <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
+        <version.arquillian.container>8.0.0.CR1</version.arquillian.container>
 
         <!-- Alternatively, comment out the above line, and un-comment the 
             line below to use version 1.0.4.Final-redhat-3 which is a release certified 
@@ -88,15 +88,15 @@
                  use this stack with any version of JBoss AS that implements Java EE 6, not
                  just JBoss AS 7! -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-tools</artifactId>
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-deltaspike</artifactId>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-deltaspike</artifactId>
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -115,10 +115,16 @@
         <!-- Import the Common Annotations API (JSR-250), we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
-            <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
             <scope>provided</scope>
         </dependency>
-        
+
+        <!-- Import the Interceptors API, we use provided scope as the API is included in JBoss AS 7 -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.interceptor</groupId>
+            <artifactId>jboss-interceptors-api_1.2_spec</artifactId>
+        </dependency>
+
         <!-- Import DeltaSpike API to get common extension building utilities -->
         <dependency>
             <groupId>org.apache.deltaspike.core</groupId>

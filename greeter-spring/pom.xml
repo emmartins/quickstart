@@ -18,9 +18,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jboss.as.quickstarts</groupId>
+    <groupId>org.wildfly.quickstarts</groupId>
     <artifactId>jboss-as-greeter-spring</artifactId>
-    <version>7.1.2-SNAPSHOT</version>
+    <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>JBoss AS Quickstarts: Greeter Spring</name>
     <description>JBoss AS Quickstarts: Greeter Spring</description>
@@ -47,7 +47,7 @@
         <!-- JBoss AS plugin for deployment -->
         <version.jboss.maven.plugin>7.1.1.Final</version.jboss.maven.plugin>
 
-        <version.jboss.bom>1.0.5.CR4</version.jboss.bom>
+        <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
         <version.surefire.plugin>2.9</version.surefire.plugin>
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -69,16 +69,16 @@
                 this stack with any version of JBoss AS that implements Java EE 6, not just
                 JBoss AS 7! -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-hibernate</artifactId>
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-spring</artifactId>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-spring</artifactId>
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -103,7 +103,7 @@
             AS 7 / EAP 6 -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
             <scope>provided</scope>
         </dependency>
 

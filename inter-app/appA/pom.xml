@@ -25,9 +25,9 @@
     <description>Inter-application: Shows how to communicate between two applications using EJB and CDI</description>
 
     <parent>
-        <groupId>org.jboss.as.quickstarts</groupId>
+        <groupId>org.wildfly.quickstarts</groupId>
         <artifactId>jboss-as-inter-app-parent</artifactId>
-        <version>7.1.2-SNAPSHOT</version>
+        <version>8.0.0-SNAPSHOT</version>
     </parent>
 
     <licenses>
@@ -50,7 +50,7 @@
         <!-- Import the EJB API, we use provided scope as the API is included in JBoss AS 7 -->
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
-            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -58,7 +58,7 @@
             time. See the corresponding Dependencies entry in the MANIFEST.mf which defines 
             the dependency at runtime. -->
         <dependency>
-            <groupId>org.jboss.as.quickstarts</groupId>
+            <groupId>org.wildfly.quickstarts</groupId>
             <artifactId>jboss-as-inter-app-shared</artifactId>
             <scope>provided</scope>
         </dependency>

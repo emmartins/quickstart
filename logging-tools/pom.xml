@@ -19,9 +19,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jboss.as.quickstarts</groupId>
+    <groupId>org.wildfly.quickstarts</groupId>
     <artifactId>jboss-as-logging-tools</artifactId>
-    <version>7.1.2-SNAPSHOT</version>
+    <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>JBoss AS Quickstarts: jboss-as-logging-tools</name>
     <description>JBoss AS Quickstarts: Demonstration of jboss-logging-tools using JAX-RS</description>
@@ -45,7 +45,7 @@
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-        <version.jboss.bom>1.0.4.Final</version.jboss.bom> 
+        <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
         <!-- Alternatively, comment out the above line, and un-comment the 
             line below to use version 1.0.4.Final-redhat-3 which is a release certified 
             to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
@@ -74,8 +74,8 @@
                 use this stack with any version of JBoss AS that implements Java EE 6, not
                 just JBoss AS 7! -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-javaee-6.0-with-logging</artifactId>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-logging</artifactId>
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -87,8 +87,8 @@
       
         <!-- not related to jboss-logging-tools, just required for JAX-RS  -->
         <dependency>
-            <groupId>org.jboss.spec.javax.ws.rs</groupId>
-            <artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
