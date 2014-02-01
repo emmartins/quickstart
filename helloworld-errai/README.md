@@ -5,12 +5,12 @@ Level: Beginner
 Technologies: Errai, JAX-RS, GWT
 Summary: Helloworld using the Errai framework
 Target Product: WFK
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss Enterprise Application Platform 6* or *JBoss AS 7* with a GWT front-end client.
+This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly* with a GWT front-end client.
 
 GWT is basically a typesafe, statically checked programming model for producing HTML5+CSS3+JavaScript front-ends. In this example, we use RESTful services on the backend. The client communicates with the backend using stubs that are generated based on the JAX-RS resources when the application is compiled.
 
@@ -21,7 +21,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -30,7 +30,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

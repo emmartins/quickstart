@@ -4,13 +4,13 @@ Author: Gustavo A. Brey, Gaston Coco
 Level: Intermediate
 Technologies: CDI, JAX-RS
 Summary: Demonstrates the use of CDI 1.0 and JAX-RS
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss AS 7* or *JBoss Enterprise Application Platform 6*.
+This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss WildFly* or *JBoss Enterprise Application Platform 6*.
 
 
 System requirements
@@ -18,7 +18,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -27,7 +27,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.
@@ -95,7 +95,7 @@ If you do not yet have an OpenShift account and domain, [Sign in to OpenShift](h
 
 ### Create the OpenShift Application
 
-Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss AS 7:
+Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss WildFly:
 
     rhc app create -a helloworldrs -t APPLICATION_TYPE
 

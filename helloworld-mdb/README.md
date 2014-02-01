@@ -4,13 +4,13 @@ Author: Serge Pagop, Andy Taylor, Jeff Mesnil
 Level: Intermediate  
 Technologies: JMS, EJB, MDB  
 Summary: Demonstrates the use of JMS 1.1 and EJB 3.1 Message-Driven Bean  
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example demonstrates the use of *JMS 1.1* and *EJB 3.1 Message-Driven Bean* in JBoss Enterprise Application Platform 6 or JBoss AS 7.1.0.
+This example demonstrates the use of *JMS 1.1* and *EJB 3.1 Message-Driven Bean* in JBoss WildFly.1.0.
 
 This project creates two JMS resources:
 
@@ -23,7 +23,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -32,7 +32,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Full Profile
+Start JBoss WildFly with the Full Profile
 ---------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.
@@ -114,7 +114,7 @@ If you do not yet have an OpenShift account and domain, [Sign in to OpenShift](h
 
 ### Create the OpenShift Application
 
-Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss AS 7:
+Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss WildFly:
 
     rhc app create -a hellworldmdb -t APPLICATION_TYPE
 

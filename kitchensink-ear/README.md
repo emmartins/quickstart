@@ -1,25 +1,25 @@
-kitchensink-ear: Example Using Multiple Java EE 6 Technologies Deployed as an EAR
+kitchensink-ear: Example Using Multiple Java EE 7 Technologies Deployed as an EAR
 ==============================================================================================
 Author: Pete Muir
 Level: Intermediate
 Technologies: EAR
 Summary: Based on kitchensink, but deployed as an EAR
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly.
 
-This project is setup to allow you to create a compliant Java EE 6 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java. 
+This project is setup to allow you to create a compliant Java EE 7 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java.
 
 System requirements
 -------------------
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -28,7 +28,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

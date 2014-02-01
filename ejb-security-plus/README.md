@@ -4,8 +4,8 @@ Author: Darran Lofthouse
 Level: Advanced
 Technologies: EJB, Security
 Summary: Demonstrates how interceptors can be used to supply additional information to be used for authentication before EJB calls.
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
@@ -85,13 +85,13 @@ After the server is configured you will then need to define four user accounts, 
 
 _NOTE - Before you begin:_
 
-1. If it is running, stop the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server.
+1. If it is running, stop the JBoss WildFly Server.
 2. Backup the file: `JBOSS_HOME/standalone/configuration/standalone.xml`
 3. After you have completed testing this quickstart, you can replace this file to restore the server to its original configuration.
 
 #### Configure the Security Domain by Running the JBoss CLI Script
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following: 
+1. Start the JBoss WildFly Server by typing the following:
 
         For Linux:  JBOSS_HOME/bin/standalone.sh 
         For Windows:  JBOSS_HOME\bin\standalone.bat
@@ -131,7 +131,7 @@ Finally, restart the server to pick up these changes.
 
 ### Configure the Security Domain by Manually Editing the Server Configuration File
 
-1.  If it is running, stop the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server.
+1.  If it is running, stop the JBoss WildFly Server.
 2.  Backup the file: `JBOSS_HOME/standalone/configuration/standalone.xml`
 3.  Open the file: `JBOSS_HOME/standalone/configuration/standalone.xml`
 4.  Make the additions described below.
@@ -264,7 +264,7 @@ You can remove the security domain configuration by running the  `remove-securit
 
 ### Remove the Security Domain Configuration by Running the JBoss CLI Script
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following: 
+1. Start the JBoss WildFly Server by typing the following:
 
         For Linux:  JBOSS_HOME_SERVER_1/bin/standalone.sh
         For Windows:  JBOSS_HOME_SERVER_1\bin\standalone.bat
@@ -279,7 +279,7 @@ This script removes the `test` queue from the `messaging` subsystem in the serve
 
 
 ### Remove the Security Domain Configuration Manually
-1. If it is running, stop the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server.
+1. If it is running, stop the JBoss WildFly Server.
 2. Replace the `JBOSS_HOME/standalone/configuration/standalone.xml` file with the back-up copy of the file.
 
 

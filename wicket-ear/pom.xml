@@ -24,7 +24,7 @@
     <version>8.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>JBoss AS Quickstarts: Wicket EAR parent</name>
+    <name>WildFly Quickstarts: Wicket EAR parent</name>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -34,7 +34,7 @@
     </licenses>
 
     <description>
-        A sample JAVA EE 6 project demonstrating how to use Wicket Framework with JBoss AS 7.
+        A sample JAVA EE 6 project demonstrating how to use Wicket Framework with JBoss WildFly.
         EAR with EJB JAR and WAR version.
     </description>
 
@@ -55,11 +55,7 @@
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         
         <version.jboss.spec.javaee.7.0>1.0.0.Final</version.jboss.spec.javaee.7.0>
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.0.Final-redhat-2 which is a release certified
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.spec.javaee.7.0>1.0.0.Final-redhat-2</version.jboss.spec.javaee.7.0> -->
+
 
         <!-- Other dependency versions -->
         <version.org.apache.wicket>1.5.5</version.org.apache.wicket>
@@ -78,13 +74,13 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
                 a collection) of artifacts. We use this here so that we always get the correct 
-                versions of artifacts. Here we use the jboss-javaee-6.0-with-tools stack 
-                (you can read this as the JBoss stack of the Java EE 6 APIs, with some extras 
-                tools for your project, such as Arquillian for testing) and the jboss-javaee-6.0-with-hibernate 
-                stack you can read this as the JBoss stack of the Java EE 6 APIs, with extras 
+                versions of artifacts. Here we use the jboss-javaee-7.0-with-tools stack
+                (you can read this as the JBoss stack of the Java EE 7 APIs, with some extras
+                tools for your project, such as Arquillian for testing) and the jboss-javaee-7.0-with-hibernate
+                stack you can read this as the JBoss stack of the Java EE 7 APIs, with extras
                 from the Hibernate family of projects) -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
@@ -139,7 +135,7 @@
                         <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
-                <!-- The JBoss AS plugin deploys your ear to a local JBoss 
+                <!-- The WildFly plugin deploys your ear to a local JBoss
                     AS container -->
                 <!-- Due to Maven's lack of intelligence with EARs we need 
                     to configure the jboss-as maven plugin to skip deployment for all modules. 

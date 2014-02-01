@@ -23,10 +23,10 @@
     <artifactId>jboss-as-wsat-simple</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>JBoss AS Quickstarts: Simple WS-AT Web service</name>
-    <description>JBoss AS Quickstarts: Simple WS-AT Web service</description>
+    <name>WildFly Quickstarts: Simple WS-AT Web service</name>
+    <description>WildFly Quickstarts: Simple WS-AT Web service</description>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -50,11 +50,7 @@
 
         <version.arquillian.container>8.0.0.CR1</version.arquillian.container>
 
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.4.Final-redhat-3 which is a release certified 
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.bom>1.0.4.Final-redhat-3</version.jboss.bom> -->
+
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -68,15 +64,15 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Define the version of JBoss' Java EE 6 APIs and Tools we want to import.  -->
+            <!-- Define the version of JBoss' Java EE 7 APIs and Tools we want to import.  -->
 
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including a Bill
                 of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection)
                 of artifacts. We use this here so that we always get the correct versions
                 of artifacts.-->
 
-            <!-- This BOM provides the jboss-javaee-6.0 with tools stack (you can read this as
-                the JBoss stack of the Java EE 6 APIs, with some extras tools for your project, such
+            <!-- This BOM provides the jboss-javaee-7.0 with tools stack (you can read this as
+                the JBoss stack of the Java EE 7 APIs, with some extras tools for your project, such
                 as Arquillian for testing) -->
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
@@ -85,9 +81,9 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- This BOM provides the jboss-javaee-6.0 with transactions stack (you can read this as
-                the JBoss stack of the Java EE 6 APIs, with some extra transactions APIS for your project,
-                that are not included in the Java EE 6 API. -->
+            <!-- This BOM provides the jboss-javaee-7.0 with transactions stack (you can read this as
+                the JBoss stack of the Java EE 7 APIs, with some extra transactions APIS for your project,
+                that are not included in the Java EE 7 API. -->
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
                 <artifactId>jboss-javaee-7.0-with-transactions</artifactId>
@@ -112,14 +108,14 @@
             </exclusions>
         </dependency>
 
-        <!-- Import the CDI API, we use provided scope as the API is included in JBoss AS 7 -->
+        <!-- Import the CDI API, we use provided scope as the API is included in JBoss WildFly -->
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
         
-        <!-- Import the Servlet API, we use provided scope as the API is included in JBoss AS 7 -->
+        <!-- Import the Servlet API, we use provided scope as the API is included in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_3.1_spec</artifactId>
@@ -127,7 +123,7 @@
         </dependency>
 
         <!-- Import the Common Annotations API (JSR-250), we use provided scope
-            as the API is included in JBoss AS 7 -->
+            as the API is included in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
             <artifactId>jboss-annotations-api_1.2_spec</artifactId>
@@ -163,7 +159,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${version.war.plugin}</version>
                 <configuration>
-                    <!-- Java EE 6 doesn't require web.xml, Maven needs to catch up! -->
+                    <!-- Java EE 7 doesn't require web.xml, Maven needs to catch up! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <archive>
                         <manifestEntries>
@@ -172,7 +168,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!-- JBoss AS plugin to deploy war -->
+            <!-- WildFly plugin to deploy war -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
@@ -225,8 +221,8 @@
         <profile>
 
             <!-- An optional Arquillian testing profile that executes tests
-                in your JBoss AS instance -->
-            <!-- This profile will start a new JBoss AS instance, and execute the
+                in your WildFly instance -->
+            <!-- This profile will start a new WildFly instance, and execute the
                 test, shutting it down when done -->
             <!-- Run with: mvn clean test -Parq-jbossas-managed -->
             <id>arq-jbossas-managed</id>
@@ -242,7 +238,7 @@
 
         <profile>
             <!-- An optional Arquillian testing profile that executes tests
-                in a remote JBoss AS instance -->
+                in a remote WildFly instance -->
             <!-- Run with: mvn clean test -Parq-jbossas-remote -->
             <id>arq-jbossas-remote</id>
             <dependencies>
@@ -269,7 +265,7 @@
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
                             <warName>ROOT</warName>
-                            <!-- Java EE 6 doesn't require web.xml, Maven needs to catch up! -->
+                            <!-- Java EE 7 doesn't require web.xml, Maven needs to catch up! -->
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                         </configuration>
                     </plugin>

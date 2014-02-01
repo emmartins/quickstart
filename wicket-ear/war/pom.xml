@@ -28,7 +28,7 @@
     <artifactId>jboss-as-wicket-ear-war</artifactId>
     <packaging>war</packaging>
 
-    <name>JBoss AS Quickstarts: Wicket EAR: WAR</name>
+    <name>WildFly Quickstarts: Wicket EAR: WAR</name>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -89,7 +89,7 @@
         </resources>
 
         <plugins>
-            <!-- Skip JBoss AS plugin - only applicable for the EAR package. -->
+            <!-- Skip WildFly plugin - only applicable for the EAR package. -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>

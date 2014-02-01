@@ -21,11 +21,11 @@
     <groupId>org.wildfly.quickstarts</groupId>
     <artifactId>jboss-as-jts-parent</artifactId>
     <version>8.0.0-SNAPSHOT</version>
-    <name>JBoss AS Quickstarts: Java Transaction Service</name>
+    <name>WildFly Quickstarts: Java Transaction Service</name>
     <description>Using CMT with JTS</description>
     <packaging>pom</packaging>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -53,11 +53,6 @@
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         
         <version.jboss.spec.javaee.7.0>1.0.0.Final</version.jboss.spec.javaee.7.0>
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.0.Final-redhat-2 which is a release certified
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.spec.javaee.7.0>1.0.0.Final-redhat-2</version.jboss.spec.javaee.7.0> -->
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -71,11 +66,11 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
                 a collection) of artifacts. We use this here so that we always get the correct 
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read 
-                this as the JBoss stack of the Java EE 6 APIs) -->
+                versions of artifacts. Here we use the jboss-javaee-7.0 stack (you can read
+                this as the JBoss stack of the Java EE 7 APIs) -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
                 <artifactId>jboss-javaee-7.0</artifactId>
@@ -96,7 +91,7 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- The JBoss AS plugin deploys your war to a local JBoss 
+                <!-- The WildFly plugin deploys your war to a local JBoss
                     AS container -->
                 <!-- To use, set the JBOSS_HOME environment variable and 
                     run: mvn package jboss-as:deploy -->
@@ -109,7 +104,7 @@
         </pluginManagement>
 
         <plugins>
-            <!-- Disable the JBoss AS Plugin for this POM artifact -->
+            <!-- Disable the WildFly Plugin for this POM artifact -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>

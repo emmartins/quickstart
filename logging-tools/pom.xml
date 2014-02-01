@@ -23,10 +23,10 @@
     <artifactId>jboss-as-logging-tools</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>JBoss AS Quickstarts: jboss-as-logging-tools</name>
-    <description>JBoss AS Quickstarts: Demonstration of jboss-logging-tools using JAX-RS</description>
+    <name>WildFly Quickstarts: jboss-as-logging-tools</name>
+    <description>WildFly Quickstarts: Demonstration of jboss-logging-tools using JAX-RS</description>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -46,11 +46,7 @@
         
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.4.Final-redhat-3 which is a release certified 
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.bom>1.0.4.Final-redhat-3</version.jboss.bom> -->
+
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -63,16 +59,16 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Define the version of JBoss' Java EE 6 APIs we want to import. 
+            <!-- Define the version of JBoss' Java EE 7 APIs we want to import.
                 Any dependencies from org.jboss.spec will have their version defined by this 
                 BOM -->
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
                 a collection) of artifacts. We use this here so that we always get the correct
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can
-                read this as the JBoss stack of the Java EE 6 APIs). You can actually
-                use this stack with any version of JBoss AS that implements Java EE 6, not
-                just JBoss AS 7! -->
+                versions of artifacts. Here we use the jboss-javaee-7.0 stack (you can
+                read this as the JBoss stack of the Java EE 7 APIs). You can actually
+                use this stack with any version of WildFly that implements Java EE 7, not
+                just WildFly 8! -->
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
                 <artifactId>jboss-javaee-7.0-with-logging</artifactId>
@@ -117,7 +113,7 @@
                 <version>${version.war.plugin}</version>
             </plugin>
 
-            <!-- JBoss AS plugin to deploy war -->
+            <!-- WildFly plugin to deploy war -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>

@@ -23,7 +23,7 @@
 
     <name>ejb-throws-exception-ejb-api</name>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
        <license>
           <name>Apache License, Version 2.0</name>

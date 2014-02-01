@@ -5,14 +5,14 @@ Level: Intermediate
 Technologies: JAX-RS
 Summary: Demonstrates the use an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS
 Prerequisites: helloworld-rs
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
 This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses *CDI 1.0* and *JAX-RS* 
-in *JBoss Enterprise Application Platform 6* or *JBoss AS 7*.  
+in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
 
 This client "calls" the HelloWorld JAX-RS Web Service that was created in the `helloworld-rs` quickstart. See the **Prerequisite** section below for details on how to build and deploy the `helloworld-rs` quickstart.
 
@@ -22,7 +22,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven

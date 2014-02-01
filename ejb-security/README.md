@@ -4,13 +4,13 @@ Author: Sherif F. Makary
 Level: Intermediate
 Technologies: EJB, Security
 Summary: Shows how to use Java EE Declarative Security to Control Access to EJB 3
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example demonstrates the use of Java EE declarative security to control access to Servlets and EJBs in *JBoss Enterprise Application Platform 6* or *JBoss AS 7*.
+This example demonstrates the use of Java EE declarative security to control access to Servlets and EJBs in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
 
 This quickstart takes the following steps to implement EJB security:
 
@@ -40,7 +40,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
 
 Configure Maven
@@ -61,7 +61,7 @@ After you add the default `quickstartUser`, use the same steps to add a second a
         Roles:    app-user
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

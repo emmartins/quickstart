@@ -27,8 +27,8 @@
     <artifactId>jboss-as-quickstarts-dist</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>JBoss AS Quickstarts Distribution</name>
-    <description>JBoss AS Quickstarts Distribution</description>
+    <name>WildFly Quickstarts Distribution</name>
+    <description>WildFly Quickstarts Distribution</description>
     <url>http://github.com/jbossas/quickstart</url>
 
     <licenses>

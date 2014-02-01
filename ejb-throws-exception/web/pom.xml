@@ -23,9 +23,9 @@
     <artifactId>jboss-as-ejb-throws-exception-web</artifactId>
     <packaging>war</packaging>
 
-    <name>JBoss AS Quickstarts: EJB throws exception (WAR)</name>
+    <name>WildFly Quickstarts: EJB throws exception (WAR)</name>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
        <license>
           <name>Apache License, Version 2.0</name>
@@ -46,7 +46,7 @@
         </dependency>
 
         <!-- Import the JAX-RS API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>jaxrs-api</artifactId>
@@ -54,7 +54,7 @@
         </dependency>
 
         <!-- Import the CDI API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
@@ -62,7 +62,7 @@
         </dependency>
 
         <!-- Import the JPA API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>
@@ -84,7 +84,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${version.war.plugin}</version>
                 <configuration>
-                    <!-- Java EE 6 doesn't require web.xml, Maven needs to 
+                    <!-- Java EE 7 doesn't require web.xml, Maven needs to
                         catch up! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>

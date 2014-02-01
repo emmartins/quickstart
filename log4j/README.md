@@ -4,8 +4,8 @@ Author: Bartosz Baranowski
 Level: Beginner
 Technologies: JBoss Modules
 Summary: Demonstrates how to use modules to control class loading for 3rd party logging frameworks
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
@@ -13,9 +13,9 @@ What is it?
 This simple JSF 2.0 application shows how to use container defined modules to limit the size of the application package. It also shows how to use 
 common versions of certain classes at runtime.
 
-Applications must often depend on third-party libraries. By default, Java EE packages allow you to include dependencies in a deployable unit which can lead to uncontrolled growth of the deployable unit. This can be avoided by the use of container defined modules. A module is nothing more than a container managed binary dependency which is shared by all deployed applications. For more informatin on class loading and modules please refer to [Class Loading in AS7](https://docs.jboss.org/author/display/AS7/Class+Loading+in+AS7).  
+Applications must often depend on third-party libraries. By default, Java EE packages allow you to include dependencies in a deployable unit which can lead to uncontrolled growth of the deployable unit. This can be avoided by the use of container defined modules. A module is nothing more than a container managed binary dependency which is shared by all deployed applications. For more informatin on class loading and modules please refer to [Class Loading in WildFly](https://docs.jboss.org/author/display/WildFly/Class+Loading+in+WildFly).
 
-This example is very simple. It declares dependency on the Apache Log4j module which allows it to use a custom logging framework. This is achieved with a simple addition to the xml file: `src/main/webapp/WEB-INF/jboss-deployment-structure.xml`. For more information about this file please refer to <https://docs.jboss.org/author/display/AS7/Developer+Guide#DeveloperGuide-JBossDeploymentStructureFile> or the product documentation.
+This example is very simple. It declares dependency on the Apache Log4j module which allows it to use a custom logging framework. This is achieved with a simple addition to the xml file: `src/main/webapp/WEB-INF/jboss-deployment-structure.xml`. For more information about this file please refer to <https://docs.jboss.org/author/display/WildFly/Developer+Guide#DeveloperGuide-JBossDeploymentStructureFile> or the product documentation.
 
 
 System requirements
@@ -23,7 +23,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -32,7 +32,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

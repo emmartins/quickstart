@@ -27,7 +27,7 @@
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <name>JBoss AS Quickstarts: SingletonService (client)</name>
+    <name>WildFly Quickstarts: SingletonService (client)</name>
     <packaging>jar</packaging>
 
     <licenses>

@@ -23,8 +23,8 @@
     <artifactId>jboss-as-helloworld-osgi</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>JBoss AS Quickstarts: OSGi Helloworld</name>
-    <description>JBoss AS Quickstarts: OSGi Helloworld</description>
+    <name>WildFly Quickstarts: OSGi Helloworld</name>
+    <description>WildFly Quickstarts: OSGi Helloworld</description>
 
     <url>http://jboss.org/jbossas/osgi</url>
     <licenses>
@@ -47,11 +47,7 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.4.Final-redhat-3 which is a release certified 
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.bom>1.0.4.Final-redhat-3</version.jboss.bom> -->
+
 
         <!-- other plugin versions -->
         <version.bundle.plugin>2.3.4</version.bundle.plugin>
@@ -118,7 +114,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JBoss AS plugin to deploy artifact -->
+            <!-- WildFly plugin to deploy artifact -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>

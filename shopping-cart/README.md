@@ -4,13 +4,13 @@ Author: Serge Pagop
 Level: Intermediate
 Technologies: EJB
 Summary: Demonstrates a stateful session bean
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-In this example, you will learn how to deploy and run a simple Java EE 6 application named `shopping-cart` that uses a stateful session bean. The shopping-cart allows customers to buy, checkout and view their cart contents. 
+In this example, you will learn how to deploy and run a simple Java EE 7 application named `shopping-cart` that uses a stateful session bean. The shopping-cart allows customers to buy, checkout and view their cart contents.
 
 The shopping-cart application consists of the following:
 
@@ -27,7 +27,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -36,7 +36,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.
@@ -57,7 +57,7 @@ Build and Deploy the Quickstart
     For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
 
         mvn clean install jboss-as:deploy -s PATH_TO_QUICKSTARTS/example-settings.xml
-    For JBoss AS 7 or JBoss Enterprise Application Platform 6 (Maven user settings configured): 
+    For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
         mvn clean install jboss-as:deploy 
 4. This maven goal will deploy `server/target/jboss-as-shoppingcart-server.jar`. You can check the Application Server console to see information messages regarding the deployment.
@@ -72,7 +72,7 @@ Now start a client that will access the beans you just deployed:
 
         mvn exec:java -f client/pom.xml -s PATH_TO_QUICKSTARTS/example-settings.xml
 
-    For JBoss AS 7 or JBoss Enterprise Application Platform 6 (Maven user settings configured): 
+    For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
         mvn exec:java -f client/pom.xml 
 

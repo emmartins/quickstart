@@ -4,8 +4,8 @@ Author: Wolf-Dieter Fink
 Level: Advanced
 Technologies: EJB, HASingleton, JNDI
 Summary: A SingletonService deployed in a JAR started by SingletonStartup and accessed by an EJB
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
@@ -26,7 +26,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -37,7 +37,7 @@ You can copy or link to the Maven configuration information in the README file i
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with a HA profile
+Start JBoss WildFly with a HA profile
 -------------------------
 
 If you run a non HA profile the singleton service will not start correctly. To run the example one instance must be started, to see the singleton behaviour at minimum two instances

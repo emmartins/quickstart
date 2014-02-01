@@ -4,13 +4,13 @@ Author: David Bosschaert
 Level: Intermediate
 Technologies: OSGi
 Summary: Shows how to create and deploy a simple OSGi Bundle
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example demonstrates the use of *OSGi* in  *JBoss Enterprise Application Platform 6* or *JBoss AS 7*.
+This example demonstrates the use of *OSGi* in  *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
 
 There is a tutorial for this quickstart in the [Getting Started Developing Applications Guide](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/HelloworldOSGiQuickstart/).
 
@@ -20,7 +20,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -29,7 +29,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.
@@ -40,7 +40,7 @@ Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
             For Linux:   JBOSS_HOME/bin/standalone.sh  -c standalone-osgi.xml
             For Windows: JBOSS_HOME\bin\standalone.bat -c standalone-osgi.xml
 
-        For JBoss Enterprise Application Platform 6.0 or JBoss AS 7: 
+        For JBoss Enterprise Application Platform 6.0 or JBoss WildFly:
         
             For Linux:   JBOSS_HOME/bin/standalone.sh
             For Windows: JBOSS_HOME\bin\standalone.bat
@@ -65,7 +65,7 @@ Investigate the Server Console Output
 
 Look in the JBoss Application Server console or Server log and you should see the following message:
 
-    `Hello AS7 World!!`
+    `Hello WildFly World!!`
 
 
 Undeploy the Archive

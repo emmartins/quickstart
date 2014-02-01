@@ -1,18 +1,18 @@
-kitchensink-jsp: Example Using Multiple Java EE 6 Technologies with a JSP (JavaServer Pages) Front End
+kitchensink-jsp: Example Using Multiple Java EE 7 Technologies with a JSP (JavaServer Pages) Front End
 ======================================================================================================
 Author: Elvadas Nono
 Level: Intermediate
 Technologies: JSP
 Summary: Based on kitchensink, but uses a JSP for the user interface
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss AS 7 or JBoss Enterprise Application Platform 6. 
+This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly or JBoss Enterprise Application Platform 6.
 
-This project is setup to allow you to create a compliant Java EE 6 application using *JSP 2.0* *EL 2.0* *JSTL 1.2* *CDI 1.0*, *EJB 3.1*, *JPA 2.0* and Bean Validation 1.0. 
+This project is setup to allow you to create a compliant Java EE 7 application using *JSP 2.0* *EL 2.0* *JSTL 1.2* *CDI 1.0*, *EJB 3.1*, *JPA 2.0* and Bean Validation 1.0.
 
 This project recreates the presentation tier of the `kitchensink` quickstart using JSP and JSTL instead of JSF features. It reuses all other components from the Member Registration template. It also reuses the persistence unit and some sample persistence and transaction code to help you with database access in enterprise Java. 
 
@@ -21,7 +21,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -30,7 +30,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

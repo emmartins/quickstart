@@ -3,14 +3,14 @@ greeter-spring: Greeter Example using Spring 3.2
 Author: Marius Bogoevici
 Level: Beginner
 Technologies: Spring MVC, JSP, and JPA 2.0
-Summary: Demonstrates the use of JPA 2.0 and JSP in JBoss Enterprise Application Platform 6 or JBoss AS 7.
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Summary: Demonstrates the use of JPA 2.0 and JSP in JBoss WildFly.
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is this?
 -------------
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7.
+The application this project produces is designed to be run on JBoss WildFly.
 
 When you deploy this example, two users are automatically created for you: emuster and jdoe. This data is located in the `src/main/resources/init-db.sql` file.
 
@@ -37,14 +37,14 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7.
+The application this project produces is designed to be run on JBoss WildFly.
 
 Configure Maven
 ---------------
 
 If you have not yet done so, you must Configure Maven before testing the quickstarts.
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 ---------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

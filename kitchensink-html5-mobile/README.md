@@ -10,7 +10,7 @@ Source: https://github.com/jboss-jdf/jboss-as-quickstart
 What is it?
 -----------
 
-This is your project! It's a deployable Maven 3 project to help you get your foot in the door developing HTML5 based desktop/mobile web applications with Java EE 6 on JBoss. This project is setup to allow you to create a basic Java EE 6 application using HTML5, jQuery Mobile, JAX-RS, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
+This is your project! It's a deployable Maven 3 project to help you get your foot in the door developing HTML5 based desktop/mobile web applications with Java EE 7 on JBoss. This project is setup to allow you to create a basic Java EE 7 application using HTML5, jQuery Mobile, JAX-RS, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
 
 This application is built using a HTML5 + REST approach.  This uses a pure HTML client that interacts with with the application server via restful end-points (JAX-RS).  This application also uses some of the latest HTML5 features and advanced JAX-RS. And since testing is just as important with client side as it is server side, this application uses QUnit to show you how to unit test your JavaScript.
 
@@ -21,7 +21,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss AS 7 or JBoss Enterprise Application Platform 6.
+The application this project produces is designed to be run on JBoss WildFly or JBoss Enterprise Application Platform 6.
 
 An HTML5 compatible browser such as Chrome, Safari 5+, Firefox 5+, or IE 9+ are required. and note that some behaviors will vary slightly (ex. validations) based on browser support, especially IE 9.
 

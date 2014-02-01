@@ -28,7 +28,7 @@
     <artifactId>jboss-as-wicket-ear-ejb</artifactId>
     <packaging>ejb</packaging>
 
-    <name>JBoss AS Quickstarts: Wicket EAR: EJB JAR</name>
+    <name>WildFly Quickstarts: Wicket EAR: EJB JAR</name>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -39,7 +39,7 @@
 
     <dependencies>
 
-        <!-- "provided" scope used for API's included in JBoss AS 7. -->
+        <!-- "provided" scope used for API's included in JBoss WildFly. -->
 
         <!-- Import the Common Annotations API (JSR-250). -->
         <dependency>

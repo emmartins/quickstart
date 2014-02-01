@@ -5,8 +5,8 @@ Level: Intermediate
 Technologies: JPA, JAX-RS
 Summary: Demonstrates how to use JAX-RS and JPA together
 Prerequisites: tasks
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
@@ -25,7 +25,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7.
+The application this project produces is designed to be run on JBoss WildFly.
 
 
 Configure Maven
@@ -41,7 +41,7 @@ Add an Application User
 This quickstart uses a secured management interface and requires that you create an application user to access the running application. Instructions to set up an Application user can be found here:  [Add an Application User](../README.md#addapplicationuser).  After following these instructions. you should have created a user called `quickstartUser` with password `quickstartPwd1!`, belonging to the `guest` role.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.

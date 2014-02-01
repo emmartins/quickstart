@@ -4,13 +4,13 @@ Author: Jaikiran Pai, Mike Musgrove
 Level: Intermediate
 Technologies: EJB
 Summary: Shows how to access an EJB from a remote Java client program using JNDI
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 What is it?
 -----------
 
-This example shows how to access an EJB from a remote Java client application. It demonstrates the use of *EJB 3.1* and *JNDI* in *JBoss Enterprise Application Platform 6* or *JBoss AS 7*.
+This example shows how to access an EJB from a remote Java client application. It demonstrates the use of *EJB 3.1* and *JNDI* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
 
 There are two components to this example: 
 
@@ -29,7 +29,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
  
 Configure Maven
@@ -38,7 +38,7 @@ Configure Maven
 If you have not yet done so, you must [Configure Maven](../README.md#mavenconfiguration) before testing the quickstarts.
 
 
-Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile
+Start JBoss WildFly with the Web Profile
 -------------------------
 
 1. Open a command line and navigate to the root of the JBoss server directory.
@@ -65,7 +65,7 @@ Since this quickstart builds two separate components, you can not use the standa
 
             mvn clean install -s PATH_TO_QUICKSTARTS/example-settings.xml
 
-        For JBoss AS 7 or JBoss Enterprise Application Platform 6 (Maven user settings configured): 
+        For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
             mvn clean install        
     * Deploy the EJB JAR to your server. This maven goal will deploy `server-side/target/jboss-as-ejb-remote-app.jar`. You can check the JBoss server console to see information messages regarding the deployment.
@@ -81,7 +81,7 @@ Since this quickstart builds two separate components, you can not use the standa
 
             mvn clean compile -s PATH_TO_QUICKSTARTS/example-settings.xml
 
-        For JBoss AS 7 or JBoss Enterprise Application Platform 6 (Maven user settings configured): 
+        For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
             mvn clean compile
     * Execute the client application within Maven

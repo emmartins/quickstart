@@ -5,8 +5,8 @@ Level: Intermediate
 Technologies: JTS
 Summary: Uses Java Transaction Service (JTS) to coordinate distributed transactions
 Prerequisites: cmt
-Target Product: EAP
-Source: <https://github.com/jboss-jdf/jboss-as-quickstart/>
+Target Project: WildFly
+Source: <https://github.com/wildfly/quickstart/>
 
 
 What is it?
@@ -47,7 +47,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3.0 or better.
 
-The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+The application this project produces is designed to be run on JBoss WildFly.
 
 Configure Maven
 ---------------
@@ -88,13 +88,13 @@ You can configure the server by running the  `configure-jts-transactions.cli` sc
 
 _NOTE - Before you begin:_
 
-1. If it is running, stop the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server.
+1. If it is running, stop the JBoss WildFly Server.
 2. Backup the file: `JBOSS_HOME/standalone/configuration/standalone-full.xml`
 3. After you have completed testing this quickstart, you can replace this file to restore the server to its original configuration.
 
 #### Modify the Server Configuration by Running the JBoss CLI Script
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following: 
+1. Start the JBoss WildFly Server by typing the following:
 
         For Linux:  JBOSS_HOME/bin/standalone.sh -c standalone-full.xml
         For Windows:  JBOSS_HOME\bin\standalone.bat -c standalone-full.xml
@@ -111,7 +111,7 @@ This script configures the server to use jts transaction processing. You should 
 
 #### Modify the Server Configuration Using the JBoss CLI Tool Interactively
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following: 
+1. Start the JBoss WildFly Server by typing the following:
 
         For Linux:  JBOSS_HOME_SERVER_1/bin/standalone.sh -c standalone-full.xml
         For Windows:  JBOSS_HOME_SERVER_1\bin\standalone.bat -c standalone-full.xml
@@ -159,7 +159,7 @@ Make a copy of this JBoss directory structure to use for the second server.
     * [Add the PostgreSQL driver](../README.md#addpostgresqldriver) to the Application 1 server configuration file.
 
 
-Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Servers
+Start the JBoss WildFly Servers
 -------------------------
 
 If you are using Linux:
@@ -227,7 +227,7 @@ You can modify the server configuration by running the `remove-jts-transactions.
 
 ### Remove the JTS Server Configuration by Running the JBoss CLI Script
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following: 
+1. Start the JBoss WildFly Server by typing the following:
 
         For Linux:  JBOSS_HOME_SERVER_1/bin/standalone.sh -c standalone-full.xml
         For Windows:  JBOSS_HOME_SERVER_1\bin\standalone.bat -c standalone-full.xml
@@ -245,7 +245,7 @@ This script removes the `test` queue from the `messaging` subsystem in the serve
 
 ### Remove the JTS Server Configuration using the JBoss CLI Tool
 
-1. Start the JBoss Enterprise Application Platform 6 or JBoss AS 7 Server by typing the following. 
+1. Start the JBoss WildFly Server by typing the following.
 
         If you are using Linux:  JBOSS_HOME_SERVER_1/bin/standalone.sh -c standalone-full.xml
         If you are using Windows:  JBOSS_HOME_SERVER_1\bin\standalone.bat -c standalone-full.xml

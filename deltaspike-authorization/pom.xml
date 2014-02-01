@@ -23,10 +23,10 @@
     <artifactId>jboss-as-deltaspike-authorization</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>JBoss AS Quickstarts: DeltaSpike Authorization</name>
+    <name>WildFly Quickstarts: DeltaSpike Authorization</name>
     <description>DeltaSpike Authorization: shows a custom authorization example using security binding types from DeltaSpike</description>
 
-    <url>http://jboss.org/jbossas</url>
+    <url>http://wildfly.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -48,11 +48,7 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>8.0.0-SNAPSHOT</version.jboss.bom>
-        <!-- Alternatively, comment out the above line, and un-comment the 
-            line below to use version 1.0.4.Final-redhat-3 which is a release certified 
-            to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 
-            maven repository. -->
-        <!-- <version.jboss.bom>1.0.4.Final-redhat-3</version.jboss.bom> -->
+
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -65,13 +61,13 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
                 a collection) of artifacts. We use this here so that we always get the correct 
-                versions of artifacts. Here we use the jboss-javaee-6.0-with-deltaspike stack 
-                (you can read this as the JBoss stack of the Java EE 6 APIs with Deltaspike). 
-                You can actually use this stack with any version of JBoss AS that implements 
-                Java EE 6, not just JBoss AS 7! -->
+                versions of artifacts. Here we use the jboss-javaee-7.0-with-deltaspike stack
+                (you can read this as the JBoss stack of the Java EE 7 APIs with Deltaspike).
+                You can actually use this stack with any version of WildFly that implements
+                Java EE 7, not just WildFly 8! -->
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
                 <artifactId>jboss-javaee-7.0-with-deltaspike</artifactId>
@@ -85,7 +81,7 @@
     <dependencies>
 
         <!-- Import the Servlet API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_3.1_spec</artifactId>
@@ -93,7 +89,7 @@
         </dependency>
 
         <!-- Import the CDI API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
@@ -101,7 +97,7 @@
         </dependency>
 
         <!-- Import the Common Annotations API (JSR-250), we use provided 
-            scope as the API is included in JBoss AS 7 -->
+            scope as the API is included in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
             <artifactId>jboss-annotations-api_1.2_spec</artifactId>
@@ -109,7 +105,7 @@
         </dependency>
 
         <!-- Import the JSF API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.2_spec</artifactId>
@@ -117,7 +113,7 @@
         </dependency>
 
         <!-- Import the JPA API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>
@@ -125,7 +121,7 @@
         </dependency>
 
         <!-- Import the JPA API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.transaction</groupId>
             <artifactId>jboss-transaction-api_1.2_spec</artifactId>
@@ -133,14 +129,14 @@
         </dependency>
 
         <!-- Import the EJB API, we use provided scope as the API is included 
-            in JBoss AS 7 -->
+            in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
             <artifactId>jboss-ejb-api_3.2_spec</artifactId>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Import the Interceptors API, we use provided scope as the API is included in JBoss AS 7 -->
+        <!-- Import the Interceptors API, we use provided scope as the API is included in JBoss WildFly -->
         <dependency>
             <groupId>org.jboss.spec.javax.interceptor</groupId>
             <artifactId>jboss-interceptors-api_1.2_spec</artifactId>
@@ -188,12 +184,12 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${version.war.plugin}</version>
                 <configuration>
-                    <!-- Java EE 6 doesn't require web.xml, Maven needs to 
+                    <!-- Java EE 7 doesn't require web.xml, Maven needs to
                         catch up! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-            <!-- JBoss AS plugin to deploy war -->
+            <!-- WildFly plugin to deploy war -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
