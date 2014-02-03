@@ -45,8 +45,7 @@
 
         <version.wildfly.maven.plugin>1.0.0.Beta1</version.wildfly.maven.plugin>
 
-        <version.wildfly>8.0.0.CR1</version.wildfly>
-
+        <version.wildfly>8.0.0.Final-SNAPSHOT</version.wildfly>
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -81,7 +80,7 @@
                         <!--
                         <systemProperty>
                             <key>java.naming.provider.url</key>
-                            <value>remote://localhost:8080</value>
+                            <value>http-remoting://localhost:8080</value>
                         </systemProperty>
                         <systemProperty>
                             <key>username</key>
