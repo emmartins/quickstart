@@ -44,7 +44,7 @@
             BOM -->
         <!-- Define the version of JBoss' Java EE 7 APIs and Tools we want
             to import. -->
-        <jboss.bom.version>1.0.0.Final</jboss.bom.version>
+        <jboss.bom.version>8.0.0-SNAPSHOT</jboss.bom.version>
         <!-- Alternatively, comment out the above line, and un-comment the 
             line below to use version 1.0.0.Final-redhat-1 which is a release certified 
             to work with JBoss WildFly. It requires you have access to the JBoss WildFly
