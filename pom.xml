@@ -152,8 +152,6 @@
                 <module>ejb-in-war</module>
                 <module>ejb-remote</module>
                 <module>ejb-security</module>
-                <module>ejb-security-plus</module>
-                <module>ejb-security-interceptors</module>
                 <module>greeter</module>
                 <module>greeter-spring</module>
                 <module>helloworld</module>
@@ -220,7 +218,6 @@
                 <module>jax-rs-client</module>
                 <module>jts</module>
                 <module>inter-app</module>                
-                <module>ejb-security-plus</module>
             </modules>
         </profile>
         <profile>
