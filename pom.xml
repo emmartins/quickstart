@@ -153,7 +153,6 @@
                 <module>deltaspike-beanmanagerprovider</module>
                 <module>deltaspike-deactivatable</module>
                 <module>deltaspike-exception-handling</module>
-                <module>deltaspike-helloworld-jms</module>
                 <module>deltaspike-projectstage</module>
                 <module>ejb-asynchronous</module>
                 <module>ejb-in-ear</module>
@@ -165,20 +164,17 @@
                 <module>greeter</module>
                 <module>greeter-spring</module>
                 <module>helloworld</module>
-                <module>helloworld-errai</module>
                 <module>helloworld-gwt</module>
                 <module>helloworld-html5</module>
                 <module>helloworld-jdg</module>
                 <module>helloworld-jms</module>
                 <module>helloworld-mdb</module>
-                <module>helloworld-osgi</module>
                 <module>helloworld-rf</module>
                 <module>helloworld-rs</module>
                 <module>helloworld-singleton</module>
                 <module>helloworld-ws</module>
                 <module>hibernate3</module>
                 <module>hibernate4</module>
-                <module>hotrod-endpoint</module>
                 <module>kitchensink</module>
                 <module>kitchensink-angularjs</module>
                 <module>kitchensink-deltaspike</module>
@@ -187,22 +183,15 @@
                 <module>kitchensink-jsp</module>
                 <module>kitchensink-ml</module>
                 <module>kitchensink-ml-ear</module>
-                <module>kitchensink-rf</module>
-                <module>log4j</module>
                 <module>logging-tools</module>
                 <module>mail</module>
-                <module>memcached-endpoint</module>
                 <module>numberguess</module>
                 <module>payment-cdi-event</module>
-                <module>rest-endpoint</module>
-                <module>richfaces-validation</module>
                 <module>servlet-async</module>
                 <module>servlet-filterlistener</module>
                 <module>servlet-security</module>
                 <module>shopping-cart</module>
                 <module>tasks</module>
-                <module>tasks-jsf</module>
-                <module>tasks-rs</module>
                 <module>temperature-converter</module>
                 <module>wicket-ear</module>
                 <module>wicket-war</module>
@@ -283,9 +272,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <modules>
-                <module>forge-from-scratch</module>
                 <module>h2-console</module>
-                <module>kitchensink-cordova</module>
                 <module>jts-distributed-crash-rec</module>
             </modules>
         </profile>
