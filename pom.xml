@@ -143,17 +143,10 @@
                 <module>bmt</module>
                 <module>carmart</module>
                 <module>carmart-tx</module>
-                <module>cdi-add-interceptor-binding</module>
                 <module>cdi-alternative</module>
                 <module>cdi-injection</module>
                 <module>cdi-portable-extension</module>
                 <module>cdi-veto</module>
-                <module>deltaspike-authorization</module>
-                <module>deltaspike-beanbuilder</module>
-                <module>deltaspike-beanmanagerprovider</module>
-                <module>deltaspike-deactivatable</module>
-                <module>deltaspike-exception-handling</module>
-                <module>deltaspike-projectstage</module>
                 <module>ejb-asynchronous</module>
                 <module>ejb-in-ear</module>
                 <module>ejb-in-war</module>
@@ -177,7 +170,6 @@
                 <module>hibernate4</module>
                 <module>kitchensink</module>
                 <module>kitchensink-angularjs</module>
-                <module>kitchensink-deltaspike</module>
                 <module>kitchensink-ear</module>
                 <module>kitchensink-html5-mobile</module>
                 <module>kitchensink-jsp</module>
