@@ -157,7 +157,6 @@
                 <module>greeter</module>
                 <module>greeter-spring</module>
                 <module>helloworld</module>
-                <module>helloworld-gwt</module>
                 <module>helloworld-html5</module>
                 <module>helloworld-jdg</module>
                 <module>helloworld-jms</module>
