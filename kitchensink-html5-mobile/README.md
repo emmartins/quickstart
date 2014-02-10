@@ -54,13 +54,13 @@ To deploy the application, you first need to produce the archive to deploy using
 
 You can now deploy the artifact by executing the following command:
 
-    mvn jboss-as:deploy
+    mvn wildfly:deploy
 
 The client application will be running at the following URL <http://localhost:8080/jboss-as-kitchensink-html5-mobile/>.
 
 To undeploy run this command:
 
-    mvn jboss-as:undeploy
+    mvn wildfly:undeploy
 
 You can also start the JBoss container and deploy the project using JBoss Tools. See the <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a> for more information.
 
@@ -82,12 +82,12 @@ Finally, wro4j runs in the compile phase so any standard build command like pack
 NOTE: You must either specify the default profile for no tests or the arquillian test profile to run tests when minifying to avoid test errors. For example:
 
     #No Tests
-    mvn clean package jboss-as:deploy -Pminify,default
+    mvn clean package wildfly:deploy -Pminify,default
 
 OR
 
     #With Tests
-    mvn clean package jboss-as:deploy -Pminify,arq-jbossas-remote
+    mvn clean package wildfly:deploy -Pminify,arq-jbossas-remote
  
 Running the Arquillian tests
 ============================

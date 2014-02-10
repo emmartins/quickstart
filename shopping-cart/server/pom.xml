@@ -63,8 +63,8 @@
         <plugins>
             <!-- WildFly plugin to deploy the application -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
                 <configuration>
                     <skip>false</skip>
                 </configuration>

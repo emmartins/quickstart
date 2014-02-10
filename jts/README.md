@@ -183,7 +183,7 @@ Since this quickstart builds two separate components, you can not use the standa
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 
 4. This will deploy `application-component-1/target/jboss-as-jts-application-component-1.war` and `application-component-2/target/jboss-as-jts-application-component-2.jar` to the running instance of the server.
 
@@ -214,7 +214,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn package jboss-as:undeploy
+        mvn package wildfly:undeploy
 
 
 <a id="remove-jts-configuration"></a>

@@ -48,7 +48,7 @@ the following Maven goal:
 
 You can now deploy the artifact by executing the following command:
 
-    mvn jboss-as:deploy
+    mvn wildfly:deploy
 
 This will deploy both the client and service applications.
 
@@ -56,7 +56,7 @@ The application will be running at the following URL <http://localhost:8080/jbos
 
 To undeploy run this command:
 
-    mvn jboss-as:undeploy
+    mvn wildfly:undeploy
 
 You can also start the JBoss container and deploy the project using JBoss Tools. See the
 <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a>

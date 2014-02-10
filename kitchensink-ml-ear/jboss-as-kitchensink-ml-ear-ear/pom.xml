@@ -88,8 +88,8 @@
                 the jboss-as maven plugin to skip deployment for all modules. We then enable 
                 it specifically in the ear module. -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
                 <configuration>
                     <filename>${project.artifactId}.ear</filename>
                     <skip>false</skip>

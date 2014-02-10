@@ -48,7 +48,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 
 4. This will deploy `target/jboss-as-helloworld-gwt.war` to the running instance of the server.
 
@@ -66,7 +66,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Run the Application in GWT Dev Mode
@@ -75,7 +75,7 @@ Run the Application in GWT Dev Mode
 GWT Dev Mode provides an edit-save-refresh development experience. If you plan to modify this demo, we recommend you start the application in Dev Mode so you don't have to repackage the entire application every time you change it.
 
 1. Deploy the WAR file and start the JBoss Server as described above.
-2. Open a command line and navigate to the helloworld-errai quickstart directory
+2. Open a command line and navigate to the helloworld-gwt quickstart directory
 3. Execute the following command:
 
         mvn gwt:run

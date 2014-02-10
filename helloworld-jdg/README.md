@@ -67,12 +67,12 @@ for complete instructions and additional options._
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive to the first server:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 
 4. This will deploy `target/jboss-as-helloworld-jdg.war` to the first running instance of the server.
 5. Type this command to build and deploy the archive to the second server (running on different ports):
 
-        mvn clean package jboss-as:deploy -Djboss-as.port=10099
+        mvn clean package wildfly:deploy -Djboss-as.port=10099
 
 6. This will deploy `target/jboss-as-helloworld-jdg.war` to the second running instance of the server.
 
@@ -113,8 +113,8 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive from both running servers:
 
-        mvn jboss-as:undeploy
-        mvn jboss-as:undeploy -Ddeploy.port=10099
+        mvn wildfly:undeploy
+        mvn wildfly:undeploy -Ddeploy.port=10099
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

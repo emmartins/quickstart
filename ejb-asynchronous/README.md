@@ -52,7 +52,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean install jboss-as:deploy
+        mvn clean install wildfly:deploy
 4. This will deploy `service/target/jboss-as-ejb-asynchronous.jar` to the running instance of the server.
  
 Check whether the application is deployed successfully.
@@ -84,7 +84,7 @@ Access the application
 
           action 'fireAndForget' finished
 
-_NOTE: In WildFly.1.1.Final there is a bug that an ERROR will be logged that the result can not be written._
+_NOTE: In WildFly 8 there is a bug that an ERROR will be logged that the result can not be written._
 
 
 Undeploy the Archive
@@ -94,7 +94,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

@@ -54,7 +54,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
         
 4. This will deploy `target/jboss-as-carmart.war` to the running instance of the server.
  
@@ -72,7 +72,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Debug the Application
@@ -117,12 +117,12 @@ NOTE: The application must be deployed to JBoss WildFly. It can not be deployed 
 
 7. Deploy the application
 
-        mvn jboss-as:deploy -Premote
+        mvn wildfly:deploy -Premote
 
 8. The application will be running at the following URL: <http://localhost:8080/jboss-as-carmart/>
 
 9. Undeploy the application
 
-        mvn jboss-as:undeploy -Premote
+        mvn wildfly:undeploy -Premote
 
 

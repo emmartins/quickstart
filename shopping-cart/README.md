@@ -56,10 +56,10 @@ Build and Deploy the Quickstart
 
     For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
 
-        mvn clean install jboss-as:deploy -s PATH_TO_QUICKSTARTS/example-settings.xml
+        mvn clean install wildfly:deploy -s PATH_TO_QUICKSTARTS/example-settings.xml
     For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
-        mvn clean install jboss-as:deploy 
+        mvn clean install wildfly:deploy
 4. This maven goal will deploy `server/target/jboss-as-shoppingcart-server.jar`. You can check the Application Server console to see information messages regarding the deployment.
 
 
@@ -144,7 +144,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

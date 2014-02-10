@@ -85,10 +85,10 @@
             <!-- The WildFly plugin deploys your war to a local WildFly
                 container -->
             <!-- To use, set the JBOSS_HOME environment variable and run: 
-                mvn package jboss-as:deploy -->
+                mvn package wildfly:deploy -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
                 <configuration>
                     <port>10099</port>
                 </configuration>

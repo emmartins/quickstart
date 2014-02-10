@@ -89,9 +89,9 @@
             </plugin>
             <!-- WildFly plugin to deploy ear -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${version.jboss.maven.plugin}</version>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${version.wildfly.maven.plugin}</version>
                 <configuration>
                     <filename>${project.artifactId}.ear</filename>
                     <skip>false</skip>

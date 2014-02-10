@@ -38,7 +38,7 @@ Add an Application User
 This quickstart uses secured management interfaces and requires that you create an application user to access the running application. Instructions to set up the quickstart application user can be found here: [Add an Application User](../README.md#addapplicationuser)
 
 
-Configure the JBoss Enterprise Application Platform 6 server
+Configure the JBoss WildFly server
 ------------------------------------------------------------
 
 If you are using the JBoss WildFly Quickstart distribution, the server configuration file already contains the JMS `test` queue and you can skip this step.
@@ -121,7 +121,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 4. This will deploy `target/jboss-as-deltaspike-helloworld-jms.war` to the running instance of the server.
 
 Access the application
@@ -211,7 +211,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Remove the JMS Configuration

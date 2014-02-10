@@ -44,7 +44,7 @@
 
        <!-- JBoss dependency versions -->
 
-       <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
+       <version.wildfly.maven.plugin>1.0.0.Beta1</version.wildfly.maven.plugin>
 
         <version.wildfly>8.0.0.CR1</version.wildfly>
 
@@ -216,9 +216,9 @@
             <!-- The WildFly plugin deploys your apps to a local WildFly container -->
             <!-- Disabling it here means that we don't try to deploy this POM! -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${version.jboss.maven.plugin}</version>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${version.wildfly.maven.plugin}</version>
                 <inherited>true</inherited>
                 <configuration>
                     <skip>true</skip>

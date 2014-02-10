@@ -211,10 +211,10 @@
             </plugin>
             <!-- The WildFly plugin deploys your war to a local WildFly
                 container -->
-            <!-- To use, run: mvn package jboss-as:deploy -->
+            <!-- To use, run: mvn package wildfly:deploy -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.org.jboss.as.plugins.maven.plugin}</version>
             </plugin>
         </plugins>

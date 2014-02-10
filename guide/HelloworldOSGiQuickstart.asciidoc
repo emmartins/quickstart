@@ -25,7 +25,7 @@ link:http://www.jboss.org/jbossas/osgi[JBoss OSGi project pages].
 
 Switch to the `quickstarts/helloworld-osgi` directory and instruct Maven to build and deploy the application: 
 
-    mvn package jboss-as:deploy
+    mvn package wildfly:deploy
 
 Now, you should see the OSGi subsystem start up, and the bundle deployed and started:
 
@@ -36,10 +36,10 @@ image:gfx/console.png[]
 If you wish to undeploy the quickstart, or redeploy after making some 
 changes, it's pretty easy:
 
-* `mvn jboss-as:deploy` - deploy any changes to the application to the 
+* `mvn wildfly:deploy` - deploy any changes to the application to the
   application server 
 
-* `mvn jboss-as:undeploy` - undeploy the quickstart
+* `mvn wildfly:undeploy` - undeploy the quickstart
 ========================================================================
 
 

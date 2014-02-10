@@ -163,13 +163,13 @@ In some cases, you may want to build the application to test for compile errors 
 2. Open a command line and navigate to the root directory of the quickstart you want to run.
 3. Use this command to build and deploy the archive:
 
-            mvn clean package jboss-as:deploy
+            mvn clean package wildfly:deploy
 
 #### Undeploy an Archive
 
 The command to undeploy the quickstart is simply: 
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
  
 <a id="verifyall"></a>
 ### Verify the Quickstarts Build with One Command
@@ -198,7 +198,7 @@ You can undeploy quickstarts using the following procedure:
 2. Open a command line and navigate to the root directory of the quickstarts.
 3. Use this command to undeploy any deployed quickstarts:
 
-            mvn jboss-as:undeploy -fae
+            mvn wildfly:undeploy -fae
 
 To undeploy any quickstarts that fail due to complex dependencies, follow the undeploy procedure described in the quickstart's README file.
 
@@ -612,7 +612,7 @@ When instructed to use Byteman to halt the application, perform the following st
 
     For Linux, open the `JBOSS_HOME/bin/standalone.conf` file and append the following line:
 
-        JAVA_OPTS="-javaagent:/PATH_TO_BYTEMAN_DOWNLOAD/lib/byteman.jar=script:/PATH_TO_QUICKSTARTS/jta-crash-rec/src/main/scripts/xa.btm ${JAVA_OPTS}" 
+        JAVA_OPTS="-javaagent:/Users/martins/Downloads/byteman-download-2.1.4.1/lib/byteman.jar=script:/Users/martins/wildfly/git/quickstart/jta-crash-rec/src/main/scripts/xa.btm ${JAVA_OPTS}"
     For Windows, open the `JBOSS_HOME\bin\standalone.conf.bat` file and append the following line:
 
         SET "JAVA_OPTS=%JAVA_OPTS% -javaagent:C:PATH_TO_BYTEMAN_DOWNLOAD\lib\byteman.jar=script:C:\PATH_TO_QUICKSTARTS\jta-crash-rec\src\main\scripts\xa.btm %JAVA_OPTS%"

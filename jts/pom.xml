@@ -50,7 +50,7 @@
         
         <!-- JBoss dependency versions -->
         
-        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
+        <version.wildfly.maven.plugin>1.0.0.Beta1</version.wildfly.maven.plugin>
         
         <version.jboss.spec.javaee.7.0>1.0.0.Final</version.jboss.spec.javaee.7.0>
 
@@ -94,11 +94,11 @@
                 <!-- The WildFly plugin deploys your war to a local JBoss
                     AS container -->
                 <!-- To use, set the JBOSS_HOME environment variable and 
-                    run: mvn package jboss-as:deploy -->
+                    run: mvn package wildfly:deploy -->
                 <plugin>
-                    <groupId>org.jboss.as.plugins</groupId>
-                    <artifactId>jboss-as-maven-plugin</artifactId>
-                    <version>${version.jboss.maven.plugin}</version>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>${version.wildfly.maven.plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -106,8 +106,8 @@
         <plugins>
             <!-- Disable the WildFly Plugin for this POM artifact -->
             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
                 <inherited>false</inherited>
                 <configuration>
                     <skip>true</skip>

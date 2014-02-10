@@ -79,7 +79,7 @@ Contributor: If the server is started in a different manner than above, give the
 Build and Deploy the Quickstart
 -------------------------
 
-Contributor: If the quickstart is built and deployed using the standard Maven commands, "mvn clean package" and "mvn jboss-as:deploy", copy the following:
+Contributor: If the quickstart is built and deployed using the standard Maven commands, "mvn clean package" and "mvn wildfly:deploy", copy the following:
 
 _NOTE: The following build command assumes you have configured your Maven user settings. If you have not, you must include Maven setting arguments on the command line. See [Build and Deploy the Quickstarts](../README.md#buildanddeploy) for complete instructions and additional options._
 
@@ -87,7 +87,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 4. This will deploy `target/jboss-as-QUICKSTART_NAME.war` (or `target/jboss-as-QUICKSTART_NAME.ear`) to the running instance of the server.
  
 Contributor: Be sure to replace the QUICKSTART_NAME. If this quickstart requires different or additional instructions, be sure to modify or add those instructions here.
@@ -124,7 +124,7 @@ Contributor: For example:
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Run the Arquillian Tests (For quickstarts that contain Arquillian tests)

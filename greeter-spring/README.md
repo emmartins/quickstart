@@ -61,7 +61,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 
 4. This will deploy target/greeter-spring.war to the running instance of the server.
 
@@ -79,7 +79,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 Or you can manually remove the application by removing greeter-spring.war from JBOSS_HOME/standalone/deployments
 

@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of Java EE declarative security to control access to Servlets and EJBs in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+This example demonstrates the use of Java EE declarative security to control access to Servlets and EJBs in *JBoss WildFly*.
 
 This quickstart takes the following steps to implement EJB security:
 
@@ -80,7 +80,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
-        mvn clean package jboss-as:deploy
+        mvn clean package wildfly:deploy
 
 4. This will deploy `target/jboss-as-ejb-security.war` to the running instance of the server.
 
@@ -127,7 +127,7 @@ Undeploy the Archive
 2. Open a command line and navigate to the root directory of this quickstart.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

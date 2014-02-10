@@ -65,7 +65,7 @@ following logger block to the ./docs/examples/configs/standalone-xts.xml of your
             <level name="WARN"/>
         </logger>         
 
-Next you need to start JBoss WildFly (7.1.0.CR1 or above), with the XTS sub system enabled. This is enabled through the optional server configuration *standalone-xts.xml*. To do this, run the following commands from the top-level directory of JBossAS:
+Next you need to start JBoss WildFly, with the XTS sub system enabled. This is enabled through the optional server configuration *standalone-xts.xml*. To do this, run the following commands from the top-level directory of JBossAS:
 
         For Linux:     ./bin/standalone.sh --server-config=../../docs/examples/configs/standalone-xts.xml
         For Windows:   \bin\standalone.bat --server-config=..\..\docs\examples\configs\standalone-xts.xml

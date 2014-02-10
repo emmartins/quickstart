@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example shows how to access an EJB from a remote Java client application. It demonstrates the use of *EJB 3.1* and *JNDI* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+This example shows how to access an EJB from a remote Java client application. It demonstrates the use of *EJB 3.1* and *JNDI* in *JBoss WildFly*.
 
 There are two components to this example: 
 
@@ -61,27 +61,15 @@ Since this quickstart builds two separate components, you can not use the standa
         cd server-side
     * Build the EJB and client interfaces JARs and install them in your local Maven repository.
 
-        For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
-
-            mvn clean install -s PATH_TO_QUICKSTARTS/example-settings.xml
-
-        For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
-
             mvn clean install        
     * Deploy the EJB JAR to your server. This maven goal will deploy `server-side/target/jboss-as-ejb-remote-app.jar`. You can check the JBoss server console to see information messages regarding the deployment.
 
-            mvn jboss-as:deploy
+            mvn wildfly:deploy
 4. Build and run the client application
     * Navigate to the server-side subdirectory:
 
             cd ../client
     * Compile the client code
-
-        For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
-
-            mvn clean compile -s PATH_TO_QUICKSTARTS/example-settings.xml
-
-        For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
 
             mvn clean compile
     * Execute the client application within Maven
@@ -149,7 +137,7 @@ The remote client application can also be built as a standalone executable JAR w
       
 4. You can then run the executable JAR using `java -jar`:
       
-        java -jar target/jboss-as-quickstarts-ejb-remote-client-7.0.2-SNAPSHOT-jar-with-dependencies.jar
+        java -jar target/jboss-as-ejb-remote-client-jar-with-dependencies.jar
 
 
 Undeploy the Archive
@@ -162,7 +150,7 @@ To undeploy the server side component from the JBoss server:
         cd ../server-side
 2. Type the following command:
 
-        mvn jboss-as:undeploy
+        mvn wildfly:undeploy
 
 
 
