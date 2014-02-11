@@ -33,7 +33,7 @@ import org.jboss.as.quickstarts.ejb.asynchronous.AsynchronousAccess;
 import org.jboss.as.quickstarts.ejb.asynchronous.ParallelAccess;
 
 /**
- * A client to call the SingletonService via EJB remoting (AS7.1 / EAP6) to demonstrate the behaviour of asynchronous invocations.
+ * A client to call the SingletonService via EJB remoting (WildFly) to demonstrate the behaviour of asynchronous invocations.
  * 
  * @author <a href="mailto:wfink@redhat.com">Wolf-Dieter Fink</a>
  */

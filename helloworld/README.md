@@ -10,9 +10,9 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0* and *Servlet 3* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+This example demonstrates the use of *CDI 1.0* and *Servlet 3* in *JBoss WildFly*.
 
-There is a tutorial for this quickstart in the [Getting Started Developing Applications Guide](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/HelloworldQuickstart).
+There is a tutorial for this quickstart in the [Getting Started Developing Applications Guide](https://github.com/wildfly/quickstart/guide/HelloworldQuickstart).
 
 System requirements
 -------------------

@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This quickstart demonstrates how to use *CDI 1.0 Events* in  *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+This quickstart demonstrates how to use *CDI 1.0 Events* in  *JBoss WildFly*.
 
 The JSF front-end client allows you to create both credit and debit operation events.
 

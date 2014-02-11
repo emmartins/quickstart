@@ -17,9 +17,9 @@ Infinispan is configured in clustered distributed mode with synchronous replicat
 and are removed from the cache after 60 seconds since last update.
 
 HelloWorld-JDG example works in _Library mode_. In this mode, the application and the data grid are running in the same
-JVM. All libraries (JAR files) are bundled with the application and deployed to JBoss Enterprise Application Platform 6
-or JBoss WildFly.  The library usage mode only allows local access to a single node in a distributed cluster. This usage
-mode gives the application access to data grid functionality within a virtual machine in the container being used.
+JVM. All libraries (JAR files) are bundled with the application and deployed to JBoss WildFly. The library usage mode
+only allows local access to a single node in a distributed cluster. This usage mode gives the application access to
+data grid functionality within a virtual machine in the container being used.
 
 
 System requirements

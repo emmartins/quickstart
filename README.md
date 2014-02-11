@@ -34,7 +34,7 @@ The following is a list of the currently available quickstarts. The table lists 
 
 Some quickstarts are designed to enhance or extend other quickstarts. These are noted in the **Prerequisites** column. If a quickstart lists prerequisites, those must be installed or deployed before working with the quickstart.
 
-Quickstarts with tutorials in the [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/wildfly-quickstart/guide/Introduction/ "Get Started Developing Applications") are noted with two asterisks ( ** ) following the quickstart name.
+Quickstarts with tutorials in the [Get Started Developing Applications](https://github.com/wildfly/quickstart/guide/Introduction/ "Get Started Developing Applications") are noted with two asterisks ( ** ) following the quickstart name.
 
 [TOC-quickstart]
 
@@ -76,7 +76,7 @@ To run these quickstarts with the provided build scripts, you need the following
 Configure Maven 
 -------------
 
-<a id="as7mavenconfig"></a>
+<a id="wildflymavenconfig"></a>
 ### Configure Maven for JBoss WildFly
 
 If you are using the JBoss WildFly Quickstart distribution, the community artifacts are available in the Maven central repository so no additional configuration is needed.
@@ -230,7 +230,7 @@ You can run these tests using either a remote or managed container. The quicksta
             <container qualifier="jboss" default="true">
                 <!-- By default, arquillian will use the JBOSS_HOME environment variable.  Alternatively, the configuration below can be uncommented. -->
                 <!--<configuration> -->
-                <!--<property name="jbossHome">/path/to/jboss/as</property> -->
+                <!--<property name="jbossHome">/path/to/wildfly</property> -->
                 <!--</configuration> -->
             </container>
     * Remove the comments from the `<configuration>` elements.
@@ -239,10 +239,10 @@ You can run these tests using either a remote or managed container. The quicksta
             <container qualifier="jboss" default="true">
                 <!-- By default, arquillian will use the JBOSS_HOME environment variable.  Alternatively, the configuration below can be uncommented. -->
                 <configuration>
-                    <property name="jbossHome">/path/to/jboss/as</property>
+                    <property name="jbossHome">/path/to/wildfly</property>
                 </configuration>
             </container>
-    * Find the "jbossHome" property and replace the "/path/to/jboss/as" value with the actual path to your JBoss WildFly server.
+    * Find the "jbossHome" property and replace the "/path/to/wildfly" value with the actual path to your JBoss WildFly server.
     * Run the test goal with the following profile activated:
 
             mvn clean test -Parq-jbossas-managed
@@ -250,7 +250,7 @@ You can run these tests using either a remote or managed container. The quicksta
 <a id="useeclipse"></a>
 Use JBoss Developer Studio or Eclipse to Run the Quickstarts
 -------------------------------------
-You can also deploy the quickstarts from Eclipse using JBoss tools. For more information on how to set up Maven and the JBoss tools, refer to the [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
+You can also deploy the quickstarts from Eclipse using JBoss tools. For more information on how to set up Maven and the JBoss tools, refer to the [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) or [Get Started Developing Applications](https://github.com/wildfly/quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 
 <a id="optionalcomponents"></a>

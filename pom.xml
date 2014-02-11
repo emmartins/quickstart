@@ -30,7 +30,7 @@
     <packaging>pom</packaging>
     <name>WildFly Quickstarts Parent</name>
     <description>WildFly Quickstarts Parent</description>
-    <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
+    <url>https://github.com/wildfly/quickstart/</url>
 
     <licenses>
         <license>
@@ -137,8 +137,7 @@
                 </property>
             </activation>
             <modules>
-                <!-- All the modules that require nothing but JBoss Enterprise
-                    Application Platform or WildFly -->
+                <!-- All the modules that require nothing but WildFly -->
                 <module>bean-validation</module>
                 <module>bmt</module>
                 <module>carmart</module>

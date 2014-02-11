@@ -25,7 +25,7 @@ import javax.naming.NamingException;
 import org.jboss.as.quickstarts.cluster.hasingleton.service.ejb.ServiceAccess;
 
 /**
- * A client to call the SingletonService via EJB remoting (AS7) to demonstrate the behaviour of the singleton.
+ * A client to call the SingletonService via EJB remoting (WildFly) to demonstrate the behaviour of the singleton.
  *
  * @author <a href="mailto:wfink@redhat.com">Wolf-Dieter Fink</a>
  */

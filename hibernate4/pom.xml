@@ -150,7 +150,7 @@
             depending on features you want to use like Hibernate Session used in the 
             quickstart -->
         <!--please note that scope is provided as these jars are shipped 
-            with as7 -->
+            with wildfly -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>

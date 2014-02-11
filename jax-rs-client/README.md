@@ -12,7 +12,7 @@ What is it?
 -----------
 
 This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses *CDI 1.0* and *JAX-RS* 
-in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+in *JBoss WildFly*.
 
 This client "calls" the HelloWorld JAX-RS Web Service that was created in the `helloworld-rs` quickstart. See the **Prerequisite** section below for details on how to build and deploy the `helloworld-rs` quickstart.
 

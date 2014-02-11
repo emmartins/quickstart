@@ -18,7 +18,7 @@
 <cheatsheet title="EJB 3.1 Message-Driven Bean + Servlet 3.0 - HelloWorldMDB">
     <intro>
         <description>
-            This quickstart shows you how to deploy a simple EJB 3.1 Message-Driven Bean to JBoss AS. We use here a Servlet 3.0
+            This quickstart shows you how to deploy a simple EJB 3.1 Message-Driven Bean to WildFly. We use here a Servlet 3.0
             as Client to send several messages to the queue.
             <br />
             <br />

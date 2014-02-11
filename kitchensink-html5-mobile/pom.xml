@@ -391,7 +391,7 @@
                         <artifactId>maven-dependency-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>unpack-as7</id>
+                                <id>unpack-wildfly</id>
                                 <phase>process-test-classes</phase>
                                 <goals>
                                     <goal>unpack</goal>

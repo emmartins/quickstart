@@ -12,7 +12,7 @@ What is it?
 
 WildFly bundles H2 as an in-memory, in-process database. H2 is written in Java so can run on any platform WildFly runs.
 
-This is quickstart shows you how to use the H2 console with JBoss Enterprise Platform 6 or JBoss WildFly. It uses the `greeter` quickstart as a GUI for entering data.
+This is quickstart shows you how to use the H2 console with JBoss WildFly. It uses the `greeter` quickstart as a GUI for entering data.
 
 
 System requirements
@@ -42,7 +42,7 @@ Note: Unlike most of the quickstarts, this one requires JBoss WildFly.1.x or lat
 Deploy the H2 Console
 ------------------------
 
-This quickstart comes bundled with a version of the H2 Console built for JBoss Enterprise Application Platform 6 and JBoss WildFly. The changes that have been made to the stock console are described below.
+This quickstart comes bundled with a version of the H2 Console built for JBoss WildFly. The changes that have been made to the stock console are described below.
 
 Deploy the console by copying the `QUICKSTART_HOME/h2-console/h2console.war` to the `$JBOSS_HOME/standalone/deployments` directory. 
 
@@ -70,8 +70,8 @@ Take a look at the data added by the `greeter` application. Run the following SQ
 You should see the two users seeded by the `greeter` quickstart, plus any users you added when testing that application.
 
 
-Changes to the H2 Console for JBoss Enterprise Application Platform 6 and JBoss WildFly
+Changes to the H2 Console for JBoss WildFly
 ----------------------------------------
 
-To make the H2 console run on JBoss Enterprise Application Platform 6 and JBoss WildFly, the H2 libraries were removed from the WAR and a dependency on the H2 module was added to the META-INF/MANIFEST.MF fle. The rebuilt console is provided with this quickstart.
+To make the H2 console run on JBoss WildFly, the H2 libraries were removed from the WAR and a dependency on the H2 module was added to the META-INF/MANIFEST.MF fle. The rebuilt console is provided with this quickstart.
 

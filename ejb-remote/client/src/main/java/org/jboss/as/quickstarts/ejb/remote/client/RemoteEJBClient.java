@@ -25,7 +25,7 @@ import javax.naming.NamingException;
 import java.util.Hashtable;
 
 /**
- * A sample program which acts a remote client for a EJB deployed on AS7 server. This program shows how to lookup stateful and
+ * A sample program which acts a remote client for a EJB deployed on WildFly server. This program shows how to lookup stateful and
  * stateless beans via JNDI and then invoke on them
  * 
  * @author Jaikiran Pai
@@ -119,7 +119,7 @@ public class RemoteEJBClient {
         // <moduleName> By the default the module name is the name of the EJB JAR file (without the
         // .jar suffix). The module name might be overridden in the ejb-jar.xml
         //
-        // <distinctName> : AS7 allows each deployment to have an (optional) distinct name.
+        // <distinctName> : WildFly allows each deployment to have an (optional) distinct name.
         // This example does not use this so leave it blank.
         //
         // <beanName> : The name of the session been to be invoked.
@@ -153,7 +153,7 @@ public class RemoteEJBClient {
         // <moduleName> By the default the module name is the name of the EJB JAR file (without the
         // .jar suffix). The module name might be overridden in the ejb-jar.xml
         //
-        // <distinctName> : AS7 allows each deployment to have an (optional) distinct name.
+        // <distinctName> : WildFly allows each deployment to have an (optional) distinct name.
         // This example does not use this so leave it blank.
         //
         // <beanName> : The name of the session been to be invoked.

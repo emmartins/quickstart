@@ -34,7 +34,7 @@ If you have not yet done so, you must [Configure Maven](../README.md#mavenconfig
 Add the Correct Dependencies
 ---------------------------
 
-JBoss Enterprise Application Platform 6 and JBoss WildFly both provide Hibernate 3, Hibernate 4, and JPA support.
+JBoss WildFly both provide Hibernate 3, Hibernate 4, and JPA support.
 
 If you use Hibernate 4 packaged within JBoss WildFly, you will need to first import the JPA API.
 
@@ -56,7 +56,7 @@ For example:
          </exclusions>
       </dependency>
 
-Please note that if you are working with Hibernate 3, the process is different. You will need to bundle the jars since JBoss Enterprise Application Platform 6 and JBoss WildFly do not ship with Hibernate 3. Refer to the `hibernate3` quickstart for details on how to bundle the JARs.
+Please note that if you are working with Hibernate 3, the process is different. You will need to bundle the jars since JBoss WildFly do not ship with Hibernate 3. Refer to the `hibernate3` quickstart for details on how to bundle the JARs.
 
 
 Start JBoss WildFly with the Web Profile

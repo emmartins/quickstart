@@ -21,7 +21,7 @@ System requirements
 All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven
 3.0 or better.
 
-The application this project produces is designed to be run on JBoss WildFly or JBoss Enterprise Application Platform 6.
+The application this project produces is designed to be run on JBoss WildFly.
 
 An HTML5 compatible browser such as Chrome, Safari 5+, Firefox 5+, or IE 9+ are
 required.
@@ -59,7 +59,7 @@ To undeploy run this command:
     mvn wildfly:undeploy
 
 You can also start the JBoss container and deploy the project using JBoss Tools. See the
-<a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a>
+<a href="https://github.com/wildfly/quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a>
 for more information.
 
 ### Deploying to OpenShift
@@ -70,7 +70,7 @@ Importing the project into an IDE
 =================================
 
 Detailed instructions for using Eclipse / JBoss Tools with are provided in the
-<a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a>.
+<a href="https://github.com/wildfly/quickstart/guide/Introduction/" title="Getting Started Developing Applications Guide">Getting Started Developing Applications Guide</a>.
 
 If you created the project from the commandline using archetype:generate, then
 you need to import the project into your IDE. If you are using NetBeans 6.8 or

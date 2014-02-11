@@ -12,7 +12,7 @@ What is it?
 
 This example demonstrates sending email with the use of *CDI 1.0* and *JSF 2.0* in *JBoss WildFly*.
 
-The example uses the default Mail provider that comes out of the box with *JBoss Enterprise Application Platform 6* and *JBoss WildFly*.  It uses your local mail relay and the default SMTP port of 25.
+The example uses the default Mail provider that comes out of the box with *JBoss WildFly*.  It uses your local mail relay and the default SMTP port of 25.
 
 The configuration of the mail provider is found in the `JBOSS_HOME/standalone/configuration/standalone.xml` if you are running a standalone server or in the `JBOSS_HOME/domain/configuration/domain.xml` file if you are running in a managed domain. An example of the mail subsystem XML configuration is provided below:
 

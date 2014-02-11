@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly or JBoss Enterprise Application Platform 6.
+This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly.
 
 This project is setup to allow you to create a compliant Java EE 7 application using *JSP 2.0* *EL 2.0* *JSTL 1.2* *CDI 1.0*, *EJB 3.1*, *JPA 2.0* and Bean Validation 1.0.
 

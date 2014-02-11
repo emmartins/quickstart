@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0* and *PicketLink IDM* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*.
+This example demonstrates the use of *CDI 1.0* and *PicketLink IDM* in *JBoss WildFly*.
 
 System requirements
 -------------------

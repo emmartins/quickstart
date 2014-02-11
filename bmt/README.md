@@ -18,7 +18,7 @@ When you run this example, you will be provided with a `Use bean managed Entity 
 * If you check the checkbox, it shows the developer responsibilities when injecting an Entity Manager into a managed (stateless) bean.
 * If you uncheck the checkbox, shows the developer responsibilities when using JPA and transactions with an unmanaged component.
 
-JBoss Enterprise Application Platform 6 and JBoss WildFly ship with H2, an in-memory database written in Java. This example shows how to transactionally insert key value pairs into the H2 database and demonstrates the requirements on the developer with respect to the JPA Entity Manager.
+JBoss WildFly ship with H2, an in-memory database written in Java. This example shows how to transactionally insert key value pairs into the H2 database and demonstrates the requirements on the developer with respect to the JPA Entity Manager.
 
 _NOTE: A Java EE container is designed with robustness in mind, so you should carefully analyse the scaleabiltiy, concurrency and performance needs of you application before taking advantage of these techniques in your own applications._
 

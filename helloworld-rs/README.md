@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss WildFly* or *JBoss Enterprise Application Platform 6*.
+This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss WildFly*.
 
 
 System requirements

@@ -54,12 +54,8 @@ Build and Deploy the Quickstart
 2. Open a command line and navigate to the `shopping-cart` quickstart directory
 3. To build both the server component and the remote client program, deploy the server module, change into the examples shopping-cart directory and type the following:
 
-    For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
+    mvn clean install wildfly:deploy
 
-        mvn clean install wildfly:deploy -s PATH_TO_QUICKSTARTS/example-settings.xml
-    For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
-
-        mvn clean install wildfly:deploy
 4. This maven goal will deploy `server/target/jboss-as-shoppingcart-server.jar`. You can check the Application Server console to see information messages regarding the deployment.
 
 
@@ -68,13 +64,7 @@ Run the Client Application
 
 Now start a client that will access the beans you just deployed:
 
-    For JBoss Enterprise Application Platform 6 (Maven user settings NOT configured): 
-
-        mvn exec:java -f client/pom.xml -s PATH_TO_QUICKSTARTS/example-settings.xml
-
-    For JBoss WildFly or JBoss Enterprise Application Platform 6 (Maven user settings configured):
-
-        mvn exec:java -f client/pom.xml 
+    mvn exec:java -f client/pom.xml
 
 Investigate the Console Output
 -------------------------------

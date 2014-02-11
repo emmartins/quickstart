@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This quickstart demonstrates the use of an *EJB 3.1 Singleton Bean* in JBoss WildFly or JBoss Enterprise Application Platform 6.
+This quickstart demonstrates the use of an *EJB 3.1 Singleton Bean* in JBoss WildFly.
 
 System requirements
 -------------------

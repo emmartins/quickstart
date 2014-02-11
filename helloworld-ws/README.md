@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of *JAX-WS* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly* as a simple Hello World application.
+This example demonstrates the use of *JAX-WS* in *JBoss WildFly* as a simple Hello World application.
 
 System requirements
 -------------------

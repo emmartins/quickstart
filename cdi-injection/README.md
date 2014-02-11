@@ -10,7 +10,7 @@ Source: <https://github.com/wildfly/quickstart/>
 What is it?
 -----------
 
-This example demonstrates the use of *CDI 1.0 Injection and Qualifiers* in *JBoss Enterprise Application Platform 6* or *JBoss WildFly*  with JSF as the front-end client.
+This example demonstrates the use of *CDI 1.0 Injection and Qualifiers* in *JBoss WildFly* with JSF as the front-end client.
 
 
 System requirements

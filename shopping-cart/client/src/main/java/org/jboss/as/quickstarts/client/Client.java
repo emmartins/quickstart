@@ -60,7 +60,7 @@ public class Client {
         final String moduleName = "jboss-as-shoppingcart-server";
 
         /*
-         * AS7 allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB
+         * WildFly allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB
          * deployment, so this is an empty string
          */
         final String distinctName = "";

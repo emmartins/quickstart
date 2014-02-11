@@ -23,7 +23,7 @@ The relational database table in this example contains two columns that represen
 
 In this example, you halt the JBoss server in the middle of an XA transaction after the database modification has been committed, but before the JMS producer is committed. You can verify that the transaction was started, then restart the JBoss server to complete the transaction. You then verify that everything is in a consistent state.
 
-JBoss Enterprise Application Platform 6 and JBoss WildFly ship with H2, an in-memory database written in Java. In this example, we use H2 for the database. Although H2 XA support is not recommended for production systems, the example does illustrate the general steps you need to perform for any datasource vendor. This example provides its own H2 XA datasource configuration. It is defined in the `jta-crash-rec-ds.xml` file in the WEB-INF folder of the WAR archive.
+JBoss WildFly ship with H2, an in-memory database written in Java. In this example, we use H2 for the database. Although H2 XA support is not recommended for production systems, the example does illustrate the general steps you need to perform for any datasource vendor. This example provides its own H2 XA datasource configuration. It is defined in the `jta-crash-rec-ds.xml` file in the WEB-INF folder of the WAR archive.
 
 
 System requirements
@@ -129,10 +129,8 @@ Test the application
 6. If you want to verify the database insert was committed but that message delivery is still pending, you can use an SQL client such as the H2 database console tool. Issue a query to show that the value is present but does not contain the message added by the consumer (*" updated via JMS"*). Here is how you can do it using H2:
     * Start the H2 console by typing:
 
-            For JBoss Enterprise Application Platform 6: 
-                  java -cp $JBOSS_HOME/modules/com/h2database/h2/main/h2*.jar org.h2.tools.Console
-            For JBoss WildFly:
-                  java -jar $JBOSS_HOME/modules/com/h2database/h2/main/h2*.jar
+            java -jar $JBOSS_HOME/modules/com/h2database/h2/main/h2*.jar
+
     * Log in:
        
             Database URL: jdbc:h2:file:~/jta-crash-rec-quickstart
