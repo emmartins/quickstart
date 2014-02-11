@@ -152,7 +152,6 @@
                 <module>ejb-remote</module>
                 <module>ejb-security</module>
                 <module>greeter</module>
-                <module>greeter-spring</module>
                 <module>helloworld</module>
                 <module>helloworld-html5</module>
                 <module>helloworld-jdg</module>
