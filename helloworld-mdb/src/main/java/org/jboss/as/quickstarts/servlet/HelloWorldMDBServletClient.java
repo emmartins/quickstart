@@ -89,13 +89,13 @@ public class HelloWorldMDBServletClient extends HttpServlet {
                 messageProducer.send(message);
                 out.write("Message (" + i + "): " + message.getText() + "</br>");
             }
-            out.write("<p><i>Go to your JBoss Application Server console or Server log to see the result of messages processing</i></p>");
+            out.write("<p><i>Go to your WildFly console or Server log to see the result of messages processing</i></p>");
 
         } catch (JMSException e) {
             e.printStackTrace();
             out.write("<h2>A problem occurred during the delivery of this message</h2>");
             out.write("</br>");
-            out.write("<p><i>Go your the JBoss Application Server console or Server log to see the error stack trace</i></p>");
+            out.write("<p><i>Go your the WildFly console or Server log to see the error stack trace</i></p>");
         } finally {
             if (connection != null) {
                 try {

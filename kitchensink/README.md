@@ -51,13 +51,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
 
-4. This will deploy `target/jboss-as-kitchensink.war` to the running instance of the server.
+4. This will deploy `target/wildfly-kitchensink.war` to the running instance of the server.
  
 
 Access the application 
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-as-kitchensink/>.
+The application will be running at the following URL: <http://localhost:8080/wildfly-kitchensink/>.
 
 
 Undeploy the Archive
@@ -81,7 +81,7 @@ _NOTE: The following commands assume you have configured your Maven user setting
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
-        mvn clean test -Parq-jbossas-remote 
+        mvn clean test -Parq-wildfly-remote
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

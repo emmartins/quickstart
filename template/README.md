@@ -88,7 +88,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 3. Type this command to build and deploy the archive:
 
         mvn clean package wildfly:deploy
-4. This will deploy `target/jboss-as-QUICKSTART_NAME.war` (or `target/jboss-as-QUICKSTART_NAME.ear`) to the running instance of the server.
+4. This will deploy `target/wildfly-QUICKSTART_NAME.war` (or `target/wildfly-QUICKSTART_NAME.ear`) to the running instance of the server.
  
 Contributor: Be sure to replace the QUICKSTART_NAME. If this quickstart requires different or additional instructions, be sure to modify or add those instructions here.
 
@@ -98,7 +98,7 @@ Access the application (For quickstarts that have a UI component)
 
 Contributor: Provide the URL to access the running application. Be sure to make the URL a hyperlink as below, substituting the your quickstart name for the QUICKSTART_NAME. 
 
-        Access the running application in a browser at the following URL:  <http://localhost:8080/jboss-as-QUICKSTART_NAME>
+        Access the running application in a browser at the following URL:  <http://localhost:8080/wildfly-QUICKSTART_NAME>
 
 
 Contributor: Briefly describe what you will see when you access the application. For example: 
@@ -140,7 +140,7 @@ _NOTE: The following commands assume you have configured your Maven user setting
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
-        mvn clean test -Parq-jbossas-remote 
+        mvn clean test -Parq-wildfly-remote
 
 Contributor: The quickstart README should show what to expect from the the tests
 

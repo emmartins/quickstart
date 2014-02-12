@@ -21,11 +21,11 @@
 
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>jboss-as-wicket-ear-parent</artifactId>
+        <artifactId>wildfly-wicket-ear-parent</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jboss-as-wicket-ear-ear</artifactId>
+    <artifactId>wildfly-wicket-ear-ear</artifactId>
     <packaging>ear</packaging>
 
     <name>WildFly Quickstarts: Wicket EAR: EAR package</name>
@@ -42,14 +42,14 @@
         <!-- EJB JAR module. -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-wicket-ear-ejb</artifactId>
+            <artifactId>wildfly-wicket-ear-ejb</artifactId>
             <type>ejb</type>
         </dependency>
 
         <!-- WAR module. -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-wicket-ear-war</artifactId>
+            <artifactId>wildfly-wicket-ear-war</artifactId>
             <type>war</type>
         </dependency>
     </dependencies>
@@ -69,13 +69,13 @@
                         automatically have any modules (EJB-JARs and WARs) use them -->
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
-                        <!-- Default context root of the web app is /jboss-as-wicket-ear-web. 
+                        <!-- Default context root of the web app is /wildfly-wicket-ear-web.
                             If a custom context root is needed, uncomment the following snippet to register 
                             our War as a web module and set the contextRoot property -->
                         <!-- <webModule> -->
                         <!-- <groupId>org.wildfly.quickstarts</groupId> -->
-                        <!-- <artifactId>jboss-as-wicket-ear-web</artifactId> -->
-                        <!-- <contextRoot>/jboss-as-wicket</contextRoot> -->
+                        <!-- <artifactId>wildfly-wicket-ear-web</artifactId> -->
+                        <!-- <contextRoot>/wildfly-wicket</contextRoot> -->
                         <!-- </webModule> -->
                     </modules>
                     <fileNameMapping>no-version</fileNameMapping>

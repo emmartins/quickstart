@@ -217,7 +217,7 @@ You can run these tests using either a remote or managed container. The quicksta
     * A remote container requires you start the JBoss WildFly server before running the test. [Start the JBoss Server](#startjboss) as described in the quickstart README file.
     * Run the test goal with the following profile activated:
 
-            mvn clean test -Parq-jbossas-remote 
+            mvn clean test -Parq-wildfly-remote
 <a id="testmanaged"></a>
 
 2. Test the quickstart on Managed Server
@@ -245,7 +245,7 @@ You can run these tests using either a remote or managed container. The quicksta
     * Find the "jbossHome" property and replace the "/path/to/wildfly" value with the actual path to your JBoss WildFly server.
     * Run the test goal with the following profile activated:
 
-            mvn clean test -Parq-jbossas-managed
+            mvn clean test -Parq-wildfly-managed
 
 <a id="useeclipse"></a>
 Use JBoss Developer Studio or Eclipse to Run the Quickstarts
@@ -505,7 +505,7 @@ _NOTE - Before you begin:_
         For Windows:  JBOSS_HOME_SERVER_1\bin\standalone.bat -c standalone-full.xml
 2. Open a new command line, navigate to the root directory of the quickstarts, and run the following command, replacing JBOSS_HOME with the path to your server:
 
-        JBOSS_HOME/bin/jboss-cli.sh --connect --file=configure-postgres-driver.cli 
+        JBOSS_HOME/bin/jboss-cli.sh --connect --file=configure-postgresql.cli
 This script adds the PostgreSQL driver to the datasources subsystem in the server configuration. You should see the following result when you run the script:
 
         #1 /subsystem=datasources/jdbc-driver=postgresql:add(driver-name=postgresql,driver-module-name=org.postgresql,driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)

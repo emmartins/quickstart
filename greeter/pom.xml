@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-greeter</artifactId>
+    <artifactId>wildfly-greeter</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>WildFly Quickstarts: Greeter</name>

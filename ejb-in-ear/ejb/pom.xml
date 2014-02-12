@@ -25,12 +25,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>jboss-as-ejb-in-ear</artifactId>
+        <artifactId>wildfly-ejb-in-ear</artifactId>
         <groupId>org.wildfly.quickstarts</groupId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jboss-as-ejb-in-ear-ejb</artifactId>
+    <artifactId>wildfly-ejb-in-ear-ejb</artifactId>
     <name>WildFly Quickstarts: EJB and War in an Ear - EJB</name>
     <description>WildFly Quickstarts: EJB and War in an Ear - EJB</description>
 

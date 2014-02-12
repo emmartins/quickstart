@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-helloworld-singleton</artifactId>
+    <artifactId>wildfly-helloworld-singleton</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>WildFly Quickstarts: Helloworld Singleton Session Bean with JSF 2.0 as client</name>

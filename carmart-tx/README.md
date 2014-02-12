@@ -23,7 +23,7 @@ Infinispan ships with several transaction manager lookup classes:
 - **DummyTransactionManagerLookup** : This provides with a dummy transaction manager which should only be used for testing.  Being a dummy, this is not recommended for production use a it has some severe limitations to do with concurrent transactions and recovery.
 - **JBossStandaloneJTAManagerLookup** : If you're running Infinispan in a standalone environment, this should be your default choice for transaction manager. It's a fully fledged transaction manager based on JBoss Transactions which overcomes all the deficiencies of the dummy transaction manager.
 - **GenericTransactionManagerLookup** : This is a lookup class that locate transaction managers in the most  popular Java EE application servers _(JBoss, JRun4, Resin, Orion, JOnAS, BEA Weblogic, Websphere, Glassfish)_. If no transaction manager can be found, it defaults on the dummy transaction manager.
-- **JBossTransactionManagerLookup** : This lookup class locates the transaction manager running within a JBoss Application Server instance.
+- **JBossTransactionManagerLookup** : This lookup class locates the transaction manager running within a WildFly instance.
 
 
 
@@ -62,13 +62,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
         
-4. This will deploy `target/jboss-as-carmart-tx.war` to the running instance of the server.
+4. This will deploy `target/wildfly-carmart-tx.war` to the running instance of the server.
  
 
 Access the application
 ---------------------
 
-Access the running application in a browser at the following URL:  <http://localhost:8080/jboss-as-carmart-tx/>
+Access the running application in a browser at the following URL:  <http://localhost:8080/wildfly-carmart-tx/>
 
 
 Undeploy the Archive

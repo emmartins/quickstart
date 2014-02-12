@@ -19,14 +19,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jboss-as-ejb-asynchronous-ejb</artifactId>
+    <artifactId>wildfly-ejb-asynchronous-ejb</artifactId>
     <name>WildFly Quickstarts: Asynchronous method invocations (EJB Jar)</name>
-    <description>jboss-as-ejb-asynchronous: The application jar with an asynchronous EJB and a second EJB to demonstrate how an EJB can be used asynchronous</description>
+    <description>wildfly-ejb-asynchronous: The application jar with an asynchronous EJB and a second EJB to demonstrate how an EJB can be used asynchronous</description>
     <packaging>ejb</packaging>
     
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>jboss-as-ejb-asynchronous</artifactId>
+        <artifactId>wildfly-ejb-asynchronous</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 

@@ -58,12 +58,12 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean install wildfly:deploy
 
-4. This will deploy `service/target/jboss-as-cluster-ha-singleton-service.jar` to the running instance of the server.
+4. This will deploy `service/target/wildfly-cluster-ha-singleton-service.jar` to the running instance of the server.
 5. Type this command to deploy the archive to the second server (or more) and replace the port, depending on your settings:
 
-        mvn wildfly:deploy -Djboss-as.port=10099
+        mvn wildfly:deploy -Dwildfly.port=10090
 
-6. This will deploy `service/target/jboss-as-cluster-ha-singleton-service.jar` to the running instance of the additional server.
+6. This will deploy `service/target/wildfly-cluster-ha-singleton-service.jar` to the running instance of the additional server.
  
 Check whether the application is deployed on each instance.
 All instances will have a message:
@@ -105,7 +105,7 @@ Undeploy the Archive
 3. When you are finished testing, type this command to undeploy the archive:
 
         mvn wildfly:undeploy
-        mvn wildfly:undeploy -Djboss-as.port=10099
+        mvn wildfly:undeploy -Dwildfly.port=10090
 
 
 Run the Quickstart in JBoss Developer Studio or Eclipse

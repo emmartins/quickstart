@@ -16,7 +16,7 @@
 
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>jboss-as-ejb-throws-exception</artifactId>
+        <artifactId>wildfly-ejb-throws-exception</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
@@ -39,17 +39,17 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-ejb-throws-exception-web</artifactId>
+            <artifactId>wildfly-ejb-throws-exception-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-ejb-throws-exception-ejb</artifactId>
+            <artifactId>wildfly-ejb-throws-exception-ejb</artifactId>
             <type>ejb</type>
         </dependency>
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-ejb-throws-exception-ejb-api</artifactId>
+            <artifactId>wildfly-ejb-throws-exception-ejb-api</artifactId>
         </dependency>
     </dependencies>
 
@@ -73,7 +73,7 @@
             <!-- The WildFly plugin deploys your ear to a local WildFly
                 container -->
             <!-- Due to Maven's lack of intelligence with EARs we need to 
-                configure the jboss-as maven plugin to skip deployment for all modules. We 
+                configure the wildfly maven plugin to skip deployment for all modules. We
                 then enable it specifically in the ear module. -->
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>

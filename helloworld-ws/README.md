@@ -47,12 +47,12 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
 
-4. This will deploy `target/jboss-as-helloworld-ws.war` to the running instance of the server.
+4. This will deploy `target/wildfly-helloworld-ws.war` to the running instance of the server.
 
 Access the application 
 ---------------------
 
-You can check that the Web Service is running and deployed correctly by accessing the following URL: <http://localhost:8080/jboss-as-helloworld-ws?wsdl>. This URL will display the deployed WSDL endpoint for the Web Service.
+You can check that the Web Service is running and deployed correctly by accessing the following URL: <http://localhost:8080/wildfly-helloworld-ws?wsdl>. This URL will display the deployed WSDL endpoint for the Web Service.
 
 
 Undeploy the Archive
@@ -76,7 +76,7 @@ _NOTE: The following commands assume you have configured your Maven user setting
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
-		mvn clean test -Parq-jbossas-remote
+		mvn clean test -Parq-wildfly-remote
 
 
 Investigate the Console Output
@@ -84,7 +84,7 @@ Investigate the Console Output
 
 The following expected output should appear. The output shows what was said to the Web Service by the client and the responses it received.
 
-    WSDL Deployment URL: http://localhost:8080/jboss-as-helloworld-ws/HelloWorldService?wsdl
+    WSDL Deployment URL: http://localhost:8080/wildfly-helloworld-ws/HelloWorldService?wsdl
     [Client] Requesting the WebService to say Hello.
     [WebService] Hello World!
     [Client] Requesting the WebService to say Hello to John.
@@ -117,7 +117,7 @@ If you do not yet have an OpenShift account and domain, [Sign in to OpenShift](h
 
 ### Create the OpenShift Application
 
-Note that we use the `jboss-as-quickstart@jboss.org` user for these examples. You need to substitute it with your own user name.
+Note that we use the `wildfly-quickstart@jboss.org` user for these examples. You need to substitute it with your own user name.
 
 Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss WildFly:
 
@@ -178,7 +178,7 @@ You can now deploy the changes to your OpenShift application using git as follow
 
 The final push command triggers the OpenShift infrastructure to build and deploy the changes. 
 
-Note that the `openshift` profile in `pom.xml` is activated by OpenShift, and causes the war build by openshift to be copied to the `deployments` directory, and deployed to the "jboss-as-helloworld-ws" context path.
+Note that the `openshift` profile in `pom.xml` is activated by OpenShift, and causes the war build by openshift to be copied to the `deployments` directory, and deployed to the "wildfly-helloworld-ws" context path.
 
 ### Access the OpenShift Application
 
@@ -188,7 +188,7 @@ Now you will start to tail the log files of the server. To do this run the follo
 
 Once the app is deployed, you can test the application by accessing the following URL either via a browser or using tools such as curl or wget. Be sure to replace the `quickstart` in the URL with your domain name.
 
-    http://helloworldws-quickstart.rhcloud.com/jboss-as-helloworld-ws/HelloWorldService?wsdl
+    http://helloworldws-quickstart.rhcloud.com/wildfly-helloworld-ws/HelloWorldService?wsdl
 
 If the application has run successfully you should see some output in the browser.
 

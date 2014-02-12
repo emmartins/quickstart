@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-ejb-asynchronous</artifactId>
+    <artifactId>wildfly-ejb-asynchronous</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WildFly Quickstarts: Asynchronous method invocations</name>
@@ -98,7 +98,7 @@
                 ejb jar -->
             <dependency>
                 <groupId>org.wildfly.quickstarts</groupId>
-                <artifactId>jboss-as-ejb-asynchronous-ejb</artifactId>
+                <artifactId>wildfly-ejb-asynchronous-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb-client</type>
             </dependency>

@@ -20,12 +20,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>jboss-as-kitchensink-ml-ear</artifactId>
+        <artifactId>wildfly-kitchensink-ml-ear</artifactId>
         <groupId>org.wildfly.quickstarts</groupId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jboss-as-kitchensink-ml-ear-ear</artifactId>
+    <artifactId>wildfly-kitchensink-ml-ear-ear</artifactId>
     <packaging>ear</packaging>
 
     <name>WildFly Quickstarts: Kitchensink EAR: EAR Module</name>
@@ -44,12 +44,12 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-kitchensink-ml-ear-web</artifactId>
+            <artifactId>wildfly-kitchensink-ml-ear-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-kitchensink-ml-ear-ejb</artifactId>
+            <artifactId>wildfly-kitchensink-ml-ear-ejb</artifactId>
             <type>ejb</type>
         </dependency>
     </dependencies>
@@ -69,14 +69,14 @@
                         have any modules (EJB-JARs and WARs) use them -->
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
-                        <!-- Default context root of the web app is /jboss-as-kitchensink-ml-ear-web. 
+                        <!-- Default context root of the web app is /wildfly-kitchensink-ml-ear-web.
                         If a custom context root is needed, uncomment the following snippet to
                         register our War as a web module and set the contextRoot property -->
                         <!--
                         <webModule>
                             <groupId>org.wildfly.quickstarts</groupId>
-                            <artifactId>jboss-as-kitchensink-ml-ear-web</artifactId>
-                            <contextRoot>/jboss-as-kitchensink-ml-ear</contextRoot>
+                            <artifactId>wildfly-kitchensink-ml-ear-web</artifactId>
+                            <contextRoot>/wildfly-kitchensink-ml-ear</contextRoot>
                         </webModule>
                         -->
                     </modules>
@@ -85,7 +85,7 @@
             </plugin>
             <!-- The WildFly plugin deploys your ear to a local WildFly container -->
             <!-- Due to Maven's lack of intelligence with EARs we need to configure 
-                the jboss-as maven plugin to skip deployment for all modules. We then enable 
+                the wildfly maven plugin to skip deployment for all modules. We then enable
                 it specifically in the ear module. -->
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>

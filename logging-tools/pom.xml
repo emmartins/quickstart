@@ -20,10 +20,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-logging-tools</artifactId>
+    <artifactId>wildfly-logging-tools</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>WildFly Quickstarts: jboss-as-logging-tools</name>
+    <name>WildFly Quickstarts: wildfly-logging-tools</name>
     <description>WildFly Quickstarts: Demonstration of jboss-logging-tools using JAX-RS</description>
 
     <url>http://wildfly.org</url>

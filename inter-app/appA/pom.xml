@@ -19,14 +19,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jboss-as-inter-app-A</artifactId>
+    <artifactId>wildfly-inter-app-A</artifactId>
     <packaging>war</packaging>
     <name>WildFly Quickstarts: Inter-application (Application A)</name>
     <description>Inter-application: Shows how to communicate between two applications using EJB and CDI</description>
 
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>jboss-as-inter-app-parent</artifactId>
+        <artifactId>wildfly-inter-app-parent</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
@@ -59,7 +59,7 @@
             the dependency at runtime. -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-inter-app-shared</artifactId>
+            <artifactId>wildfly-inter-app-shared</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -82,7 +82,7 @@
                         in the POM, which defines the dependency at compile time. -->
                     <archive>
                         <manifestEntries>
-                            <Dependencies>deployment.jboss-as-inter-app-shared.jar</Dependencies>
+                            <Dependencies>deployment.wildfly-inter-app-shared.jar</Dependencies>
                         </manifestEntries>
                     </archive>
                 </configuration>

@@ -52,14 +52,14 @@ _NOTE: The following commands assume you have configured your Maven user setting
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
-        mvn clean test -Parq-jbossas-remote 
+        mvn clean test -Parq-wildfly-remote
 
 
 Run tests from JBDS
 -----------------------
 
-To be able to run the tests from JBDS, first set the active Maven profile in project properties to be either 'arq-jbossas-managed' for running on
-managed server or 'arq-jbossas-remote' for running on remote server.
+To be able to run the tests from JBDS, first set the active Maven profile in project properties to be either 'arq-wildfly-managed' for running on
+managed server or 'arq-wildfly-remote' for running on remote server.
 
 To run the tests, right click on the project or individual classes and select Run As --> JUnit Test in the context menu.
 

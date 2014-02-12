@@ -89,13 +89,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
 
-4. This will deploy `target/jboss-as-cmt.war` to the running instance of the server.
+4. This will deploy `target/wildfly-cmt.war` to the running instance of the server.
 
 Access the application 
 ---------------------
-To access the application type the following into a browser: <http://localhost:8080/jboss-as-cmt/>
+To access the application type the following into a browser: <http://localhost:8080/wildfly-cmt/>
 
-The application will be running at the following URL: <http://localhost:8080/jboss-as-cmt/>.
+The application will be running at the following URL: <http://localhost:8080/wildfly-cmt/>.
 
 You will be presented with a simple form for adding customers to a database.
 

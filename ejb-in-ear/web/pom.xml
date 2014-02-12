@@ -25,12 +25,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>jboss-as-ejb-in-ear</artifactId>
+        <artifactId>wildfly-ejb-in-ear</artifactId>
         <groupId>org.wildfly.quickstarts</groupId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jboss-as-ejb-in-ear-web</artifactId>
+    <artifactId>wildfly-ejb-in-ear-web</artifactId>
     <packaging>war</packaging>
 
     <name>WildFly Quickstarts: EJB and War in an Ear - WEB</name>
@@ -49,7 +49,7 @@
         <!-- Import the ejb project so that the JSF managed bean can use the EJB -->
         <dependency>
             <groupId>org.wildfly.quickstarts</groupId>
-            <artifactId>jboss-as-ejb-in-ear-ejb</artifactId>
+            <artifactId>wildfly-ejb-in-ear-ejb</artifactId>
             <type>ejb</type>
             <scope>provided</scope>
         </dependency>

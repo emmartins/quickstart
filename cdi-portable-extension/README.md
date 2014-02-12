@@ -61,14 +61,14 @@ _NOTE: The following commands assume you have configured your Maven user setting
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
 
-        mvn clean test -Parq-jbossas-remote
+        mvn clean test -Parq-wildfly-remote
 
 
 Run tests from JBDS
 -----------------------
 
-To be able to run the tests from JBDS, first set the active Maven profile in project properties to be either 'arq-jbossas-managed' for running on
-managed server or 'arq-jbossas-remote' for running on remote server.
+To be able to run the tests from JBDS, first set the active Maven profile in project properties to be either 'arq-wildfly-managed' for running on
+managed server or 'arq-wildfly-remote' for running on remote server.
 
 To run the tests, right click on the project or individual classes and select Run As --> JUnit Test in the context menu.
 
@@ -110,7 +110,7 @@ There are two logging statements done when the tests are run:
     15:07:13,495 INFO  [org.jboss.as.server] (management-handler-thread - 5) JBAS018559: Deployed "test.war"
     15:07:13,922 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) JBAS016009: Stopping weld service for deployment test.war
     15:07:13,932 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015877: Stopped deployment test.war in 16ms
-    15:07:14,039 INFO  [org.jboss.as.repository] (management-handler-thread - 6) JBAS014901: Content removed from location /home/jporter/java_libraries/jboss-as/build/target/jboss-as-7.1.1.Final/standalone/data/content/4d/40e4e277a16327b45b62954d70d91bbf3fcf42/content
+    15:07:14,039 INFO  [org.jboss.as.repository] (management-handler-thread - 6) JBAS014901: Content removed from location /home/jporter/java_libraries/wildfly/build/target/wildfly-8.0.0.Final/standalone/data/content/4d/40e4e277a16327b45b62954d70d91bbf3fcf42/content
     15:07:14,040 INFO  [org.jboss.as.server] (management-handler-thread - 6) JBAS018558: Undeployed "test.war"
 
 The two statements to look for are these:

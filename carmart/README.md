@@ -56,13 +56,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
         
-4. This will deploy `target/jboss-as-carmart.war` to the running instance of the server.
+4. This will deploy `target/wildfly-carmart.war` to the running instance of the server.
  
 
 Access the application
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-as-carmart/>
+The application will be running at the following URL: <http://localhost:8080/wildfly-carmart/>
 
 
 Undeploy the Archive
@@ -119,7 +119,7 @@ NOTE: The application must be deployed to JBoss WildFly. It can not be deployed 
 
         mvn wildfly:deploy -Premote
 
-8. The application will be running at the following URL: <http://localhost:8080/jboss-as-carmart/>
+8. The application will be running at the following URL: <http://localhost:8080/wildfly-carmart/>
 
 9. Undeploy the application
 

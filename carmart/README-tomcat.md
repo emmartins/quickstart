@@ -67,13 +67,13 @@ Build and Deploy the Application in Library Mode
 
         mvn -Plibrary-tomcat clean package tomcat:deploy
         
-4. This will deploy `target/jboss-as-carmart.war` to the running instance of EWS/tomcat.
+4. This will deploy `target/wildfly-carmart.war` to the running instance of EWS/tomcat.
 
 
 Access the application
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-as-carmart/>
+The application will be running at the following URL: <http://localhost:8080/wildfly-carmart/>
 
 
 Undeploy the Archive

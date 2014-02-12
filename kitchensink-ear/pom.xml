@@ -20,7 +20,7 @@
     <name>WildFly Quickstarts: Kitchensink EAR</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-kitchensink-ear</artifactId>
+    <artifactId>wildfly-kitchensink-ear</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -33,9 +33,9 @@
         </license>
     </licenses>
     <modules>
-        <module>jboss-as-kitchensink-ear-ejb</module>
-        <module>jboss-as-kitchensink-ear-web</module>
-        <module>jboss-as-kitchensink-ear-ear</module>
+        <module>wildfly-kitchensink-ear-ejb</module>
+        <module>wildfly-kitchensink-ear-web</module>
+        <module>wildfly-kitchensink-ear-ear</module>
     </modules>
 
     <properties>
@@ -75,7 +75,7 @@
                 to repeat ourselves in every module -->
             <dependency>
                 <groupId>org.wildfly.quickstarts</groupId>
-                <artifactId>jboss-as-kitchensink-ear-ejb</artifactId>
+                <artifactId>wildfly-kitchensink-ear-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -84,7 +84,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>org.wildfly.quickstarts</groupId>
-                <artifactId>jboss-as-kitchensink-ear-web</artifactId>
+                <artifactId>wildfly-kitchensink-ear-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
@@ -133,7 +133,7 @@
                 <!-- The WildFly plugin deploys your ear to a local JBoss
                     AS container -->
                 <!-- Due to Maven's lack of intelligence with EARs we need 
-                    to configure the jboss-as maven plugin to skip deployment for all modules. 
+                    to configure the wildfly maven plugin to skip deployment for all modules.
                     We then enable it specifically in the ear module. -->
                 <plugin>
                     <groupId>org.wildfly.plugins</groupId>

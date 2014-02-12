@@ -62,7 +62,7 @@ Since this quickstart builds two separate components, you can not use the standa
     * Build the EJB and client interfaces JARs and install them in your local Maven repository.
 
             mvn clean install        
-    * Deploy the EJB JAR to your server. This maven goal will deploy `server-side/target/jboss-as-ejb-remote-app.jar`. You can check the JBoss server console to see information messages regarding the deployment.
+    * Deploy the EJB JAR to your server. This maven goal will deploy `server-side/target/wildfly-ejb-remote-app.jar`. You can check the JBoss server console to see information messages regarding the deployment.
 
             mvn wildfly:deploy
 4. Build and run the client application
@@ -137,7 +137,7 @@ The remote client application can also be built as a standalone executable JAR w
       
 4. You can then run the executable JAR using `java -jar`:
       
-        java -jar target/jboss-as-ejb-remote-client-jar-with-dependencies.jar
+        java -jar target/wildfly-ejb-remote-client-jar-with-dependencies.jar
 
 
 Undeploy the Archive

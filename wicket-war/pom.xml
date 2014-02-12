@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-wicket-war</artifactId>
+    <artifactId>wildfly-wicket-war</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

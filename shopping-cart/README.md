@@ -56,7 +56,7 @@ Build and Deploy the Quickstart
 
     mvn clean install wildfly:deploy
 
-4. This maven goal will deploy `server/target/jboss-as-shoppingcart-server.jar`. You can check the Application Server console to see information messages regarding the deployment.
+4. This maven goal will deploy `server/target/wildfly-shoppingcart-server.jar`. You can check the Application Server console to see information messages regarding the deployment.
 
 
 Run the Client Application

@@ -31,7 +31,7 @@ The quickstart uses a Maven plugin to deploy the application. The plugin require
 
 Or you can start the server using an IDE, like Eclipse.
 
-Now, check if the application has deployed properly by clicking http://localhost:8080/jboss-as-kitchensink. If you see a splash page it's all working!
+Now, check if the application has deployed properly by clicking http://localhost:8080/wildfly-kitchensink. If you see a splash page it's all working!
 
 
 [TIP]
@@ -51,7 +51,7 @@ Deploying the Kitchensink quickstart using JBoss Developer Studio, or Eclipse wi
 
 You may choose to deploy the quickstart using JBoss Developer Studio, or Eclipse with JBoss Tools. You'll need to have JBoss WildFly started in the IDE (as described  in <<GettingStarted-with_jboss_tools, Starting the JBoss server from JBDS or Eclipse with JBoss Tools>>) and to have imported the quickstarts into Eclipse (as described in <<GettingStarted-importing_quickstarts_into_eclipse,Importing the quickstarts into Eclipse>>).
 
-With the quickstarts imported, you can deploy the quickstart by right clicking on the `jboss-as-kitchensink` project, and choosing _Run As -> Run On Server_:
+With the quickstarts imported, you can deploy the quickstart by right clicking on the `wildfly-kitchensink` project, and choosing _Run As -> Run On Server_:
 
 image:gfx/Eclipse_KitchenSink_Deploy_1.jpg[]
 
@@ -115,7 +115,7 @@ Next, let's take a look at the JSF view the user sees. As usual, we use a templa
             <p>Learn more about JBoss WildFly.</p>
             <ul>
                 <li>
-                    <a href="http://jboss.org/jdf/quickstarts/jboss-as-quickstart/guide">
+                    <a href="http://jboss.org/jdf/quickstarts/wildfly-quickstart/guide">
                         Getting Started Developing Applications Guide
                     </a>
                 </li>
@@ -714,12 +714,12 @@ image:gfx/eclipse_arquillian_0.png[]
 
 Now, make sure the server is not running (so that the instance started for running the test does not interfere), and then run the tests from the command line by typing:
 
-    mvn clean test -Parq-jbossas-managed
+    mvn clean test -Parq-wildfly-managed
 
 You should see the server start up, a `test.war` deployed, test executed, and then the results displayed to you on the console: 
 
 ------------------------------------------------------------------------
-$ > mvn clean test -Parq-jbossas-managed
+$ > mvn clean test -Parq-wildfly-managed
 
 
 [INFO] Scanning for projects...
@@ -728,25 +728,25 @@ $ > mvn clean test -Parq-jbossas-managed
 [INFO] Building WildFly Quickstarts: Kitchensink 7.0.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO]
-[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ jboss-as-kitchensink ---
-[INFO] Deleting /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ wildfly-kitchensink ---
+[INFO] Deleting /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target
 [INFO]
-[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ jboss-as-kitchensink ---
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ wildfly-kitchensink ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 2 resources
 [INFO]
-[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ jboss-as-kitchensink ---
-[INFO] Compiling 6 source files to /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/classes
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ wildfly-kitchensink ---
+[INFO] Compiling 6 source files to /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/classes
 [INFO]
-[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ jboss-as-kitchensink ---
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ wildfly-kitchensink ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO]
-[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ jboss-as-kitchensink ---
-[INFO] Compiling 1 source file to /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/test-classes
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ wildfly-kitchensink ---
+[INFO] Compiling 1 source file to /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/test-classes
 [INFO]
-[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ jboss-as-kitchensink ---
-[INFO] Surefire report directory: /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/surefire-reports
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ wildfly-kitchensink ---
+[INFO] Surefire report directory: /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/surefire-reports
 
 -------------------------------------------------------
  T E S T S
@@ -849,12 +849,12 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 ------------------------------------------------------------------------
 
-As you can see, that didn't take too long (approximately 15s), and is great for running in your QA environment, but if you running locally, you might prefer to connect to a running server. To do that, start up JBoss WildFly (as described in <<GettingStarted-, Getting Started with JBoss Enterprise Application Platform of WildFly>>. Now, run your test, but use the `arq-jbossas-remote` profile:
+As you can see, that didn't take too long (approximately 15s), and is great for running in your QA environment, but if you running locally, you might prefer to connect to a running server. To do that, start up JBoss WildFly (as described in <<GettingStarted-, Getting Started with JBoss Enterprise Application Platform of WildFly>>. Now, run your test, but use the `arq-wildfly-remote` profile:
 
-    mvn clean test -Parq-jbossas-remote
+    mvn clean test -Parq-wildfly-remote
 
 ------------------------------------------------------------------------
-$ > mvn clean test -Parq-jbossas-remote
+$ > mvn clean test -Parq-wildfly-remote
 
 
 [INFO] Scanning for projects...
@@ -863,25 +863,25 @@ $ > mvn clean test -Parq-jbossas-remote
 [INFO] Building WildFly Quickstarts: Kitchensink 7.0.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO]
-[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ jboss-as-kitchensink ---
-[INFO] Deleting /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ wildfly-kitchensink ---
+[INFO] Deleting /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target
 [INFO]
-[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ jboss-as-kitchensink ---
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ wildfly-kitchensink ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 2 resources
 [INFO]
-[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ jboss-as-kitchensink ---
-[INFO] Compiling 6 source files to /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/classes
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ wildfly-kitchensink ---
+[INFO] Compiling 6 source files to /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/classes
 [INFO]
-[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ jboss-as-kitchensink ---
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ wildfly-kitchensink ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO]
-[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ jboss-as-kitchensink ---
-[INFO] Compiling 1 source file to /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/test-classes
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ wildfly-kitchensink ---
+[INFO] Compiling 1 source file to /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/test-classes
 [INFO]
-[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ jboss-as-kitchensink ---
-[INFO] Surefire report directory: /Users/pmuir/workspace/jboss-as-docs/quickstarts/kitchensink/target/surefire-reports
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ wildfly-kitchensink ---
+[INFO] Surefire report directory: /Users/pmuir/workspace/wildfly-docs/quickstarts/kitchensink/target/surefire-reports
 
 ------------------------------------------------------
  T E S T S
@@ -925,7 +925,7 @@ Now, locate the Maven panel:
 
 image:gfx/eclipse_arquillian_2.png[]
 
-And activate the `arq-jbossas-managed` profile: 
+And activate the `arq-wildfly-managed` profile:
 
 image:gfx/eclipse_arquillian_3.png[]
 
@@ -939,7 +939,7 @@ image:gfx/eclipse_arquillian_12.png[]
 
 You should see the server start in the Eclipse Console, the test be deployed, and finally the JUnit View pop up with the result (a pass of course!).
 
-We can also run the test in an already running instance of Eclipse. Simply change the active profile to `arq-jbossas-remote`:
+We can also run the test in an already running instance of Eclipse. Simply change the active profile to `arq-wildfly-remote`:
 
 image:gfx/eclipse_arquillian_11.png[]
 
@@ -1049,13 +1049,13 @@ Now, we need to look at how we select between containers in the `pom.xml`:
         in your WildFly instance -->
     <!-- This profile will start a new WildFly instance, and
         execute the test, shutting it down when done -->
-    <!-- Run with: mvn clean test -Parq-jbossas-managed -->
-    <id>arq-jbossas-managed</id>                                     <1>
+    <!-- Run with: mvn clean test -Parq-wildfly-managed -->
+    <id>arq-wildfly-managed</id>                                     <1>
     <dependencies>
         <dependency>
             <groupId>org.jboss.as</groupId>
             <artifactId>                                             <2>
-                jboss-as-arquillian-container-managed
+                wildfly-arquillian-container-managed
             </artifactId>
             <scope>test</scope>
         </dependency>
@@ -1065,13 +1065,13 @@ Now, we need to look at how we select between containers in the `pom.xml`:
 <profile>
     <!-- An optional Arquillian testing profile that executes 
         tests in a remote WildFly instance -->
-    <!-- Run with: mvn clean test -Parq-jbossas-remote -->
-    <id>arq-jbossas-remote</id>
+    <!-- Run with: mvn clean test -Parq-wildfly-remote -->
+    <id>arq-wildfly-remote</id>
     <dependencies>
         <dependency>
             <groupId>org.jboss.as</groupId>
             <artifactId>                                             <3>
-                jboss-as-arquillian-container-remote
+                wildfly-arquillian-container-remote
             </artifactId>
             <scope>test</scope>
         </dependency>

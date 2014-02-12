@@ -94,7 +94,7 @@ public class WSATSimpleServletClient extends HttpServlet {
             System.out.println("[CLIENT] committing Atomic Transaction (This will cause the AT to complete successfully)");
             ut.commit();
 
-            out.write("<p><i>Go to your JBoss Application Server console or Server log to see the result of the transaction</i></p>");
+            out.write("<p><i>Go to your WildFly console or Server log to see the result of the transaction</i></p>");
 
         } catch (Exception e) {
             e.printStackTrace();

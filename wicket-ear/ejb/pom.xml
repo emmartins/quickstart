@@ -21,11 +21,11 @@
 
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
-        <artifactId>jboss-as-wicket-ear-parent</artifactId>
+        <artifactId>wildfly-wicket-ear-parent</artifactId>
         <version>8.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jboss-as-wicket-ear-ejb</artifactId>
+    <artifactId>wildfly-wicket-ear-ejb</artifactId>
     <packaging>ejb</packaging>
 
     <name>WildFly Quickstarts: Wicket EAR: EJB JAR</name>

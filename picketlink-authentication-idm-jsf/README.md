@@ -47,13 +47,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
 
-4. This will deploy `target/jboss-as-picketlink-authentication-idm-jsf.war` to the running instance of the server.
+4. This will deploy `target/wildfly-picketlink-authentication-idm-jsf.war` to the running instance of the server.
 
 
 Access the application 
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-as-picketlink-authentication-idm-jsf>.
+The application will be running at the following URL: <http://localhost:8080/wildfly-picketlink-authentication-idm-jsf>.
 
 
 Undeploy the Archive

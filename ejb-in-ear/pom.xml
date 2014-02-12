@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-ejb-in-ear</artifactId>
+    <artifactId>wildfly-ejb-in-ear</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <name>WildFly Quickstarts: EJB and War in an Ear - Root pom</name>
     <description>WildFly Quickstarts: EJB and War in an Root pom</description>
@@ -74,7 +74,7 @@
                 to repeat ourselves in every module -->
             <dependency>
                 <groupId>org.wildfly.quickstarts</groupId>
-                <artifactId>jboss-as-ejb-in-ear-ejb</artifactId>
+                <artifactId>wildfly-ejb-in-ear-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -83,7 +83,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>org.wildfly.quickstarts</groupId>
-                <artifactId>jboss-as-ejb-in-ear-web</artifactId>
+                <artifactId>wildfly-ejb-in-ear-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
@@ -124,7 +124,7 @@
                 <!-- The WildFly plugin deploys your ear to a local JBoss
                     AS container -->
                 <!-- Due to Maven's lack of intelligence with EARs we need 
-                    to configure the jboss-as maven plugin to skip deployment for all modules. 
+                    to configure the wildfly maven plugin to skip deployment for all modules.
                     We then enable it specifically in the ear module. -->
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>

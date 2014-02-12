@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>jboss-as-kitchensink-angularjs</artifactId>
+    <artifactId>wildfly-kitchensink-angularjs</artifactId>
     <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>WildFly Quickstarts: Kitchensink with AngularJS</name>
@@ -42,7 +42,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- JBoss dependency versions -->
-        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
+        <version.wildfly.maven.plugin>1.0.0.Beta1</version.wildfly.maven.plugin>
         <!-- Define the version of the JBoss BOMs we want to import. The 
             JBoss BOMs specify tested stacks. -->
         <version.org.jboss.bom>8.0.0-SNAPSHOT</version.org.jboss.bom>
@@ -215,7 +215,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>${version.org.jboss.as.plugins.maven.plugin}</version>
+                <version>${version.wildfly.maven.plugin}</version>
             </plugin>
         </plugins>
     </build>
@@ -249,8 +249,8 @@
                 in your WildFly instance -->
             <!-- This profile will start a new WildFly instance, and execute the
                 test, shutting it down when done -->
-            <!-- Run with: mvn clean test -Parq-jbossas-managed -->
-            <id>arq-jbossas-managed</id>
+            <!-- Run with: mvn clean test -Parq-wildfly-managed -->
+            <id>arq-wildfly-managed</id>
             <dependencies>
                 <dependency>
                     <groupId>org.wildfly</groupId>
@@ -264,8 +264,8 @@
         <profile>
             <!-- An optional Arquillian testing profile that executes tests
                 in a remote WildFly instance -->
-            <!-- Run with: mvn clean test -Parq-jbossas-remote -->
-            <id>arq-jbossas-remote</id>
+            <!-- Run with: mvn clean test -Parq-wildfly-remote -->
+            <id>arq-wildfly-remote</id>
             <dependencies>
                 <dependency>
                     <groupId>org.wildfly</groupId>

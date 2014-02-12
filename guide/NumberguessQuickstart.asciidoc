@@ -14,7 +14,7 @@ The quickstart uses a Maven plugin to deploy the application. The plugin require
 
 Or you can start the server using an IDE, like JBoss Developer Studio.
 
-Now, see if you can determine the most efficient approach to pinpoint the random number at the URL http://localhost:8080/jboss-as-numberguess.
+Now, see if you can determine the most efficient approach to pinpoint the random number at the URL http://localhost:8080/wildfly-numberguess.
 
 [TIP]
 ========================================================================
@@ -34,7 +34,7 @@ Deploying the Numberguess quickstart using Eclipse
 
 You may choose to deploy the quickstart using Eclipse. You'll need to have JBoss WildFly started in Eclipse as described  in <<GettingStarted-with_jboss_tools, Starting the JBoss server from JBDS or Eclipse with JBoss Tools>>) and to have imported the quickstarts into Eclipse (as described in <<GettingStarted-importing_quickstarts_into_eclipse, Importing the quickstarts into Eclipse>>).
 
-With the quickstarts imported, you can deploy the quickstart by right clicking on the `jboss-as-numberguess` project, and choosing _Run As -> Run On Server_: 
+With the quickstarts imported, you can deploy the quickstart by right clicking on the `wildfly-numberguess` project, and choosing _Run As -> Run On Server_:
 
 image:gfx/Eclipse_Numberguess_Deploy_1.jpg[]
 

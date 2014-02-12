@@ -5,7 +5,7 @@ Level: Beginner
 Technologies: CDI, HTML5, REST
 Summary: Based on kitchensink, but uses HTML5, making it suitable for mobile and tablet computers
 Target Product: WFK
-Source: https://github.com/jboss-jdf/jboss-as-quickstart
+Source: https://github.com/jboss-jdf/wildfly-quickstart
 
 What is it?
 -----------
@@ -56,7 +56,7 @@ You can now deploy the artifact by executing the following command:
 
     mvn wildfly:deploy
 
-The client application will be running at the following URL <http://localhost:8080/jboss-as-kitchensink-html5-mobile/>.
+The client application will be running at the following URL <http://localhost:8080/wildfly-kitchensink-html5-mobile/>.
 
 To undeploy run this command:
 
@@ -87,7 +87,7 @@ NOTE: You must either specify the default profile for no tests or the arquillian
 OR
 
     #With Tests
-    mvn clean package wildfly:deploy -Pminify,arq-jbossas-remote
+    mvn clean package wildfly:deploy -Pminify,arq-wildfly-remote
  
 Running the Arquillian tests
 ============================
@@ -96,7 +96,7 @@ By default, tests are configured to be skipped. The reason is that the sample te
 
 To run the test in JBoss, first start the container instance. Then, run the test goal with the following profile activated:
 
-    mvn clean test -Parq-jbossas-remote
+    mvn clean test -Parq-wildfly-remote
 
 Running the QUnit tests
 ============================

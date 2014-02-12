@@ -151,13 +151,13 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
         mvn clean package wildfly:deploy
 
-4. This will deploy `target/jboss-as-servlet-security.war` to the running instance of the server.
+4. This will deploy `target/wildfly-servlet-security.war` to the running instance of the server.
 
 <a id="accesstheapp"></a>
 Access the Application 
 ---------------------
 
-The application will be running at the following URL <http://localhost:8080/jboss-as-servlet-security/>.
+The application will be running at the following URL <http://localhost:8080/wildfly-servlet-security/>.
 
 When you access the application, you should get a browser login challenge. 
 

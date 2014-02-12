@@ -55,9 +55,9 @@ public class Client {
         /*
          * This is the module name of the deployed EJBs on the server. This is typically the jar name of the EJB deployment,
          * without the .jar suffix, but can be overridden via the ejb-jar.xml. In this example, we have deployed the EJBs in a
-         * jboss-as-shoppingcart-server.jar, so the module name is jboss-as-shopping-cart-server
+         * wildfly-shoppingcart-server.jar, so the module name is wildfly-shopping-cart-server
          */
-        final String moduleName = "jboss-as-shoppingcart-server";
+        final String moduleName = "wildfly-shoppingcart-server";
 
         /*
          * WildFly allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB
