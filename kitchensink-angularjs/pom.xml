@@ -47,7 +47,7 @@
             JBoss BOMs specify tested stacks. -->
         <version.org.jboss.bom>8.0.0-SNAPSHOT</version.org.jboss.bom>
 
-        <version.arquillian.container>8.0.0.CR1</version.arquillian.container>
+        <version.arquillian.container>8.0.0.Final</version.arquillian.container>
 
         <!-- other plugin versions -->
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
