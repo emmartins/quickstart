@@ -16,14 +16,19 @@
  */
 package org.jboss.as.quickstarts.ejbinwar.ejb;
 
-import javax.ejb.Stateful;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.ejb.Singleton;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import java.util.Date;
 
 /**
  * A simple Hello World EJB. The EJB does not use an interface.
  * 
  * @author paul.robinson@redhat.com, 2011-12-21
  */
-@Stateful
+@Singleton
 public class GreeterEJB {
     /**
      * This method takes a name and returns a personalised greeting.
@@ -34,4 +39,28 @@ public class GreeterEJB {
     public String sayHello(String name) {
         return "Hello " + name;
     }
+
+    private static final String name = "java:jboss/exported/JNDIBinderBean";
+    private static final String value = "JNDIBinderBean instantiated at " + new Date();
+
+    @PostConstruct
+    public void start() {
+        try {
+            new InitialContext().rebind(name, value);
+            System.out.println("PostConstruct rebind ok");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @PreDestroy
+    public void stop() {
+        try {
+            new InitialContext().unbind(name);
+            System.out.println("PreDestroy unbind ok");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
