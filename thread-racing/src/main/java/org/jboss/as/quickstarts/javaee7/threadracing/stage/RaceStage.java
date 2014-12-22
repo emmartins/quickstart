@@ -20,7 +20,7 @@ import org.jboss.as.quickstarts.threadracing.Race;
 
 /**
  *
- * A stage of a {@link org.jboss.as.quickstarts.threadracing.Race}, which are run by {@link org.jboss.as.quickstarts.threadracing.Racer}s.
+ * A stage of the race.
  *
  * @author Eduardo Martins
  */

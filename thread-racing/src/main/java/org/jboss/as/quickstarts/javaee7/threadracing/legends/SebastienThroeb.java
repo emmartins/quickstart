@@ -14,21 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.as.quickstarts.threadracing.stage.batch;
+package org.jboss.as.quickstarts.threadracing.legends;
 
-import javax.batch.api.chunk.ItemProcessor;
-import javax.inject.Named;
+import org.jboss.as.quickstarts.threadracing.Racer;
 
 /**
- * The batch component that processes/filters read items, one by one.
+ * A WRC legend.
+ *
  * @author Eduardo Martins
  */
-@Named
-public class BatchRaceStageItemProcessor implements ItemProcessor {
+public class SebastienThroeb extends Racer {
 
-    @Override
-    public Object processItem(Object item) {
-        // TODO this app must have one, but here you process a read item, in case the item should be discarded just return null
-        return item;
+    public SebastienThroeb() {
+        super("Sebastien Throeb");
     }
 }

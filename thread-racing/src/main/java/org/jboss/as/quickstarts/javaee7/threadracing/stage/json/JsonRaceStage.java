@@ -27,11 +27,11 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 /**
- * The JSON 1.0 race stage shows how work with the new API for common use cases: building of a JSON object, writing a JSON object to a string/stream, and reading a JSON object from a string/stream.
+ * The Json race stage builds a json object, writes it to a string, and reads the object from that string.
  *
  * @author Eduardo Martins
  */
-public class JSONRaceStage implements RaceStage {
+public class JsonRaceStage implements RaceStage {
 
     @Override
     public void run(Race.Registration registration) throws Exception {

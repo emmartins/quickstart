@@ -41,7 +41,7 @@ public class JMSRaceStage implements RaceStage {
     private Queue requestQueue;
 
     /**
-     * CDI injection of a JMS context
+     * cdi injection of a JMS context
      */
     @Inject
     private JMSContext jmsContext;

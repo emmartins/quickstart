@@ -33,7 +33,7 @@ import javax.jms.TextMessage;
  *
  * @author Eduardo Martins
  */
-@JMSDestinationDefinition(name= JMSRaceStageMessageListener.REQUEST_QUEUE,
+@JMSDestinationDefinition(name=JMSRaceStageMessageListener.REQUEST_QUEUE,
         interfaceName="javax.jms.Queue",
         destinationName="JMSThreadRacingQueue")
 @MessageDriven(activationConfig = {
