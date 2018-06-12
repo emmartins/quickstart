@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.wildfly.bom</groupId>
         <artifactId>quickstart</artifactId>
-        <version>13.0.0.Final</version>
+        <version>14.0.0.Beta1-SNAPSHOT</version>
         <relativePath />
     </parent>
     <artifactId>jaxrs-client</artifactId>
@@ -84,7 +84,7 @@
             as the API is included in JBoss EAP -->
         <dependency>
             <groupId>org.jboss.spec.javax.annotation</groupId>
-            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+            <artifactId>jboss-annotations-api_1.3_spec</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -92,7 +92,7 @@
             in JBoss EAP -->
         <dependency>
             <groupId>org.jboss.spec.javax.ws.rs</groupId>
-            <artifactId>jboss-jaxrs-api_2.0_spec</artifactId>
+            <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -112,7 +112,7 @@
 
         <dependency>
             <groupId>org.jboss.spec.javax.xml.bind</groupId>
-            <artifactId>jboss-jaxb-api_2.2_spec</artifactId>
+            <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
             <scope>test</scope>
         </dependency>
 
