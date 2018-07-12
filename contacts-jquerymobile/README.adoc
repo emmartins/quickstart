@@ -12,14 +12,14 @@ include::../shared-doc/attributes.adoc[]
 :source: {githubRepoUrl}
 
 [abstract]
-The `contacts-jquerymobile` quickstart demonstrates a Java EE 7 mobile database application using HTML5, jQuery Mobile, JAX-RS, JPA, and REST.
+The `contacts-jquerymobile` quickstart demonstrates a {javaVersion} mobile database application using HTML5, jQuery Mobile, JAX-RS, JPA, and REST.
 
 :standalone-server-type: default
 :archiveType: war
 
 == What is it?
 
-The `contact-jquerymobile` quickstart is a deployable Maven 3 project designed to help you get your foot in the door developing HTML5 based mobile web applications with Java EE 7 in {productNameFull}. This project is setup to allow you to create a basic Java EE 7 application using HTML5, jQuery Mobile, JAX-RS, CDI, EJB, JPA, and Bean Validation. It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
+The `contact-jquerymobile` quickstart is a deployable Maven 3 project designed to help you get your foot in the door developing HTML5 based mobile web applications with {javaVersion} in {productNameFull}. This project is setup to allow you to create a basic {javaVersion} application using HTML5, jQuery Mobile, JAX-RS, CDI, EJB, JPA, and Bean Validation. It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
 
 This application is built using a HTML5 + REST approach. This uses a pure HTML client that interacts with with the application server via restful end-points (JAX-RS). This application also uses some of the latest HTML5 features and advanced JAX-RS. And since testing is just as important with client side as it is server side, this application uses QUnit to show you how to unit test your JavaScript.
 

@@ -13,7 +13,7 @@ include::../shared-doc/attributes.adoc[]
 :source: {githubRepoUrl}
 
 [abstract]
-The `shopping-cart` quickstart demonstrates how to deploy and run a simple Java EE 7 shopping cart application that uses a stateful session bean (SFSB).
+The `shopping-cart` quickstart demonstrates how to deploy and run a simple {javaVersion} shopping cart application that uses a stateful session bean (SFSB).
 
 :standalone-server-type: default
 :archiveType: jar
@@ -22,7 +22,7 @@ The `shopping-cart` quickstart demonstrates how to deploy and run a simple Java 
 
 == What is it?
 
-The `shopping-cart` quickstart demonstrates how to deploy and run a simple Java EE 7 application that uses a stateful session bean (SFSB) in {productNameFull}. The application allows customers to buy, checkout, and view their cart contents.
+The `shopping-cart` quickstart demonstrates how to deploy and run a simple {javaVersion} application that uses a stateful session bean (SFSB) in {productNameFull}. The application allows customers to buy, checkout, and view their cart contents.
 
 The `shopping-cart` application consists of the following:
 

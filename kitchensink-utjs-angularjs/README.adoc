@@ -18,7 +18,7 @@ Based on kitchensink, but uses a Angular for the front end and Undertow.js for t
 
 This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Undertow.js and Java EE7 on JBoss WildFly.
 
-This project is setup to allow you to create a compliant Java EE 7 application using Undertow.js CDI 1.1, JPA 2.1 and Bean Validation 1.1. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in Undertow.js.
+This project is setup to allow you to create a compliant {javaVersion} application using Undertow.js CDI 1.1, JPA 2.1 and Bean Validation 1.1. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in Undertow.js.
 
 == System requirements
 
