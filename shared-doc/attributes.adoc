@@ -1,10 +1,66 @@
+//*************************
+// CD release values
+//*************************
+// The following attribute is a flag build READMEs for the CD release instructions.
+// Comment it out to build the READMEs for the Product releases
+
+//:EAPCDRelease:
+
+// Attributes for CD releases
+:CDProductName: JBoss Enterprise Application Platform continuous delivery
+:CDProductShortName: {ProductShortName} Continuous Delivery
+:CDProductTitle: JBoss Enterprise Application Platform Continuous Delivery
+:CDProductNameSentence: continuous delivery release for {ProductShortName}
+:CDProductAcronym: JBoss EAP CD
+:CDProductVersion: 13
+:EapForOpenshiftBookName: Red Hat JBoss Enterprise Application Platform for OpenShift
+:EapForOpenshiftOnlineBookName: Red Hat JBoss Enterprise Application Platform for OpenShift Online
+:xpaasproduct: Red Hat JBoss Enterprise Application Platform for OpenShift
+:xpaasproductOpenShiftOnline: Red Hat JBoss Enterprise Application Platform for OpenShift Online
+:xpaasproduct-shortname: JBoss EAP for OpenShift
+:xpaasproductOpenShiftOnline-shortname: JBoss EAP for OpenShift Online
+:EapForOpenshiftBookName: Red Hat JBoss Enterprise Application Platform for OpenShift
+:EapForOpenshiftOnlineBookName: Red Hat JBoss Enterprise Application Platform for OpenShift Online
+:ImagePrefixVersion: eap71
+
+// Repo and reference for quickstart kitchensink procedure
+:EAPQuickStartRepo: https://github.com/jboss-developer/jboss-eap-quickstarts
+:EAPQuickStartRepoRef: 7.1.0.GA
+
+// Product names and links are dependent on whether it is a CD or a 7.x product release
+// The "DocInfo..." attributes are used to build the book links
+ifdef::EAPCDRelease[]
+:productName: {xpaasproduct}
+:productNameFull: {xpaasproduct-shortname}
+:DocInfoProductNameURL: jboss_enterprise_application_platform_continuous_delivery
+:DocInfoProductName: JBoss Enterprise Application Platform Continuous Delivery
+:DocInfoProductNumber: 13
+:ImageandTemplateImportURL: https://raw.githubusercontent.com/jboss-container-images/jboss-eap-7-openshift-image/eap-cd/templates/
+endif::[]
+ifndef::EAPCDRelease[]
 :productName: WildFly
 :productNameFull: WildFly Application Server
+:DocInfoProductName: red_hat_jboss_enterprise_application_platform
+:DocInfoProductNameURL: red_hat_jboss_enterprise_application_platform
+:DocInfoProductNumber: 7.1
+:DocInfoPreviousProductName: jboss-enterprise-application-platform
+:ImageandTemplateImportURL: https://raw.githubusercontent.com/jboss-openshift/application-templates/master/eap/
+endif::[]
+
+
+// Links to the OpenShift documentation
+:LinkOpenShiftGuide: https://access.redhat.com/documentation/en-us/{DocInfoProductNameURL}/{DocInfoProductNumber}/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/
+:LinkOpenShiftOnlineGuide: https://access.redhat.com/documentation/en-us/{DocInfoProductNameURL}/{DocInfoProductNumber}/html-single/getting_started_with_jboss_eap_for_openshift_online/
+
+//*************************
+// Product and other values
+//*************************
 :jbossHomeName: WILDFLY_HOME
 :productVersion: 12
 :ProductShortName: JBoss EAP
 :buildRequirements: Java 8.0 (Java SDK 1.8) or later and Maven 3.3.1 or later
 :jbdsEapServerName: Red Hat JBoss Enterprise Application Platform 7.1
+:javaVersion: Java EE 8
 :githubRepoUrl: https://github.com/wildfly/quickstart/
 :githubRepoBranch: master
 :guidesBaseUrl: https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/
@@ -36,9 +92,6 @@
 :SingletonSubsystemNamespace: urn:jboss:domain:singleton:1.0
 :TransactionsSubsystemNamespace: urn:jboss:domain:transactions:4.0
 
-:DocInfoProductNameURL: jboss_enterprise_application_platform_continuous_delivery
-:DocInfoProductName: JBoss Enterprise Application Platform continuous delivery
-:DocInfoProductNumber: 12
 
 // LinkProductDocHome: https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/
 :LinkProductDocHome: https://access.redhat.com/documentation/en/jboss-enterprise-application-platform-continuous-delivery

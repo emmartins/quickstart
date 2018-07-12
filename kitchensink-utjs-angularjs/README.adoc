@@ -16,9 +16,9 @@ Based on kitchensink, but uses a Angular for the front end and Undertow.js for t
 
 == What is it?
 
-This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Undertow.js and Java EE7 on JBoss WildFly.
+This quickstart is a deployable Maven 3 project to help you get your foot in the door developing with Undertow.js and {javaVersion} on JBoss WildFly.
 
-This project is setup to allow you to create a compliant Java EE 7 application using Undertow.js CDI 1.1, JPA 2.1 and Bean Validation 1.1. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in Undertow.js.
+This project is setup to allow you to create a compliant {javaVersion} application using Undertow.js CDI 1.1, JPA 2.1 and Bean Validation 1.1. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in Undertow.js.
 
 == System requirements
 
@@ -27,7 +27,7 @@ All you need to build this project is ${build.requirements}. See https://github.
 == Start JBoss WildFly with the Web Profile
 
 . Open a command line and navigate to the root of the JBoss server directory.
-. 
+.
 
 The following shows the command line to start the server with the web profile:
 
@@ -43,7 +43,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 
 . Make sure you have started the JBoss Server as described above.
 . Open a command line and navigate to the root directory of this quickstart.
-. 
+.
 
 Type this command to build and deploy the archive:
 
@@ -52,7 +52,7 @@ Type this command to build and deploy the archive:
 mvn clean package wildfly:deploy
 ----
 
-. 
+.
 
 This will deploy `target/${project.artifactId}.war` to the running instance of the server.
 
@@ -65,7 +65,7 @@ The application will be running at the following URL: http://localhost:8080/${pr
 
 . Make sure you have started the JBoss Server as described above.
 . Open a command line and navigate to the root directory of this quickstart.
-. 
+.
 
 When you are finished testing, type this command to undeploy the archive:
 
@@ -76,7 +76,7 @@ mvn wildfly:undeploy
 
 == Run the Quickstart in JBoss Developer Studio or Eclipse
 
-You can also start the server and deploy the quickstarts from Eclipse using JBoss tools. For more information, see https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/USE_JBDS.md[Use JBoss Developer Studio or Eclipse to Run the Quickstarts] 
+You can also start the server and deploy the quickstarts from Eclipse using JBoss tools. For more information, see https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/USE_JBDS.md[Use JBoss Developer Studio or Eclipse to Run the Quickstarts]
 
 == Debug the Application
 
