@@ -82,7 +82,7 @@
                 <version>${version.jaxws-tools-maven-plugin}</version>
                 <configuration>
                     <wsdls>
-                        <wsdl>${basedir}${file.separator}src${file.separator}main${file.separator}webapp${file.separator}WEB-INF${file.separator}wsdl${file.separator}ProfileMgmtService.wsdl</wsdl>
+                        <wsdl>${basedir}/src/main/webapp/WEB-INF/wsdl/ProfileMgmtService.wsdl</wsdl>
                     </wsdls>
                     <fork>true</fork>
                     <extension>true</extension>
