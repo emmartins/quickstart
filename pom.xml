@@ -389,6 +389,7 @@
             <modules>
                 <!-- All the modules that require nothing but JBoss Enterprise
                     Application Platform or JBoss EAP -->
+                <!-->
                 <module>app-client</module>
                 <module>batch-processing</module>
                 <module>bean-validation</module>
@@ -436,7 +437,9 @@
                 <module>jaxws-addressing</module>
                 <module>jaxws-ejb</module>
                 <module>jaxws-pojo</module>
+                                -->
                 <module>jaxws-retail</module>
+                <!--
                 <module>jsonp</module>
                 <module>kitchensink</module>
                 <module>kitchensink-angularjs</module>
@@ -472,6 +475,7 @@
                 <module>wicket-ear</module>
                 <module>wicket-war</module>
                 <module>xml-jaxp</module>
+                -->
             </modules>
         </profile>
         <profile>
@@ -485,7 +489,9 @@
                 </property>
             </activation>
             <modules>
+            <!--
                 <module>jts</module>
+             -->   
             </modules>
         </profile>
         <profile>
@@ -499,9 +505,11 @@
                 </property>
             </activation>
             <modules>
+            <!--
                 <module>ejb-remote</module>
                 <module>resteasy-jaxrs-client</module>
                 <module>jts</module>
+               --> 
             </modules>
         </profile>
         <profile>
@@ -516,10 +524,12 @@
                 </property>
             </activation>
             <modules>
+            <!--
                 <module>helloworld-mbean</module>
                 <module>helloworld-mdb</module>
                 <module>helloworld-mdb-propertysubstitution</module>
                 <module>jta-crash-rec</module>
+                -->
             </modules>
         </profile>
         <profile>
@@ -533,20 +543,24 @@
                 </property>
             </activation>
             <modules>
+            <!--
                 <module>wsat-simple</module>
                 <module>wsba-coordinator-completion-simple</module>
                 <module>wsba-participant-completion-simple</module>
+               --> 
             </modules>
         </profile>
         <profile>
             <id>functional-tests</id>
             <modules>
+            <!--
                 <module>contacts-jquerymobile/functional-tests</module>
                 <module>helloworld-html5/functional-tests</module>
                 <module>kitchensink-angularjs/functional-tests</module>
                 <module>spring-greeter/functional-tests</module>
                 <module>spring-kitchensink-basic/functional-tests</module>
                 <module>spring-kitchensink-springmvctest/functional-tests</module>
+             -->   
             </modules>
         </profile>
 
