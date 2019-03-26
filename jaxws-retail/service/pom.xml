@@ -84,13 +84,13 @@
                     <wsdls>
                         <wsdl>${basedir}/src/main/webapp/WEB-INF/wsdl/ProfileMgmtService.wsdl</wsdl>
                     </wsdls>
-                    <fork>true</fork>
+                    <fork>false</fork>
                     <extension>true</extension>
                     <verbose>false</verbose>
                     <endpointClass></endpointClass>
                     <!-- some JDK implementations forbid file access for external schema,
                          see http://docs.oracle.com/javase/8/docs/api/javax/xml/XMLConstants.html#ACCESS_EXTERNAL_SCHEMA -->
-                    <argLine>-Djavax.xml.accessExternalSchema=all -Dlog4j.configuration=file:${basedir}/src/main/resources/log4j.properties</argLine>
+                    <argLine>-Djavax.xml.accessExternalSchema=all -Dlog4j.configuration=file:${basedir}${file.separator}src${file.separator}main${file.separator}resources${file.separator}log4j.properties</argLine>
                     <targetPackage>org.jboss.quickstarts.ws.jaxws.samples.retail.profile</targetPackage>
                 </configuration>
                 <executions>
