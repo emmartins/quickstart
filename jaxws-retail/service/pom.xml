@@ -84,7 +84,7 @@
                     <wsdls>
                         <wsdl>${basedir}${file.separator}src${file.separator}main${file.separator}webapp${file.separator}WEB-INF${file.separator}wsdl${file.separator}ProfileMgmtService.wsdl</wsdl>
                     </wsdls>
-                    <fork>false</fork>
+                    <fork>true</fork>
                     <extension>true</extension>
                     <verbose>false</verbose>
                     <endpointClass></endpointClass>
