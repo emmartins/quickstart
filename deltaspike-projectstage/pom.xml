@@ -25,7 +25,7 @@
         merge conflicts between commits changing the GA and those changing the V.
         -->
         <version>17.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>deltaspike-projectstage</artifactId>
     <packaging>war</packaging>

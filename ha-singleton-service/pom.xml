@@ -27,7 +27,7 @@
         merge conflicts between commits changing the GA and those changing the V.
         -->
         <version>17.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
     </parent>
 
     <artifactId>ha-singleton-service</artifactId>
@@ -47,7 +47,6 @@
         <dependency>
             <groupId>org.jboss.msc</groupId>
             <artifactId>jboss-msc</artifactId>
-            <version>${version.org.jboss.msc.jboss-msc}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.logging</groupId>

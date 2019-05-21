@@ -21,11 +21,11 @@
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
-        <version>29</version>
+        <version>35</version>
     </parent>
 
     <groupId>org.wildfly.quickstarts</groupId>
-    <artifactId>quickstart-parent</artifactId>
+    <artifactId>quickstart-project</artifactId>
     <!--
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
@@ -34,8 +34,8 @@
 
     <packaging>pom</packaging>
 
-    <name>Quickstart: Parent</name>
-    <description>Quickstart's parent</description>
+    <name>Quickstart: Project</name>
+    <description>Quickstart's project</description>
     <url>https://github.com/wildfly/quickstart</url>
 
     <licenses>
@@ -63,23 +63,14 @@
             filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- Version of server
+        note: a SNAPSHOT version *requires* checkout of server at https://github.com/wildfly/wildfly and build through "build.sh"
+        -->
+        <version.server>17.0.0.Alpha1</version.server>
         <!-- Version of BOMs
         note: a SNAPSHOT version *requires* checkout of BOMs at https://github.com/wildfly/boms and build through "mvn clean install"
         -->
         <version.server.bom>17.0.0.Beta1-SNAPSHOT</version.server.bom>
-
-        <!-- Versions of dependencies on server's core -->
-        <version.commons-io>2.5</version.commons-io>
-        <version.org.apache.httpcomponents.httpclient>4.5.4</version.org.apache.httpcomponents.httpclient>
-        <version.org.jboss.msc.jboss-msc>1.4.5.Final</version.org.jboss.msc.jboss-msc>
-        <version.org.slf4j>1.7.22.jbossorg-1</version.org.slf4j>
-
-        <!-- Versions of dependencies on server -->
-        <version.com.fasterxml.jackson>2.9.8</version.com.fasterxml.jackson>
-        <version.com.h2database>1.4.193</version.com.h2database>
-        <version.com.sun.istack>3.0.7</version.com.sun.istack>
-        <version.org.bouncycastle>1.60</version.org.bouncycastle>
-        <version.org.javassist>3.23.1-GA</version.org.javassist>
 
         <!-- Other versions of dependencies -->
         <version.arquillian.angularjs.graphene>1.2.0.Beta1</version.arquillian.angularjs.graphene>
@@ -98,6 +89,7 @@
         <linkXRef>false</linkXRef>
     </properties>
 
+    <!--
     <dependencyManagement>
         <dependencies>
 
@@ -106,12 +98,6 @@
                 <artifactId>httpclient</artifactId>
                 <version>${version.org.apache.httpcomponents.httpclient}</version>
             </dependency>
-            <!-- JBoss distributes a complete set of Java EE APIs including a Bill
-                of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection)
-                of artifacts. We use this here so that we always get the correct versions
-                of artifacts. Here we use the jboss-eap-javaee8-with-tools stack (you can
-                read this as the JBoss stack of the Java EE APIs, with some extras tools
-                for your project, such as Arquillian for testing) -->
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
                 <artifactId>wildfly-javaee8-with-tools</artifactId>
@@ -122,6 +108,25 @@
         </dependencies>
     </dependencyManagement>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>wildfly-javaee8-with-tools</artifactId>
+                <version>${version.server.bom}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.wildfly</groupId>
+                <artifactId>wildfly-parent</artifactId>
+                <version>${version.server}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+ -->
     <!-- Activate the JBoss Enterprise Maven Repository.
 
         NOTE: Configuring the Maven repository in the pom.xml file is not a recommended procedure
@@ -376,6 +381,122 @@
 
     <profiles>
         <profile>
+            <id>parent</id>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.wildfly.bom</groupId>
+                        <artifactId>wildfly-javaee8-with-tools</artifactId>
+                        <version>${version.server.bom}</version>
+                        <type>pom</type>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.wildfly</groupId>
+                        <artifactId>wildfly-parent</artifactId>
+                        <version>${version.server}</version>
+                        <type>pom</type>
+                        <scope>import</scope>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-bom-builder-plugin</artifactId>
+                        <version>2.0.0.Alpha1</version>
+                        <executions>
+                            <execution>
+                                <id>build-quickstart-parent</id>
+                                <goals>
+                                    <goal>build-bom</goal>
+                                </goals>
+                                <configuration>
+                                    <parent>
+                                        <groupId>${project.groupId}</groupId>
+                                        <artifactId>${project.artifactId}</artifactId>
+                                        <relativePath/>
+                                    </parent>
+                                    <bomGroupId>${project.groupId}</bomGroupId>
+                                    <bomArtifactId>quickstart-parent</bomArtifactId>
+                                    <bomVersion>${project.version}</bomVersion>
+                                    <bomName>...</bomName>
+                                    <bomDescription>...</bomDescription>
+                                    <licenses>true</licenses>
+                                    <inheritExclusions>UNMANAGED</inheritExclusions>
+                                    <includeTransitives>true</includeTransitives>
+                                    <includeDependencies>
+                                        <!-- contacts-jquerymobile, jaxrs-client, managed-executor-service, spring-resteasy -->
+                                        <dependency>
+                                            <groupId>org.apache.httpcomponents</groupId>
+                                            <artifactId>httpclient</artifactId>
+                                        </dependency>
+                                        <!-- contacts-jquerymobile -->
+                                        <dependency>
+                                            <groupId>commons-io</groupId>
+                                            <artifactId>commons-io</artifactId>
+                                        </dependency>
+                                        <!-- ha-singleton-service -->
+                                        <dependency>
+                                            <groupId>org.jboss.msc</groupId>
+                                            <artifactId>jboss-msc</artifactId>
+                                        </dependency>
+                                        <!-- ejb-multi-server -->
+                                        <dependency>
+                                            <groupId>org.slf4j</groupId>
+                                            <artifactId>slf4j-api</artifactId>
+                                        </dependency>
+                                        <!-- spring-kitchensink-springmvctest -->
+                                        <dependency>
+                                            <groupId>com.fasterxml.jackson.core</groupId>
+                                            <artifactId>jackson-core</artifactId>
+                                        </dependency>
+                                        <!-- spring-kitchensink-springmvctest -->
+                                        <dependency>
+                                            <groupId>com.fasterxml.jackson.core</groupId>
+                                            <artifactId>jackson-databind</artifactId>
+                                        </dependency>
+                                        <!-- spring-kitchensink-basic, spring-kitchensink-springmvctest -->
+                                        <dependency>
+                                            <groupId>com.h2database</groupId>
+                                            <artifactId>h2</artifactId>
+                                        </dependency>
+                                        <!-- jaxws-ejb -->
+                                        <dependency>
+                                            <groupId>com.sun.istack</groupId>
+                                            <artifactId>istack-commons-runtime</artifactId>
+                                        </dependency>
+                                        <!-- helloworld-mutual-ssl, helloworld-mutual-ssl-secured -->
+                                        <dependency>
+                                            <groupId>org.bouncycastle</groupId>
+                                            <artifactId>bcprov-jdk15on</artifactId>
+                                        </dependency>
+                                        <dependency>
+                                            <groupId>org.bouncycastle</groupId>
+                                            <artifactId>bcpkix-jdk15on</artifactId>
+                                        </dependency>
+                                        <!-- helloworld-classfiletransformers -->
+                                        <dependency>
+                                            <groupId>org.javassist</groupId>
+                                            <artifactId>javassist</artifactId>
+                                        </dependency>
+                                    </includeDependencies>
+                                    <importDependencies>
+                                        <!--  jboss spec java ee8 bom should be in BOM's dep management with import scope -->
+                                        <dependency>
+                                            <groupId>org.wildfly.bom</groupId>
+                                            <artifactId>wildfly-javaee8-with-tools</artifactId>
+                                            <type>pom</type>
+                                        </dependency>
+                                    </importDependencies>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
             <!-- All the modules that require nothing but JBoss Enterprise
                     Application Platform or JBoss EAP -->
             <id>default</id>
@@ -405,23 +526,29 @@
                 <module>ejb-in-war</module>
                 <module>ejb-multi-server</module>
                 <module>ejb-security</module>
+                <!--
                 <module>ejb-security-context-propagation</module>
                 <module>ejb-security-jaas</module>
                 <module>ejb-security-programmatic-auth</module>
+                -->
                 <module>ejb-throws-exception</module>
                 <module>ejb-timer</module>
                 <module>greeter</module>
                 <module>ha-singleton-deployment</module>
+                <!--
                 <module>ha-singleton-service</module>
+                -->
                 <module>helloworld</module>
+                <!--
                 <module>helloworld-classfiletransformer</module>
+                -->
                 <module>helloworld-html5</module>
                 <module>helloworld-jms</module>
                 <module>helloworld-mbean</module>
                 <module>helloworld-mdb</module>
-                <module>helloworld-mdb-propertysubstitution</module>
+                <!-- <module>helloworld-mdb-propertysubstitution</module> -->
                 <module>helloworld-mutual-ssl</module>
-                <module>helloworld-mutual-ssl-secured</module>
+                <!-- <module>helloworld-mutual-ssl-secured</module> -->
                 <module>helloworld-rf</module>
                 <module>helloworld-rs</module>
                 <module>helloworld-singleton</module>
@@ -430,9 +557,9 @@
                 <module>hibernate4</module>
                 <module>hibernate</module>
                 <module>http-custom-mechanism</module>
-                <module>inter-app</module>
+                <!-- <module>inter-app</module> -->
                 <module>jaxrs-client</module>
-                <module>jaxrs-jwt</module>
+                <!-- <module>jaxrs-jwt</module> -->
                 <module>jaxws-addressing</module>
                 <module>jaxws-ejb</module>
                 <module>jaxws-pojo</module>
@@ -447,16 +574,16 @@
                 <module>kitchensink-utjs-mustache</module>
                 <module>logging</module>
                 <module>logging-tools</module>
-                <module>mail</module>
+                <!-- <module>mail</module> -->
                 <module>managed-executor-service</module>
-                <module>messaging-clustering-singleton</module>
+                <!-- <module>messaging-clustering-singleton</module> -->
                 <module>numberguess</module>
                 <module>payment-cdi-event</module>
                 <module>resteasy-jaxrs-client</module>
-                <module>security-domain-to-domain</module>
+                <!-- <module>security-domain-to-domain</module> -->
                 <module>servlet-async</module>
                 <module>servlet-filterlistener</module>
-                <module>servlet-security</module>
+                <!-- <module>servlet-security</module> -->
                 <module>shopping-cart</module>
                 <module>spring-greeter</module>
                 <module>spring-kitchensink-basic</module>

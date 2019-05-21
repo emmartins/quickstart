@@ -26,7 +26,7 @@
         merge conflicts between commits changing the GA and those changing the V.
         -->
         <version>17.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>ejb-multi-server</artifactId>
     <packaging>pom</packaging>
@@ -51,17 +51,6 @@
         <module>app-web</module>
         <module>client</module>
     </modules>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${version.org.slf4j}</version>
-                <scope>provided</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>

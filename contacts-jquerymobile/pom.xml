@@ -26,7 +26,6 @@
         merge conflicts between commits changing the GA and those changing the V.
         -->
         <version>17.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>contacts-jquerymobile</artifactId>
     <packaging>war</packaging>
@@ -40,21 +39,6 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${version.commons-io}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${version.org.apache.httpcomponents.httpclient}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>

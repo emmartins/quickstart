@@ -27,7 +27,7 @@
         merge conflicts between commits changing the GA and those changing the V.
         -->
         <version>17.0.0.Beta1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>helloworld-mutual-ssl</artifactId>
     <packaging>war</packaging>
@@ -70,12 +70,10 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>${version.org.bouncycastle}</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpkix-jdk15on</artifactId>
-            <version>${version.org.bouncycastle}</version>
         </dependency>
 
     </dependencies>
