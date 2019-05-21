@@ -37,8 +37,10 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
     <properties>
         <checkstyle.skip>true</checkstyle.skip>
+        <version.jaxws-tools-maven-plugin>1.2.3.Final</version.jaxws-tools-maven-plugin>
     </properties>
 
     <dependencies>
