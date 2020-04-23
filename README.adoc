@@ -259,8 +259,8 @@ endif::[]
 //
 //**********************************************************************************
 
-ifdef::ProductRelease,EAPCDRelease[]
-// These instrutions are only for the JBoss EAP product and CD Releases.
+ifdef::ProductRelease[]
+// These instructions are only for the JBoss EAP product and CD Releases.
 = {productNameFull} ({productName}) Quickstarts
 
 [abstract]
@@ -310,7 +310,7 @@ We suggest you approach the quickstarts as follows:
 * Some quickstarts are based upon other quickstarts but have expanded capabilities and functionality. If a prerequisite quickstart is listed, make sure you deploy and test it before looking at the expanded version.
 
 
-ifdef::EAPCDRelease[]
+ifdef::ProductRelease[]
 // Getting Started with OpenShift is only needed for the CD Releases
 // Getting Started with OpenShift
 include::shared-doc/cd-openshift-getting-started-overview.adoc[leveloffset=+1]

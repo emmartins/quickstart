@@ -85,3 +85,27 @@ include::../shared-doc/run-the-quickstart-in-jboss-developer-studio.adoc[levelof
 ** Enter *clean package exec:java* for the *Goals* and click *Run*.
 ** The client output displays in the *Console* window.
 . To undeploy the `helloworld-rs` quickstart, right-click on the *helloworld-rs* project and choose *Run As* –> *Maven build*. Enter *wildfly:undeploy* for the *Goals* and click *Run*.
+
+//*************************************************
+// Product Release content only
+//*************************************************
+
+ifdef::ProductRelease[]
+
+ifdef::openshift-template-compatible[]
+// Getting Started with OpenShift
+include::../shared-doc/cd-openshift-getting-started.adoc[leveloffset=+1]
+//Prepare OpenShift for Quickstart Deployment
+include::../shared-doc/cd-create-project.adoc[leveloffset=+1]
+// Import the Latest {xpaasproduct-shortname} Image Streams and Templates
+include::../shared-doc/cd-import-imagestreams-templates.adoc[leveloffset=+1]
+// Deploy the {ProductShortName} Source-to-Image (S2I) Quickstart to OpenShift
+include::../shared-doc/cd-deploy-project.adoc[leveloffset=+1]
+endif::[]
+
+ifndef::openshift-template-compatible[]
+// Quickstart not compatible with OpenShift
+include::../shared-doc/openshift-incompatibility.adoc[leveloffset=+1]
+endif::[]
+
+endif::[]

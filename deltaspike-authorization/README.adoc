@@ -57,3 +57,27 @@ If you want to debug the source code or look at the Javadocs of any library in t
 $ mvn dependency:sources
 $ mvn dependency:resolve -Dclassifier=javadoc
 ----
+
+//*************************************************
+// Product Release content only
+//*************************************************
+
+ifdef::ProductRelease[]
+
+ifdef::openshift-template-compatible[]
+// Getting Started with OpenShift
+include::../shared-doc/cd-openshift-getting-started.adoc[leveloffset=+1]
+//Prepare OpenShift for Quickstart Deployment
+include::../shared-doc/cd-create-project.adoc[leveloffset=+1]
+// Import the Latest {xpaasproduct-shortname} Image Streams and Templates
+include::../shared-doc/cd-import-imagestreams-templates.adoc[leveloffset=+1]
+// Deploy the {ProductShortName} Source-to-Image (S2I) Quickstart to OpenShift
+include::../shared-doc/cd-deploy-project.adoc[leveloffset=+1]
+endif::[]
+
+ifndef::openshift-template-compatible[]
+// Quickstart not compatible with OpenShift
+include::../shared-doc/openshift-incompatibility.adoc[leveloffset=+1]
+endif::[]
+
+endif::[]
