@@ -12,6 +12,7 @@ specification in {productName}.
 :standalone-server-type: default
 :archiveType: war
 :archiveName: microprofile-jwt.war
+:openshift-template-compatible:
 
 == What is it?
 

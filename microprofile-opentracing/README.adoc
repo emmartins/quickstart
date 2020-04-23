@@ -12,6 +12,7 @@ MicroProfile OpenTracing specification in {productName}.
 :standalone-server-type: default
 :archiveType: war
 :archiveName: {artifactId}
+:openshift-template-compatible:
 
 == What is it?
 

@@ -12,6 +12,7 @@ include::../shared-doc/attributes.adoc[]
 :author: Radoslav Husar, Tomas Hofman
 :level: Intermediate
 :technologies: MicroProfile, Fault Tolerance
+:openshift-template-compatible:
 
 [abstract]
 The `microprofile-fault-tolerance` quickstart demonstrates how to use Eclipse MicroProfile Fault Tolerance in {productName}.
