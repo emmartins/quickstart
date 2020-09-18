@@ -14,7 +14,7 @@
 // Enable the following flag to build README.html files for EAP XP product builds.
 // Comment it out for WildFly or JBoss EAP product builds.
 //***********************************************************************************
-//:EAPXPRelease:
+:EAPXPRelease:
 
 // This is a universal name for all releases
 :ProductShortName: JBoss EAP
@@ -85,7 +85,7 @@ endif::[]
 :ImageandTemplateImportURL: https://raw.githubusercontent.com/jboss-container-images/jboss-eap-7-openshift-image/CD{CDProductVersion}/templates/
 
 // OpenShift repository and reference for quickstarts
-:EAPQuickStartRepo: https://github.com/jboss-developer/jboss-eap-quickstarts
+:EAPQuickStartRepo: https://github.com/emmartins/quickstart
 :EAPQuickStartRepoRef: 7.3.x-openshift
 // Links to the OpenShift documentation
 :LinkOpenShiftGuide: https://access.redhat.com/documentation/en-us/{DocInfoProductNameURL}/{DocInfoProductNumber}/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/
@@ -122,7 +122,7 @@ ifdef::EAPXPRelease[]
 :ImagePrefixVersion: eap-xp1
 :ImageandTemplateImportURL: https://raw.githubusercontent.com/jboss-container-images/jboss-eap-openshift-templates/eap-xp1/
 // OpenShift repository and reference for quickstarts
-:EAPQuickStartRepoRef: xp-2.0.x
+:EAPQuickStartRepoRef: WFLY-13645-to-xp
 // Links to the OpenShift documentation
 :LinkOpenShiftGuide: https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/{DocInfoProductNumber}/html/using_eclipse_microprofile_in_jboss_eap/using-the-openshift-image-for-jboss-eap-xp_default
 :LinkOpenShiftOnlineGuide: https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/{DocInfoProductNumber}/html/using_eclipse_microprofile_in_jboss_eap/using-the-openshift-image-for-jboss-eap-xp_default
