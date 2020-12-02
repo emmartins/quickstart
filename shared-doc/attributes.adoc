@@ -2,6 +2,7 @@
 // Enable the following flag to build README.html files for JBoss EAP product builds.
 // Comment it out for WildFly builds.
 //***********************************************************************************
+// FIXME don't forget to revert this in feature PR
 :ProductRelease:
 
 //***********************************************************************************
@@ -40,7 +41,7 @@ ifdef::EAPXPRelease[]
 endif::[]
 
 ifdef::ProductRelease,EAPXPRelease[]
-:githubRepoUrl: https://github.com/jboss-developer/jboss-eap-quickstarts/
+:githubRepoUrl: https://github.com/emmartins/quickstart/
 :jbossHomeName: EAP_HOME
 :DocInfoProductName: Red Hat JBoss Enterprise Application Platform
 :DocInfoProductNameURL: red_hat_jboss_enterprise_application_platform
@@ -89,8 +90,8 @@ endif::[]
 :ImageandTemplateImportURL: https://raw.githubusercontent.com/jboss-container-images/jboss-eap-7-openshift-image/eap73/templates/
 
 // OpenShift repository and reference for quickstarts
-:EAPQuickStartRepo: https://github.com/jboss-developer/jboss-eap-quickstarts
-:EAPQuickStartRepoRef: 7.4.x
+:EAPQuickStartRepo: https://github.com/emmartins/quickstart
+:EAPQuickStartRepoRef: WFLY-12969-test
 // Links to the OpenShift documentation
 :LinkOpenShiftGuide: https://access.redhat.com/documentation/en-us/{DocInfoProductNameURL}/{DocInfoProductNumber}/html-single/getting_started_with_jboss_eap_for_openshift_container_platform/
 :LinkOpenShiftOnlineGuide: https://access.redhat.com/documentation/en-us/{DocInfoProductNameURL}/{DocInfoProductNumber}/html-single/getting_started_with_jboss_eap_for_openshift_online/
