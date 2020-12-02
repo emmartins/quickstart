@@ -25,11 +25,12 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>22.0.0.Beta1-SNAPSHOT</version>
+        <version>22.0.0.Alpha1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>bmt</artifactId>
+    <version>22.0.0.Beta1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Quickstart: bmt</name>
     <description>This project demonstrates how to use Bean Managed Transactions</description>
