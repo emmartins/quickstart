@@ -1,0 +1,6 @@
+build:
+  uri: https://github.com/wildfly/quickstart.git
+  contextDir: ee-security
+  ref: main
+deploy:
+  replicas: 1

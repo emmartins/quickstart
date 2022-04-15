@@ -32,3 +32,5 @@ atlassian-ide-plugin.xml
 *.log
 build.metadata
 
+/ee-security/nbproject/
+/websocket-hello/nbproject/
