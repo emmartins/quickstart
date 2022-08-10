@@ -22,24 +22,24 @@ import org.jboss.as.quickstarts.threadracing.legends.SebastienThroeb;
 import org.jboss.as.quickstarts.threadracing.legends.ValentinoThrossi;
 import org.jboss.as.quickstarts.threadracing.results.RaceResults;
 
-import javax.inject.Inject;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.HandshakeRequest;
-import javax.websocket.server.ServerEndpointConfig;
+import jakarta.inject.Inject;
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.HandshakeRequest;
+import jakarta.websocket.server.ServerEndpointConfig;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The app's entry point, a Web Socket {@link javax.websocket.server.ServerEndpoint}, which runs a race for each client connection established.
+ * The app's entry point, a Web Socket {@link jakarta.websocket.server.ServerEndpoint}, which runs a race for each client connection established.
  *
  * The server endpoint will update the client of the race progress and results, through text messages, and will close the session once the race ends.
  *
  * @author Eduardo Martins
  */
-@javax.websocket.server.ServerEndpoint(value = WebSocketRace.PATH, configurator = WebSocketRace.ServerEndpointConfigurator.class)
+@jakarta.websocket.server.ServerEndpoint(value = WebSocketRace.PATH, configurator = WebSocketRace.ServerEndpointConfigurator.class)
 public class WebSocketRace {
 
     public static final String PATH = "/race";
