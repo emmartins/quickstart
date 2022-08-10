@@ -19,8 +19,8 @@ package org.jboss.as.quickstarts.batch.job;
 import java.util.logging.Logger;
 
 import javax.batch.api.chunk.ItemProcessor;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 import org.jboss.as.quickstarts.batch.model.Contact;
 

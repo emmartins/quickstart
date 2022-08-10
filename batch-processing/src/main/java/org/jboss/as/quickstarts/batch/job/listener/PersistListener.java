@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 
 import javax.batch.api.chunk.listener.AbstractItemWriteListener;
 import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 //This listener updates the exit status to show the exception
 @Named("persistListener")

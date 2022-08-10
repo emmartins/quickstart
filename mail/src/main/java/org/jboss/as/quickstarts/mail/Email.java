@@ -18,9 +18,9 @@ package org.jboss.as.quickstarts.mail;
 
 import java.io.Serializable;
 
-import javax.annotation.Resource;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
 import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.Session;

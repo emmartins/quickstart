@@ -472,7 +472,7 @@ Immediately verify the number of commits finished by running the `/commit` HTTP 
 +
 [source,options="nowrap"]
 ----
-ARJUNA016036: commit on < formatId=131077, gtrid_length=35, bqual_length=36, tx_uid=..., node_name=server1, branch_uid=..., subordinatenodename=null, eis_name=unknown eis name > (Subordinate XAResource at remote+http://localhost:8180) failed with exception $XAException.XA_RETRY: javax.transaction.xa.XAException: WFTXN0029: The peer threw an XA exception
+ARJUNA016036: commit on < formatId=131077, gtrid_length=35, bqual_length=36, tx_uid=..., node_name=server1, branch_uid=..., subordinatenodename=null, eis_name=unknown eis name > (Subordinate XAResource at remote+http://localhost:8180) failed with exception $XAException.XA_RETRY: jakarta.transaction.xa.XAException: WFTXN0029: The peer threw an XA exception
 ----
 +
 The message means that the transaction manager was not able to commit the transaction.
@@ -482,7 +482,7 @@ The `XAException.XA_RETRY` exception, meaning an intermittent failure, was repor
 +
 [source,options="nowrap"]
 ----
-ARJUNA016036: commit on < formatId=131077, gtrid_length=35, bqual_length=43, tx_uid=..., node_name=server1, branch_uid=..., subordinatenodename=server2, eis_name=unknown eis name > (org.jboss.as.quickstarts.ejb.mock.MockXAResource@731ae22) failed with exception $XAException.XAER_RMFAIL: javax.transaction.xa.XAException
+ARJUNA016036: commit on < formatId=131077, gtrid_length=35, bqual_length=43, tx_uid=..., node_name=server1, branch_uid=..., subordinatenodename=server2, eis_name=unknown eis name > (org.jboss.as.quickstarts.ejb.mock.MockXAResource@731ae22) failed with exception $XAException.XAER_RMFAIL: jakarta.transaction.xa.XAException
 ----
 +
 . Wait (or force) recovery to be processed at `server1`.
