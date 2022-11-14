@@ -75,7 +75,7 @@ public class RemoteNumberGuessIT {
                 .build();
         HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
         Assertions.assertEquals(200, response.statusCode());
-        Assertions.assertTrue(response.body().toString().contains("<form id=\"numberGuess\" name=\"numberGuess\" method=\"post\" action=\"/home.jsf"));
+        Assertions.assertTrue(response.body().toString().contains("<form id=\"numberGuess\" name=\"numberGuess\" method=\"post\""));
     }
 
     private int getNumber() {

@@ -63,6 +63,12 @@ The batch executed successfully
 process-state: reload-required
 ----
 
+You'll need to reload the configuration after that
+[source,subs="+quotes,attributes+",options="nowrap"]
+----
+$ __{jbossHomeName}__/bin/jboss-cli.sh --connect --commands=reload
+----
+
 // Build and Deploy the Quickstart
 include::../shared-doc/build-and-deploy-the-quickstart.adoc[leveloffset=+2]
 

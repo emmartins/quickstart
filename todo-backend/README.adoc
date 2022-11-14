@@ -268,14 +268,14 @@ We use the `postgresql` docker image to create one:
 
 [source,options="nowrap"]
 ----
-$ docker run --name todos-db \
+$ docker run --name todo-backend-db \
   -e POSTGRES_USER=todos \
   -e POSTGRES_PASSWORD=mysecretpassword \
   -p 5432:5432 \
   postgres
 ----
 
-This will create a database named `todos-db` that we can connect to on `localhost:5432` with the credentials `todos / mysecretpassword`.
+This will create a database named `todo-backend-db` that we can connect to on `localhost:5432` with the credentials `todos / mysecretpassword`.
 
 === Run the Bootable Jar Application
 
@@ -330,14 +330,14 @@ We use the `postgresql` docker image to create one:
 
 [source,options="nowrap"]
 ----
-$ docker run --name todos-db \
+$ docker run --name todo-backend-db \
   -e POSTGRES_USER=todos \
   -e POSTGRES_PASSWORD=mysecretpassword \
   -p 5432:5432 \
   postgres
 ----
 
-This will create a database named `todos-db` that we can connect to on `localhost:5432` with the credentials `todos / mysecretpassword`.
+This will create a database named `todo-backend-db` that we can connect to on `localhost:5432` with the credentials `todos / mysecretpassword`.
 
 === Run the Application
 
@@ -432,12 +432,12 @@ ifdef::ProductRelease,EAPXPRelease[]
 [source,options="nowrap"]
 ----
 $ oc new-app postgresql-ephemeral \
-   -p DATABASE_SERVICE_NAME=todos-db \
+   -p DATABASE_SERVICE_NAME=todo-backend-db \
    -p POSTGRESQL_DATABASE=todos
 ----
 
-This will create a PostgreSQL database named `todos` on OpenShift that can be accessed on the port `5432` on the service `todos-db`.
-We don't need to copy the credentials to connect to the database as we will retrieve them later using the `todos-db` secret that was created
+This will create a PostgreSQL database named `todos` on OpenShift that can be accessed on the port `5432` on the service `todo-backend-db`.
+We don't need to copy the credentials to connect to the database as we will retrieve them later using the `todo-backend-db` secret that was created
 when the database is deployed.
 endif::[]
 
@@ -449,12 +449,12 @@ ifndef::ProductRelease[]
 [source,options="nowrap"]
 ----
 $ oc new-app postgresql-ephemeral \
-   -p DATABASE_SERVICE_NAME=todos-db \
+   -p DATABASE_SERVICE_NAME=todo-backend-db \
    -p POSTGRESQL_DATABASE=todos
 ----
 
-This will create a PostgreSQL database named `todos` on OpenShift that can be accessed on the port `5432` on the service `todos-db`.
-We don't need to copy the credentials to connect to the database as we will retrieve them later using the `todos-db` secret that was created
+This will create a PostgreSQL database named `todos` on OpenShift that can be accessed on the port `5432` on the service `todo-backend-db`.
+We don't need to copy the credentials to connect to the database as we will retrieve them later using the `todo-backend-db` secret that was created
 when the database is deployed.
 
 ==== Build and Deploy the Backend on OpenShift with Bootable Jar using the Helm Chart
@@ -465,7 +465,7 @@ ifndef::ProductRelease,EAPXPRelease[]
 
 [source,options="nowrap",subs="+attributes"]
 ----
-$ helm install todo --set build.ref={WildFlyQuickStartRepoTag} -f https://raw.githubusercontent.com/wildfly/wildfly-charts/main/examples/todo-backend/todo-backend-bootable-jar.yaml wildfly/wildfly
+$ helm install todo-backend --set build.ref={WildFlyQuickStartRepoTag} -f https://raw.githubusercontent.com/wildfly/wildfly-charts/main/examples/todo-backend/todo-backend-bootable-jar.yaml wildfly/wildfly
 NAME: todo
 ...
 STATUS: deployed
@@ -521,8 +521,8 @@ Install the full application (database + backend).
 [source,options="nowrap",subs="+attributes"]
 ----
 $ helm dependency update todo-backend-chart/
-$ helm install todo --set build.ref={WildFlyQuickStartRepoTag} todo-backend-chart
-NAME: todo
+$ helm install todo-backend todo-backend-chart/
+NAME: todo-backend
 ...
 STATUS: deployed
 REVISION: 1
@@ -634,11 +634,11 @@ deploy:
       valueFrom:
         secretKeyRef:
           key: database-password
-          name: todos-db
+          name: todo-backend-db
 ----
 
 When the application is deployed, the value for the `POSTGRESQL_PASSWORD` will be taken from the key `database-password`
-in the secret `todos-db`.
+in the secret `todo-backend-db`.
 
 Let's wait for the application to be built and deployed:
 
@@ -690,8 +690,8 @@ The backend can be deleted from OpenShift by running the command:
 
 [source,options="nowrap"]
 ----
-$ helm delete todo
-release "todo" uninstalled
+$ helm delete todo-backend
+release "todo-backend" uninstalled
 ----
 
 ==== Remove the Database
@@ -701,11 +701,11 @@ The PostresSQL database can be deleted from OpenShift by running the commands:
 [source,options="nowrap"]
 ----
 $ oc delete all -l template=postgresql-ephemeral-template
-replicationcontroller "todos-db-1" deleted
-service "todos-db" deleted
-deploymentconfig.apps.openshift.io "todos-db" deleted
-$ oc delete secret todos-db
-secret "todos-db" deleted
+replicationcontroller "todo-backend-db-1" deleted
+service "todo-backend-db" deleted
+deploymentconfig.apps.openshift.io "todo-backend-db" deleted
+$ oc delete secret todo-backend-db
+secret "todo-backend-db" deleted
 ----
 
 == Conclusion
