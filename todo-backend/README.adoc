@@ -617,9 +617,6 @@ $ helm show readme jboss-eap/eap-xp3
 ----
 endif::[]
 
-// Testing on Openshift
-include::../shared-doc/run-arquillian-integration-tests-with-openshift.adoc[leveloffset=+2]
-
 === Environment variables for PostgreSQL
 
 The Helm Chart also contains the environment variables required to connect to the PostgreSQL database.
@@ -651,6 +648,8 @@ todo   0/3     3            0           31s
 todo   3/3     3            3           4m31s
 ----
 
+// Testing on Openshift
+include::../shared-doc/run-arquillian-integration-tests-with-openshift.adoc[leveloffset=+2]
 
 === Use the todobackend Web Frontend
 
