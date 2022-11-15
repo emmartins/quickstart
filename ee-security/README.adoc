@@ -63,7 +63,8 @@ The batch executed successfully
 process-state: reload-required
 ----
 
-You'll need to reload the configuration after that
+. You'll need to reload the configuration after that:
++
 [source,subs="+quotes,attributes+",options="nowrap"]
 ----
 $ __{jbossHomeName}__/bin/jboss-cli.sh --connect --commands=reload
