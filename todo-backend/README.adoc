@@ -466,7 +466,7 @@ ifndef::ProductRelease,EAPXPRelease[]
 [source,options="nowrap",subs="+attributes"]
 ----
 $ helm install todo-backend --set build.ref={WildFlyQuickStartRepoTag} -f https://raw.githubusercontent.com/wildfly/wildfly-charts/main/examples/todo-backend/todo-backend-bootable-jar.yaml wildfly/wildfly
-NAME: todo
+NAME: todo-backend
 ...
 STATUS: deployed
 REVISION: 1
@@ -641,11 +641,11 @@ Let's wait for the application to be built and deployed:
 
 [source,options="nowrap"]
 ----
-$ oc get deployment/todo -w
+$ oc get deployment todo-backend -w
 NAME           READY   UP-TO-DATE   AVAILABLE   AGE
-todo   0/3     3            0           31s
+todo-backend   0/3     3            0           31s
 ...
-todo   3/3     3            3           4m31s
+todo-backend   3/3     3            3           4m31s
 ----
 
 // Testing on Openshift
@@ -653,13 +653,13 @@ include::../shared-doc/run-arquillian-integration-tests-with-openshift.adoc[leve
 
 === Use the todobackend Web Frontend
 
-Once the backend is deployed on OpenShift, it can be accessed from the route `todo`.
+Once the backend is deployed on OpenShift, it can be accessed from the route `todo-backend`.
 Let's find the host that we can use to connect to this backend:
 
 [source,options="nowrap"]
 ----
-$ oc get route todo -o jsonpath="{.spec.host}"
-todo-jmesnil1-dev.apps.sandbox.x8i5.p1.openshiftapps.com
+$ oc get route todo-backend -o jsonpath="{.spec.host}"
+todo-backend-jmesnil1-dev.apps.sandbox.x8i5.p1.openshiftapps.com
 ----
 
 This value will be different for every installation of the backend.
