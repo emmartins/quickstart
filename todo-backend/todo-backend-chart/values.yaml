@@ -50,7 +50,7 @@ wildfly:
         - name: POSTGRESQL_DATASOURCE
           value: ToDos
         - name: POSTGRESQL_SERVICE_HOST
-          value: todo-postgresql
+          value: todo-backend-postgresql
         - name: POSTGRESQL_SERVICE_PORT
           value: "5432"
         # Env vars to configure CORS filter
