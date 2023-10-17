@@ -37,7 +37,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  */
 
-@WebServlet("ejb-security-context-propagation")
+@WebServlet("/ejb-security-context-propagation")
 public class EJBServlet extends HttpServlet {
 
     static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
@@ -49,7 +49,7 @@ public class EJBServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1> ejb-security-context-propagation quickstart deployed successfully. You can find the available operations in the included README file. </h1>");
+        writer.println("<h1> Hello World! </h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }

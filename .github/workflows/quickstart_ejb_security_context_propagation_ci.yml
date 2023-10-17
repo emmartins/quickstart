@@ -1,0 +1,21 @@
+name: WildFly ejb-security-context-propagation Quickstart CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'ejb-security-context-propagation/**'
+      - '.github/workflows/quickstart_ci.yml'
+
+# Only run the latest job
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.ref || github.run_id }}'
+  cancel-in-progress: true
+
+jobs:
+  call-quickstart_ci:
+    uses: ./.github/workflows/quickstart_ci.yml
+    with:
+      QUICKSTART_PATH: ejb-security-context-propagation
+      TEST_PROVISIONED_SERVER: true
+      TEST_OPENSHIFT: false
