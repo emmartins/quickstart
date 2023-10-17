@@ -279,6 +279,8 @@ ERROR [org.jboss.as.ejb3.invocation] (default task-57) WFLYEJB0034: EJB Invocati
     at java.lang.Thread.run(Thread.java:745)
 ----
 
+// Server Distribution Testing
+include::../shared-doc/run-integration-tests-with-server-distribution.adoc[leveloffset=+2]
 // Undeploy the Quickstart
 include::../shared-doc/undeploy-the-quickstart.adoc[leveloffset=+1]
 // Restore the {productName} Standalone Server Configuration
@@ -322,6 +324,10 @@ This quickstart requires additional configuration and deploys and runs different
 
 // Debug the Application
 include::../shared-doc/debug-the-application.adoc[leveloffset=+1]
+// Build and run sections for other environments/builds
+ifndef::ProductRelease,EAPXPRelease[]
+include::../shared-doc/build-and-run-the-quickstart-with-provisioned-server.adoc[leveloffset=+1]
+endif::[]
 
 //*************************************************
 // Product Release content only
