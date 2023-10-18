@@ -180,7 +180,19 @@
                             <layers>
                                 <!-- layers may be used to customize the server to provision-->
                                 <layer>cloud-server</layer>
+                                <layer>undertow-https</layer>
                             </layers>
+                            <!-- use cli script(s) to configure the server -->
+                            <packaging-scripts>
+                                <packaging-script>
+                                    <scripts>
+                                        <script>${basedir}/configure-certs.cli</script>
+                                        <script>${basedir}/configure-ssl.cli</script>
+                                    </scripts>
+                                    <!-- Expressions resolved during server execution -->
+                                    <resolve-expressions>false</resolve-expressions>
+                                </packaging-script>
+                            </packaging-scripts>
                             <!-- deploys the quickstart on root web context -->
                             <name>ROOT.war</name>
                         </configuration>
