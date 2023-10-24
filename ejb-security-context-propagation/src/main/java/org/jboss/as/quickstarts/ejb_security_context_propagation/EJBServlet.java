@@ -25,11 +25,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 /**
  * <p>
- * A simple servlet taking advantage of features added in 3.0.
+ * A simple servlet which indicates successful deployment of the quickstart.
  * </p>
  *
  * <p>
- * The servlet is registered and mapped to /EJBServlet using the {@linkplain WebServlet
+ * The servlet is registered and mapped to /ejb-security-context-propagation using the {@linkplain WebServlet
  * @HttpServlet}.
  * </p>
  *
@@ -40,7 +40,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/ejb-security-context-propagation")
 public class EJBServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
+    static String PAGE_HEADER = "<html><head><title>ejb-security-context-propagation</title></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 
@@ -49,7 +49,7 @@ public class EJBServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1> Hello World! </h1>");
+        writer.println("ejb-security-context-propagation quickstart deployed successfully. You can find the available operations in the included README file.");
         writer.println(PAGE_FOOTER);
         writer.close();
     }

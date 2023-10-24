@@ -174,29 +174,6 @@
                         <generateClient>true</generateClient>
                     </configuration>
                 </plugin>
-                <!-- Add the Maven exec plug-in to allow us to run a Java program via Maven -->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <configuration>
-                        <executable>java</executable>
-                        <workingDirectory>${project.build.directory}/exec-working-directory</workingDirectory>
-                        <arguments>
-                            <!-- automatically creates the classpath using all project dependencies,
-                                        also adding the project build directory -->
-                            <argument>-classpath</argument>
-                            <classpath></classpath>
-                            <argument>org.jboss.as.quickstarts.ejb_security_context_propagation.RemoteClient</argument>
-                        </arguments>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>exec</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                   <groupId>org.wildfly.plugins</groupId>
                   <artifactId>wildfly-maven-plugin</artifactId>
@@ -224,6 +201,16 @@
                                 <layer>cloud-server</layer>
                                 <layer>ejb</layer>
                             </layers>
+                            <!-- use cli script(s) to configure the server -->
+                            <packaging-scripts>
+                                <packaging-script>
+                                    <scripts>
+                                        <script>${basedir}/configure-elytron.cli</script>
+                                    </scripts>
+                                    <!-- Expressions resolved during server execution -->
+                                    <resolve-expressions>false</resolve-expressions>
+                                </packaging-script>
+                            </packaging-scripts>
                             <!-- deploys the quickstart on root web context -->
                             <name>ROOT.war</name>
                         </configuration>
