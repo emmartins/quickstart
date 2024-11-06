@@ -51,11 +51,16 @@ public class JAXRSRaceStage implements RaceStage {
         final Client client = ((ResteasyClientBuilder) ClientBuilder.newBuilder())
                     .build();
         try {
-            final WebTarget target = client.target(pitStopURI);
+            WebTarget target = client.target(getRequestURI(registration, "http"));
             // get current time
             long now = System.currentTimeMillis();
             // box box box, i.e. send a request to the Box rest service, with the racers name provided as param 'racer'
-            final Response response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+            Response response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+            if (response.getStatus() == 302) {
+                // on openshift we can't use http and we get a redirect response, let's switch to https and try again
+                target = client.target(getRequestURI(registration, "https"));
+                response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+            }
             if (response.getStatus() != 200) {
                 throw new IllegalStateException("PIT STOP failure trouble " + response.getStatus());
             } else {
@@ -65,5 +70,19 @@ public class JAXRSRaceStage implements RaceStage {
         } finally {
             client.close();
         }
+    }
+
+    private String getRequestURI(Race.Registration registration, String host) {
+        final Map<String, String> environment = registration.getEnvironment();
+        return new StringBuilder(host)
+                .append("://")
+                .append(environment.get(EnvironmentProperties.SERVER_NAME))
+                .append(':')
+                .append(environment.get(EnvironmentProperties.SERVER_PORT))
+                .append(environment.get(EnvironmentProperties.ROOT_PATH))
+                .append('/')
+                .append(BoxApplication.PATH)
+                .append("/pitStop")
+                .toString();
     }
 }
