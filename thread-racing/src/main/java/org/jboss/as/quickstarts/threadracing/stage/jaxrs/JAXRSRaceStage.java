@@ -51,15 +51,15 @@ public class JAXRSRaceStage implements RaceStage {
         final Client client = ((ResteasyClientBuilder) ClientBuilder.newBuilder())
                     .build();
         try {
-            WebTarget target = client.target(getRequestURI(registration, "http"));
+            WebTarget target = client.target(getRequestURI(registration, false));
             // get current time
             long now = System.currentTimeMillis();
             // box box box, i.e. send a request to the Box rest service, with the racers name provided as param 'racer'
-            Response response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+            Response response = sendRequest(target, registration);
             if (response.getStatus() == 302) {
                 // on openshift we can't use http and we get a redirect response, let's switch to https and try again
-                target = client.target(getRequestURI(registration, "https"));
-                response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+                target = client.target(getRequestURI(registration, true));
+                response = sendRequest(target, registration);;
             }
             if (response.getStatus() != 200) {
                 throw new IllegalStateException("PIT STOP failure trouble " + response.getStatus());
@@ -72,13 +72,17 @@ public class JAXRSRaceStage implements RaceStage {
         }
     }
 
-    private String getRequestURI(Race.Registration registration, String host) {
+    private Response sendRequest(WebTarget target, Race.Registration registration) {
+        return target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
+    }
+
+    private String getRequestURI(Race.Registration registration, boolean https) {
         final Map<String, String> environment = registration.getEnvironment();
-        return new StringBuilder(host)
+        return new StringBuilder(https ? "https" : "http")
                 .append("://")
                 .append(environment.get(EnvironmentProperties.SERVER_NAME))
                 .append(':')
-                .append(environment.get(EnvironmentProperties.SERVER_PORT))
+                .append(environment.get(https ? "443" : EnvironmentProperties.SERVER_PORT))
                 .append(environment.get(EnvironmentProperties.ROOT_PATH))
                 .append('/')
                 .append(BoxApplication.PATH)
