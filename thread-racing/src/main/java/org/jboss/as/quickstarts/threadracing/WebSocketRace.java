@@ -122,6 +122,8 @@ public class WebSocketRace {
         @Override
         public void modifyHandshake(ServerEndpointConfig sec, HandshakeRequest request, HandshakeResponse response) {
             sec.getUserProperties().put(HOST_USER_PROP, request.getHeaders().get(HOST_USER_PROP).get(0));
+            System.out.println("Websocket request uri: "+request.getRequestURI());
+            request.getHeaders().entrySet().forEach(stringListEntry -> System.out.println(stringListEntry.getKey()+": "+stringListEntry.getValue()));
         }
     }
 }

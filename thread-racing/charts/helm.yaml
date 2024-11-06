@@ -1,6 +1,6 @@
 build:
-  uri: https://github.com/wildfly/quickstart.git
-  ref: main
+  uri: https://github.com/emmartins/quickstart.git
+  ref: JBEAP-27650
   contextDir: thread-racing
 deploy:
   replicas: 1
