@@ -38,7 +38,8 @@ public class JAXRSRaceStage implements RaceStage {
     public void run(Race.Registration registration) throws Exception {
         // build the REST service uri from race's environment
         final Map<String, String> environment = registration.getEnvironment();
-        final String pitStopURI = new StringBuilder("http://")
+        final String pitStopURI = new StringBuilder(environment.get(EnvironmentProperties.PROTOCOL))
+                .append("://")
                 .append(environment.get(EnvironmentProperties.SERVER_NAME))
                 .append(':')
                 .append(environment.get(EnvironmentProperties.SERVER_PORT))
@@ -51,16 +52,11 @@ public class JAXRSRaceStage implements RaceStage {
         final Client client = ((ResteasyClientBuilder) ClientBuilder.newBuilder())
                     .build();
         try {
-            WebTarget target = client.target(getRequestURI(registration, false));
+            final WebTarget target = client.target(pitStopURI);
             // get current time
             long now = System.currentTimeMillis();
             // box box box, i.e. send a request to the Box rest service, with the racers name provided as param 'racer'
-            Response response = sendRequest(target, registration);
-            if (response.getStatus() == 302) {
-                // on openshift we can't use http and we get a redirect response, let's switch to https and try again
-                target = client.target(getRequestURI(registration, true));
-                response = sendRequest(target, registration);
-            }
+            final Response response = target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
             if (response.getStatus() != 200) {
                 throw new IllegalStateException("PIT STOP failure trouble " + response.getStatus());
             } else {
@@ -70,23 +66,5 @@ public class JAXRSRaceStage implements RaceStage {
         } finally {
             client.close();
         }
-    }
-
-    private Response sendRequest(WebTarget target, Race.Registration registration) {
-        return target.path("{racer}").resolveTemplate("racer", registration.getRacer().getName()).request().get();
-    }
-
-    private String getRequestURI(Race.Registration registration, boolean https) {
-        final Map<String, String> environment = registration.getEnvironment();
-        return new StringBuilder(https ? "https" : "http")
-                .append("://")
-                .append(environment.get(EnvironmentProperties.SERVER_NAME))
-                .append(':')
-                .append(https ? "443" : environment.get(EnvironmentProperties.SERVER_PORT))
-                .append(environment.get(EnvironmentProperties.ROOT_PATH))
-                .append('/')
-                .append(BoxApplication.PATH)
-                .append("/pitStop")
-                .toString();
     }
 }
