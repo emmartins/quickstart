@@ -59,7 +59,7 @@ public class JAXRSRaceStage implements RaceStage {
             if (response.getStatus() == 302) {
                 // on openshift we can't use http and we get a redirect response, let's switch to https and try again
                 target = client.target(getRequestURI(registration, true));
-                response = sendRequest(target, registration);;
+                response = sendRequest(target, registration);
             }
             if (response.getStatus() != 200) {
                 throw new IllegalStateException("PIT STOP failure trouble " + response.getStatus());
