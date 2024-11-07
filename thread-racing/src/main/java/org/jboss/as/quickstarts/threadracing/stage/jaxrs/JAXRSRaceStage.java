@@ -82,7 +82,7 @@ public class JAXRSRaceStage implements RaceStage {
                 .append("://")
                 .append(environment.get(EnvironmentProperties.SERVER_NAME))
                 .append(':')
-                .append(environment.get(https ? "443" : EnvironmentProperties.SERVER_PORT))
+                .append(https ? "443" : environment.get(EnvironmentProperties.SERVER_PORT))
                 .append(environment.get(EnvironmentProperties.ROOT_PATH))
                 .append('/')
                 .append(BoxApplication.PATH)
