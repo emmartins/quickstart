@@ -152,6 +152,10 @@
                                     <location>org.wildfly:wildfly-galleon-pack:${version.server}</location>
                                 </feature-pack>
                             </feature-packs>
+                            <!-- set 'jboss-fork-embedded' option to 'true' in order to fork Galleon provisioning and CLI scripts execution in dedicated processes -->
+                            <galleon-options>
+                                <jboss-fork-embedded>true</jboss-fork-embedded>
+                            </galleon-options>
                         </configuration>
                         <executions>
                             <execution>
