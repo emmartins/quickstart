@@ -108,6 +108,12 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
     <repositories>

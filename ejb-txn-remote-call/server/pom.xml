@@ -156,6 +156,10 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <!-- Modifying webappDirectory to avoid overlapping with WildFly Maven Plugin's output directory -->

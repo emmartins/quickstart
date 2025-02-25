@@ -172,6 +172,10 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>

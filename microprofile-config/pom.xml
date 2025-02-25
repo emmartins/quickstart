@@ -103,6 +103,10 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
                 <configuration>

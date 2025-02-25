@@ -137,6 +137,10 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+            </plugin>
             <!-- (wsconsume) generate classes from wsdl -->
             <plugin>
                 <groupId>org.jboss.ws.plugins</groupId>
