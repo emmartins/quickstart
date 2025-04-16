@@ -1,6 +1,6 @@
 build:
-  uri: https://github.com/wildfly/quickstart.git
-  ref: main
+  uri: https://github.com/emmartins/quickstart.git
+  ref: JBEAP-29964
   contextDir: spring-resteasy
 deploy:
   replicas: 1
