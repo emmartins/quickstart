@@ -1,0 +1,17 @@
+[[run_a_local_postgresql_database]]
+= Run a Local PostgreSQL Database
+
+The quickstart requires a PostgreSQL database, and locally we can create and run one with Podman. Please run the following command in another terminal window:
+
+ifndef::postgresUser[:postgresUser: test]
+ifndef::postgresPassword[:postgresPassword: test]
+ifndef::postgresVersion[:postgresVersion: ]
+ifndef::postgresExtraArgs[:postgresExtraArgs: ]
+
+[source,options="nowrap",subs="attributes+"]
+
+----
+podman run --rm -e POSTGRES_USER={postgresUser} -e POSTGRES_PASSWORD={postgresPassword} postgres{postgresVersion} -p 5432:5432 {postgresExtraArgs}
+----
+
+This will create a database named `{postgresUser}` that we can connect to on `localhost:5432` with the credentials `{postgresUser} / {postgresPassword}`.

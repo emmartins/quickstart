@@ -132,19 +132,14 @@ ${jbossHomeName}_3/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!'
 
 NOTE: For Windows, use the `__{jbossHomeName}__\bin\add-user.bat` script.
 
-[[configure_datasources]]
-=== Configure datasources
-
-As this quickstart performs transactional work against a database, it is needed to create a new database.
-For the purpose of this quickstart, a simple PostgreSQL container will be used, please open another terminal and run the following command to download and start its image:
-
-[source,sh,options="nowrap"]
-----
-podman run -p 5432:5432 --rm  -ePOSTGRES_DB=test -ePOSTGRES_USER=test -ePOSTGRES_PASSWORD=test postgres:9.4 -c max-prepared-transactions=110 -c log-statement=all
-----
+:postgresUser: test
+:postgresPassword: test
+:postgresVersion: :9.4
+:postgresExtraArgs: -c max-prepared-transactions=110 -c log-statement=all
+include::../shared-doc/run-a-local-postgresql-database.adoc[leveloffset=+2]
 
 The {productName} servers need to be configured to be able to connect to the database.
-First of all, a JDBC driver needs to be installed as https://docs.wildfly.org/30/Developer_Guide.html#Class_Loading_in_WildFly[jboss module].
+First of all, a JDBC driver needs to be installed as https://docs.wildfly.org/{productVersion}/Developer_Guide.html#Class_Loading_in_WildFly[jboss module].
 
 The following command downloads the PostgreSQL driver automatically through Maven:
 [source,sh,subs="+quotes,attributes+",options="nowrap"]
@@ -620,7 +615,7 @@ The integration tests included with this quickstart, which verify that the quick
 
 Follow these steps to run the integration tests.
 
-. Ensure the PostgreSQL database is running, as described in <<configure_datasources>>.
+. Ensure the PostgreSQL database is running, as described in <<run_a_local_postgresql_database>>.
 
 . Make sure the servers are provisioned by running the commands reported in <<build_and_run_the_quickstart_with_provisioned_server>>
 
