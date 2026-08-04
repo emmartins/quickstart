@@ -1,11 +1,11 @@
 # Default values for todo-backend-chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
-db:
-  username: todos-db
-  password: todos-db
-  database: todos-db
+#
+#db:
+#  username: todos-db
+#  password: todos-db
+#  database: todos-db
 
 wildfly:
     build:
