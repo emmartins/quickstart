@@ -9,8 +9,8 @@
 
 wildfly:
     build:
-      uri: https://github.com/wildfly/quickstart.git
-      ref: 41.x
+      uri: https://github.com/emmartins/quickstart.git
+      ref: helmset
       contextDir: todo-backend
     deploy:
       replicas: 1
