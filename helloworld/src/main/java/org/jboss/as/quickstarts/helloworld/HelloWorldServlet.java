@@ -46,7 +46,19 @@ public class HelloWorldServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1>Hello World "+System.getProperty("test")+"!</h1>");
+        String serverHost = System.getenv("test");
+        if (serverHost == null) {
+            serverHost = System.getProperty("test");
+            if (serverHost == null) {
+                serverHost = System.getProperty("env.test");
+            } else {
+                serverHost = "System.getProperty(test)";
+            }
+        } else {
+            serverHost = "System.getenv(test)";
+        }
+
+        writer.println("<h1>Hello World "+serverHost+"!</h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }

@@ -4,3 +4,6 @@ build:
   contextDir: helloworld
 deploy:
   replicas: 1
+  env:
+    - name: test
+      value: "{{ .Values.test.test }}"
