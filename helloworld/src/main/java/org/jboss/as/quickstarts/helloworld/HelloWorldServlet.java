@@ -46,7 +46,7 @@ public class HelloWorldServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1>Hello World!</h1>");
+        writer.println("<h1>Hello World "+System.getProperty("test")+"!</h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }

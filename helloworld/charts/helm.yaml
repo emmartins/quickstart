@@ -1,6 +1,6 @@
 build:
-  uri: https://github.com/wildfly/quickstart.git
-  ref: 41.x
+  uri: https://github.com/emmartins/quickstart.git
+  ref: helmset
   contextDir: helloworld
 deploy:
   replicas: 1
