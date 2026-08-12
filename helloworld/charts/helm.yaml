@@ -5,5 +5,7 @@ build:
 deploy:
   replicas: 1
   env:
-    - name: test
-      value: "{{ .Values.test.test }}"
+    - name: userName
+      value: "{{ .Values.userName }}"
+    - name: userPassword
+      value: "{{ .Values.userPassword }}"
