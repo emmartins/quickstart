@@ -9,3 +9,5 @@ deploy:
       value: "{{ .Values.userName }}"
     - name: userPassword
       value: "{{ .Values.userPassword }}"
+    - name: SERVER_ARGS
+      value: "{{ .Values.serverArgs }}"
