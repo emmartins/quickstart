@@ -47,9 +47,9 @@
         <!-- the Maven project should use the minimum Java SE version supported -->
         <maven.compiler.release>17</maven.compiler.release>
         <!-- the version for the Server -->
-        <version.server>42.0.0.Final</version.server>
+        <version.server>41.0.1.Final</version.server>
         <!-- the versions for BOMs, Packs and Plugins -->
-        <version.bom.ee>${version.server}</version.bom.ee>
+        <version.bom.ee>42.0.0.Final</version.bom.ee>
         <version.plugin.wildfly>6.0.3.Final</version.plugin.wildfly>
     </properties>
 
@@ -75,6 +75,17 @@
         <dependency>
             <groupId>jakarta.websocket</groupId>
             <artifactId>jakarta.websocket-client-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Import the CDI API, we use provided scope as the API is included in JBoss EAP -->
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.enterprise.concurrent</groupId>
+            <artifactId>jakarta.enterprise.concurrent-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

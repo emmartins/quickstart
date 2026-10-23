@@ -16,6 +16,13 @@
  */
 package org.jboss.as.quickstarts.websocket_hello;
 
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.Asynchronous;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.enterprise.concurrent.Schedule;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.event.Observes;
+import jakarta.enterprise.event.Startup;
 import jakarta.websocket.CloseReason;
 import jakarta.websocket.OnClose;
 import jakarta.websocket.OnMessage;
@@ -40,5 +47,19 @@ public class HelloName {
     @OnClose
     public void helloOnClose(CloseReason reason) {
         System.out.println("WebSocket connection closed with CloseCode: " + reason.getCloseCode());
+    }
+
+    @ApplicationScoped
+    static class SessionPinger {
+        @Resource
+        private ManagedExecutorService executor;
+
+        {
+            System.out.println("starting pinger");
+        }
+        @Asynchronous(runAt = @Schedule(cron = "*/" + 10 + " * * * * *"))
+        void pingAll(@SuppressWarnings("unused") @Observes Startup s) {
+            System.out.println("running pinger");
+        }
     }
 }
